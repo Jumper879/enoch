@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services — Enoch's Portfolio</title>
+  <meta name="description" content="Services by Enoch: Product Design, Brand Identity, Web Design &amp; Framer Translation, and Creative Direction.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="assets/images/dexo-icon.png">
+</head>
+<body>
+
+  <!-- =========================================================================
+       1. CANVAS RULER BAR
+       ========================================================================= -->
+  <div class="canvas-ruler-wrap" aria-hidden="true">
+    <div class="canvas-ruler-ticks" id="rulerTicks"></div>
+  </div>
+
+  <!-- =========================================================================
+       2. TOP NAVIGATION HEADER
+       ========================================================================= -->
+  <header class="top-header-bar">
+    <div class="nav-left-group">
+      <!-- Dexo Logo (Icon & Wordmark) -->
+      <a href="index.html" class="dexo-logo-link" aria-label="Enoch's Portfolio Home">
+        <img src="assets/images/dexo-logo-icon.png" alt="Dexo Icon" class="dexo-icon-img">
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links-row">
+          <li><a href="index.html" class="nav-tab-item"><span class="tab-icon">🏠</span> HOME</a></li>
+          <li><a href="about.html" class="nav-tab-item"><span class="tab-icon">✱</span> ABOUT</a></li>
+          <li><a href="case-study.html" class="nav-tab-item"><span class="tab-icon">🗂</span> CASE STUDIES</a></li>
+          <li><a href="services.html" class="nav-tab-item active"><span class="tab-icon">💼</span> SERVICES</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="nav-right-group">
+      <a href="mailto:dara.daodu@gmail.com" class="mini-badge-btn em" title="Email Enoch">EM</a>
+      <a href="tel:+2347067511942" class="mini-badge-btn ph" title="Call Enoch">PH</a>
+
+      <a href="contact.html" class="nav-tab-contact">
+        <span style="color: var(--token-pink);">♥</span> CONTACT
+      </a>
+
+      <div class="floating-cursor-badge" aria-hidden="true">
+        <svg class="cursor-arrow-svg" viewBox="0 0 16 16" fill="none">
+          <path d="M0 0L6 14L8.5 8.5L14 6L0 0Z" fill="#36c5f0" stroke="#111212" stroke-width="1.5" stroke-linejoin="round"/>
+        </svg>
+        <a href="mailto:dara.daodu@gmail.com" class="cursor-tag-pill" style="text-decoration: none; color: inherit;">dara.daodu@gmail.com</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       3. SERVICES HERO
+       ========================================================================= -->
+  <main>
+    <section class="container" style="padding: 60px 0 40px; text-align: center;">
+      <span class="handwritten-intro-note" style="font-size: 32px; color: var(--token-cyan);">what i do</span>
+      <br>
+      <div class="figma-selection" style="padding: 10px 48px; margin-top: 10px;">
+        <div class="figma-handle handle-tl"></div>
+        <div class="figma-handle handle-tc"></div>
+        <div class="figma-handle handle-tr"></div>
+        <div class="figma-handle handle-ml"></div>
+        <div class="figma-handle handle-mr"></div>
+        <div class="figma-handle handle-bl"></div>
+        <div class="figma-handle handle-bc"></div>
+        <div class="figma-handle handle-br"></div>
+        <h1 class="leave-a-note-title">Services</h1>
+      </div>
+      <p style="font-size: 1.2rem; color: var(--token-gray-sub); max-width: 680px; margin: 16px auto 0;">
+        Strategic brand identity systems, high-converting web experiences, and thoughtful product design tailored to ambitious teams.
+      </p>
+
+      <!-- 4 Core Services Grid -->
+      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; margin-top: 50px; text-align: left;">
+        
+        <!-- Service 01 -->
+        <div class="folder-project-card">
+          <div class="folder-tab-badge">
+            <span>(01)</span>
+            <span>UX / UI</span>
+          </div>
+          <h2 style="font-family: var(--font-display); font-size: 1.8rem; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 12px;">Product Design &amp; UX/UI</h2>
+          <p style="font-size: 1.05rem; color: #4a4b4b; line-height: 1.55;">
+            Transforming complex workflows into intuitive, human-centered digital experiences. User flow mapping, high-fidelity components, and interactive prototypes ready for dev handoff.
+          </p>
+          <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px;">
+            <span class="meta-sticker green">User Flow Mapping</span>
+            <span class="meta-sticker cyan">Design Systems</span>
+            <span class="meta-sticker yellow">Interactive Prototyping</span>
+          </div>
+        </div>
+
+        <!-- Service 02 -->
+        <div class="folder-project-card">
+          <div class="folder-tab-badge yellow">
+            <span>(02)</span>
+            <span>BUILD</span>
+          </div>
+          <h2 style="font-family: var(--font-display); font-size: 1.8rem; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 12px;">Web Design &amp; Framer Translation</h2>
+          <p style="font-size: 1.05rem; color: #4a4b4b; line-height: 1.55;">
+            Crafting responsive, personality-rich websites that capture attention, communicate value with absolute clarity, and convert visitors into long-term customers.
+          </p>
+          <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px;">
+            <span class="meta-sticker yellow">Framer Translation</span>
+            <span class="meta-sticker pink">Micro-Interactions</span>
+            <span class="meta-sticker green">Performance &amp; SEO</span>
+          </div>
+        </div>
+
+        <!-- Service 03 -->
+        <div class="folder-project-card">
+          <div class="folder-tab-badge">
+            <span>(03)</span>
+            <span>BRAND</span>
+          </div>
+          <h2 style="font-family: var(--font-display); font-size: 1.8rem; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 12px;">Brand Identity &amp; Visual Systems</h2>
+          <p style="font-size: 1.05rem; color: #4a4b4b; line-height: 1.55;">
+            Building memorable visual foundations that give startups distinctive presence. Logos, typography hierarchies, token sets, and comprehensive brand guidelines.
+          </p>
+          <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px;">
+            <span class="meta-sticker pink">Brand Strategy</span>
+            <span class="meta-sticker green">Logo Systems</span>
+            <span class="meta-sticker cyan">Guidelines &amp; Toolkits</span>
+          </div>
+        </div>
+
+        <!-- Service 04 -->
+        <div class="folder-project-card">
+          <div class="folder-tab-badge yellow">
+            <span>(04)</span>
+            <span>VISUALS</span>
+          </div>
+          <h2 style="font-family: var(--font-display); font-size: 1.8rem; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 12px;">Creative Direction &amp; Pitch Decks</h2>
+          <p style="font-size: 1.05rem; color: #4a4b4b; line-height: 1.55;">
+            Elevating your digital presence with cohesive pitch decks, editorial marketing assets, motion graphics, and visual storytelling that make lasting impressions.
+          </p>
+          <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px;">
+            <span class="meta-sticker cyan">Pitch Decks</span>
+            <span class="meta-sticker yellow">Motion Graphics</span>
+            <span class="meta-sticker pink">3D Asset Integration</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         4. THE 4-STEP PROCESS
+         ========================================================================= -->
+    <section class="container" style="padding: 60px 0;">
+      <div style="text-align: center; margin-bottom: 36px;">
+        <span class="handwritten-intro-note" style="font-size: 28px; color: var(--token-amber);">how it works</span>
+        <h2 style="font-family: var(--font-flux); font-weight: 1000; font-size: clamp(2.5rem, 6vw, 4.5rem); letter-spacing: -0.02em; text-transform: uppercase;">
+          THE 4-STEP PROCESS
+        </h2>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;">
+        <div class="folder-project-card" style="padding: 24px;">
+          <div style="font-family: var(--font-mono); font-size: 12px; color: var(--token-cyan); font-weight: 700;">STEP (01)</div>
+          <h3 style="font-family: var(--font-display); font-size: 1.35rem; font-weight: 700; margin: 8px 0 10px;">Discover</h3>
+          <p style="font-size: 0.95rem; color: #4a4b4b; line-height: 1.5;">We dig into your company, goals, audience, and market landscape to uncover the exact challenge we're solving.</p>
+        </div>
+
+        <div class="folder-project-card" style="padding: 24px;">
+          <div style="font-family: var(--font-mono); font-size: 12px; color: var(--token-amber); font-weight: 700;">STEP (02)</div>
+          <h3 style="font-family: var(--font-display); font-size: 1.35rem; font-weight: 700; margin: 8px 0 10px;">Define</h3>
+          <p style="font-size: 0.95rem; color: #4a4b4b; line-height: 1.5;">Synthesize findings into clear user flows, wireframes, moodboards, and a solid direction before opening high-fidelity tools.</p>
+        </div>
+
+        <div class="folder-project-card" style="padding: 24px;">
+          <div style="font-family: var(--font-mono); font-size: 12px; color: var(--token-green); font-weight: 700;">STEP (03)</div>
+          <h3 style="font-family: var(--font-display); font-size: 1.35rem; font-weight: 700; margin: 8px 0 10px;">Design</h3>
+          <p style="font-size: 0.95rem; color: #4a4b4b; line-height: 1.5;">Crafting high-fidelity mockups, responsive screens, design tokens, and interactive prototypes with rapid feedback loops.</p>
+        </div>
+
+        <div class="folder-project-card" style="padding: 24px;">
+          <div style="font-family: var(--font-mono); font-size: 12px; color: var(--token-pink); font-weight: 700;">STEP (04)</div>
+          <h3 style="font-family: var(--font-display); font-size: 1.35rem; font-weight: 700; margin: 8px 0 10px;">Deliver</h3>
+          <p style="font-size: 0.95rem; color: #4a4b4b; line-height: 1.5;">Production-ready asset export, developer handoff specs, design QA, or full live web deployment.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         5. INTERACTIVE FAQ ACCORDION
+         ========================================================================= -->
+    <section class="container" style="padding: 60px 0 80px;">
+      <div style="text-align: center; margin-bottom: 36px;">
+        <span class="handwritten-intro-note" style="font-size: 28px; color: var(--token-pink);">got questions?</span>
+        <h2 style="font-family: var(--font-flux); font-weight: 1000; font-size: clamp(2.5rem, 6vw, 4.5rem); letter-spacing: -0.02em; text-transform: uppercase;">
+          FREQUENTLY ASKED
+        </h2>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 16px; max-width: 840px; margin: 0 auto;">
+        
+        <div class="folder-project-card faq-item open" style="padding: 0; overflow: hidden;">
+          <button class="faq-question" style="width: 100%; padding: 22px 28px; display: flex; justify-content: space-between; align-items: center; font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; text-align: left;">
+            <span>What is your typical project timeline?</span>
+            <span class="faq-icon" style="font-family: var(--font-mono); font-size: 18px; width: 28px; height: 28px; border: 1.5px solid var(--token-dark); border-radius: 50%; display: flex; align-items: center; justify-content: center;">+</span>
+          </button>
+          <div class="faq-answer" style="padding: 0 28px 24px; font-size: 1rem; color: #4a4b4b; line-height: 1.6;">
+            Timelines vary depending on project scope. A focused brand identity or landing page typically takes 2–4 weeks. Comprehensive product UI/UX systems or full multi-page websites generally take 4–8 weeks with clear milestone deliverables.
+          </div>
+        </div>
+
+        <div class="folder-project-card faq-item" style="padding: 0; overflow: hidden;">
+          <button class="faq-question" style="width: 100%; padding: 22px 28px; display: flex; justify-content: space-between; align-items: center; font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; text-align: left;">
+            <span>How do we communicate throughout the engagement?</span>
+            <span class="faq-icon" style="font-family: var(--font-mono); font-size: 18px; width: 28px; height: 28px; border: 1.5px solid var(--token-dark); border-radius: 50%; display: flex; align-items: center; justify-content: center;">+</span>
+          </button>
+          <div class="faq-answer" style="padding: 0 28px 24px; font-size: 1rem; color: #4a4b4b; line-height: 1.6; display: none;">
+            I prioritize low-friction communication. We stay connected via a dedicated Slack channel or email, with weekly video syncs (Google Meet/Zoom) for major milestone walk-throughs and Loom async screen reviews.
+          </div>
+        </div>
+
+        <div class="folder-project-card faq-item" style="padding: 0; overflow: hidden;">
+          <button class="faq-question" style="width: 100%; padding: 22px 28px; display: flex; justify-content: space-between; align-items: center; font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; text-align: left;">
+            <span>Do you offer web development or just design?</span>
+            <span class="faq-icon" style="font-family: var(--font-mono); font-size: 18px; width: 28px; height: 28px; border: 1.5px solid var(--token-dark); border-radius: 50%; display: flex; align-items: center; justify-content: center;">+</span>
+          </button>
+          <div class="faq-answer" style="padding: 0 28px 24px; font-size: 1rem; color: #4a4b4b; line-height: 1.6; display: none;">
+            Yes, I provide end-to-end design and build services. For portfolio, brand, and marketing websites, I build directly in Framer or clean HTML/CSS/JS. For complex engineering apps, I provide developer-ready Figma specifications and design tokens.
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         5B. TESTIMONIALS REVIEW CAROUSEL SECTION
+         ========================================================================= -->
+    <section class="testimonials-section container">
+      <!-- Centered Streamlined Heading (Contact Sales Removed) -->
+      <div class="testimonials-header">
+        <span class="handwritten-intro-note" style="font-size: 32px; color: var(--token-cyan);">check testimonials</span>
+        <h2 class="testimonials-flux-heading">
+          CHOSEN BY 50+ GROWING
+          <span class="muted-subtext">BRANDS &amp; FOUNDERS WORLDWIDE!</span>
+        </h2>
+      </div>
+
+      <!-- Carousel Frame with Floating Navigation Arrows -->
+      <div class="testimonials-carousel-wrapper">
+        <button type="button" class="carousel-nav-btn prev" id="testimonialsPrevBtn" onclick="window.testimonialsPrev && window.testimonialsPrev()" aria-label="Previous testimonial">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="pointer-events: none;">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </button>
+
+        <!-- Viewport clipping container -->
+        <div class="testimonials-viewport" id="testimonialsViewport">
+          <!-- 8 Testimonial Cards Track -->
+          <div class="testimonials-track" id="testimonialsTrack">
+          
+          <!-- 1. Kane Williamson - Upwork -->
+          <div class="testimonial-card">
+            <div class="testimonial-card-header">
+              <div class="testimonial-author-box">
+                <img src="assets/images/client-1.jpg" alt="Kane Williamson" class="testimonial-avatar">
+                <div class="testimonial-author-info">
+                  <span class="testimonial-author-name">Kane Williamson</span>
+                  <span class="testimonial-author-role">Lead Designer · Studio Apex</span>
+                </div>
+              </div>
+              <div class="review-platform-badge upwork" title="Verified review on Upwork">
+                <img src="assets/images/logo-upwork.png" alt="Upwork" class="platform-logo-img">
+              </div>
+            </div>
+
+            <div class="testimonial-card-body">
+              <h3 class="testimonial-quote-title">"This adventure exceeded all expectations"</h3>
+              <p class="testimonial-quote-text">
+                "Working with Enoch was a revelation. He translated our complex product workflows into a sharp, conversion-focused design system and flawless live Framer build."
+              </p>
+            </div>
+
+            <div class="testimonial-card-footer">
+              <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+              <span class="testimonial-date">09/30/2024</span>
+            </div>
+          </div>
+
+          <!-- 2. Marcus Vance - Fiverr (Video/Media Card with Play Button) -->
+          <div class="testimonial-card video-card" style="background-image: url('assets/images/testimonial-video.jpg');">
+            <div class="testimonial-card-header">
+              <div class="testimonial-author-box">
+                <img src="assets/images/avatar.png" alt="Marcus Vance" class="testimonial-avatar" style="border-color: rgba(255,255,255,0.4);">
+                <div class="testimonial-author-info">
+                  <span class="testimonial-author-name">Marcus Vance</span>
+                  <span class="testimonial-author-role">Founder · Horizon Labs</span>
+                </div>
+              </div>
+              <div class="review-platform-badge fiverr" title="Verified review on Fiverr Pro">
+                <img src="assets/images/logo-fiverr.png" alt="Fiverr" class="platform-logo-img">
+              </div>
+            </div>
+
+            <div class="video-play-center">
+              <button class="video-play-btn" aria-label="Play video testimonial">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+              </button>
+            </div>
+
+            <div class="testimonial-card-footer">
+              <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+              <span class="testimonial-date">10/14/2024</span>
+            </div>
+          </div>
+
+          <!-- 3. Sarah Chen - LinkedIn -->
+          <div class="testimonial-card">
+            <div class="testimonial-card-header">
+              <div class="testimonial-author-box">
+                <img src="assets/images/client-2.jpg" alt="Sarah Chen" class="testimonial-avatar">
+                <div class="testimonial-author-info">
+                  <span class="testimonial-author-name">Sarah Chen</span>
+                  <span class="testimonial-author-role">Head of Product · Meridian</span>
+                </div>
+              </div>
+              <div class="review-platform-badge linkedin" title="Verified review on LinkedIn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+                </svg>
+              </div>
+            </div>
+
+            <div class="testimonial-card-body">
+              <h3 class="testimonial-quote-title">"Cut intake documentation time by 50%"</h3>
+              <p class="testimonial-quote-text">
+                "Enoch's clinical workflow redesign was transformative. He solved our most intricate interaction bottlenecks while making the interface feel completely calm and intuitive."
+              </p>
+            </div>
+
+            <div class="testimonial-card-footer">
+              <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+              <span class="testimonial-date">11/04/2024</span>
+            </div>
+          </div>
+
+          <!-- 4. Elena Rostova - Email -->
+          <div class="testimonial-card">
+            <div class="testimonial-card-header">
+              <div class="testimonial-author-box">
+                <img src="assets/images/client-4.jpg" alt="Elena Rostova" class="testimonial-avatar">
+                <div class="testimonial-author-info">
+                  <span class="testimonial-author-name">Elena Rostova</span>
+                  <span class="testimonial-author-role">Founder · Ewamaka Jewelry</span>
+                </div>
+              </div>
+              <div class="review-platform-badge email" title="Direct review via Email">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                </svg>
+              </div>
+            </div>
+
+            <div class="testimonial-card-body">
+              <h3 class="testimonial-quote-title">"42% jump in online conversions"</h3>
+              <p class="testimonial-quote-text">
+                "The brand identity and e-commerce experience Enoch designed catapulted our direct-to-consumer revenue. Fast, dependable, and with exceptional aesthetic taste."
+              </p>
+            </div>
+
+            <div class="testimonial-card-footer">
+              <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+              <span class="testimonial-date">11/28/2024</span>
+            </div>
+          </div>
+
+          <!-- 5. David Kim - Upwork -->
+          <div class="testimonial-card">
+            <div class="testimonial-card-header">
+              <div class="testimonial-author-box">
+                <img src="assets/images/client-3.jpg" alt="David Kim" class="testimonial-avatar">
+                <div class="testimonial-author-info">
+                  <span class="testimonial-author-name">David Kim</span>
+                  <span class="testimonial-author-role">Co-Founder &amp; CTO · Northlight AI</span>
+                </div>
+              </div>
+              <div class="review-platform-badge upwork" title="Verified review on Upwork">
+                <img src="assets/images/logo-upwork.png" alt="Upwork" class="platform-logo-img">
+              </div>
+            </div>
+
+            <div class="testimonial-card-body">
+              <h3 class="testimonial-quote-title">"Lightning fast &amp; pixel perfect"</h3>
+              <p class="testimonial-quote-text">
+                "Delivered our investor deck and launch website ahead of schedule. The interactive components and clean typography blew our lead investors away."
+              </p>
+            </div>
+
+            <div class="testimonial-card-footer">
+              <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+              <span class="testimonial-date">12/15/2024</span>
+            </div>
+          </div>
+
+          <!-- 6. Priya Patel - Fiverr -->
+          <div class="testimonial-card">
+            <div class="testimonial-card-header">
+              <div class="testimonial-author-box">
+                <img src="assets/images/client-5.jpg" alt="Priya Patel" class="testimonial-avatar">
+                <div class="testimonial-author-info">
+                  <span class="testimonial-author-name">Priya Patel</span>
+                  <span class="testimonial-author-role">VP Marketing · TrackPulse</span>
+                </div>
+              </div>
+              <div class="review-platform-badge fiverr" title="Verified review on Fiverr">
+                <img src="assets/images/logo-fiverr.png" alt="Fiverr" class="platform-logo-img">
+              </div>
+            </div>
+
+            <div class="testimonial-card-body">
+              <h3 class="testimonial-quote-title">"Our bounce rate dropped 34%"</h3>
+              <p class="testimonial-quote-text">
+                "Enoch took our Figma designs and turned them into a silky smooth Framer website in under a week. The single highest ROI decision we made this year."
+              </p>
+            </div>
+
+            <div class="testimonial-card-footer">
+              <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+              <span class="testimonial-date">01/18/2025</span>
+            </div>
+          </div>
+
+          <!-- 7. Oliver Hayes - LinkedIn -->
+          <div class="testimonial-card">
+            <div class="testimonial-card-header">
+              <div class="testimonial-author-box">
+                <img src="assets/images/contact-shot.png" alt="Oliver Hayes" class="testimonial-avatar">
+                <div class="testimonial-author-info">
+                  <span class="testimonial-author-name">Oliver Hayes</span>
+                  <span class="testimonial-author-role">Partner · Dexter Capital</span>
+                </div>
+              </div>
+              <div class="review-platform-badge linkedin" title="Verified review on LinkedIn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+                </svg>
+              </div>
+            </div>
+
+            <div class="testimonial-card-body">
+              <h3 class="testimonial-quote-title">"A rare, world-class design generalist"</h3>
+              <p class="testimonial-quote-text">
+                "From brand identity to frontend interaction, Enoch can do what normally requires a team of three. He is our top recommendation to all portfolio startups."
+              </p>
+            </div>
+
+            <div class="testimonial-card-footer">
+              <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+              <span class="testimonial-date">02/02/2025</span>
+            </div>
+          </div>
+
+          <!-- 8. Amara Okafor - Email -->
+          <div class="testimonial-card">
+            <div class="testimonial-card-header">
+              <div class="testimonial-author-box">
+                <img src="assets/images/sticker-avatar.png" alt="Amara Okafor" class="testimonial-avatar">
+                <div class="testimonial-author-info">
+                  <span class="testimonial-author-name">Amara Okafor</span>
+                  <span class="testimonial-author-role">Founder · Nudge Collective</span>
+                </div>
+              </div>
+              <div class="review-platform-badge email" title="Direct review via Email">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                </svg>
+              </div>
+            </div>
+
+            <div class="testimonial-card-body">
+              <h3 class="testimonial-quote-title">"Warm, intuitive, and unforgettable"</h3>
+              <p class="testimonial-quote-text">
+                "Enoch has a magic touch for making complex digital products feel warm, approachable, and delightful. Clients constantly praise how clean our UI feels."
+              </p>
+            </div>
+
+            <div class="testimonial-card-footer">
+              <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+              <span class="testimonial-date">02/24/2025</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <button type="button" class="carousel-nav-btn next" id="testimonialsNextBtn" onclick="window.testimonialsNext && window.testimonialsNext()" aria-label="Next testimonial">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="pointer-events: none;">
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+      </button>
+    </div>
+
+      <!-- Carousel Dots Navigation & Progress Indicator -->
+      <div class="carousel-controls-bottom">
+        <div class="carousel-dots" id="testimonialsDots"></div>
+        <span class="carousel-counter-badge" id="testimonialsCounter">(1/8)</span>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       6. FOOTER: GREEN MASCOT + LET'S TALK + GIANT CONTACT CARD
+       ========================================================================= -->
+  <footer class="nudge-footer-section">
+    <div class="container">
+      <div class="footer-top-grid">
+        
+        <div>
+          <div class="footer-mascot-row">
+            <div class="green-blob-character">
+              <div class="blob-eyes">
+                <div class="blob-pill-eye"></div>
+                <div class="blob-pill-eye"></div>
+              </div>
+            </div>
+            <h2 class="lets-talk-flux-title">LET'S<br>TALK</h2>
+          </div>
+
+          <p class="footer-bio-desc">
+            I'm most energized by projects where I can dig into complex problems, collaborate with smart people, and ship things that genuinely improve someone's day.
+          </p>
+
+          <p style="font-family: var(--font-mono); font-size: 13px; color: var(--token-gray-sub); margin-top: 14px;">
+            Open to contract work, full-time roles, and interesting conversations about hard design problems.
+          </p>
+        </div>
+
+        <div>
+          <div class="lightning-contact-card">
+            <a href="contact.html" class="cyan-contact-banner-btn">
+              <span>CONTACT</span>
+              <div class="diamond-badge-icon">❖</div>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom-strip">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <img src="assets/images/dexo-icon.png" alt="Dexo" style="width: 20px; height: 20px; border-radius: 4px;">
+          <span>© all rights reserved for enoch · dexo</span>
+        </div>
+        <div class="footer-social-links">
+          <a href="https://linkedin.com/in/enochd/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://behance.net/daradaodu" target="_blank" rel="noopener">Behance</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js?v=3.0"></script>
+  <script>
+    (function() {
+      let currentIdx = 0;
+      const track = document.getElementById('testimonialsTrack');
+      const dotsContainer = document.getElementById('testimonialsDots');
+      const counterEl = document.getElementById('testimonialsCounter');
+      const prevBtn = document.getElementById('testimonialsPrevBtn');
+      const nextBtn = document.getElementById('testimonialsNextBtn');
+
+      function initCarousel() {
+        if (!track) return;
+        const cards = track.querySelectorAll('.testimonial-card');
+        const total = cards.length;
+        if (total === 0) return;
+
+        // Render dots
+        if (dotsContainer) {
+          dotsContainer.innerHTML = '';
+          cards.forEach((_, idx) => {
+            const dot = document.createElement('button');
+            dot.type = 'button';
+            dot.className = 'carousel-dot' + (idx === 0 ? ' active' : '');
+            dot.setAttribute('aria-label', 'Go to testimonial ' + (idx + 1));
+            dot.addEventListener('click', function(e) {
+              e.preventDefault();
+              window.goToTestimonial(idx);
+            });
+            dotsContainer.appendChild(dot);
+          });
+        }
+
+        window.goToTestimonial = function(index) {
+          if (index < 0) index = total - 1;
+          if (index >= total) index = 0;
+          currentIdx = index;
+
+          const cardWidth = cards[0].offsetWidth;
+          const gap = 24;
+          const shift = currentIdx * (cardWidth + gap);
+          track.style.transform = 'translateX(-' + shift + 'px)';
+
+          if (dotsContainer) {
+            const dots = dotsContainer.querySelectorAll('.carousel-dot');
+            dots.forEach((d, i) => d.classList.toggle('active', i === currentIdx));
+          }
+
+          if (counterEl) {
+            counterEl.textContent = '(' + (currentIdx + 1) + '/' + total + ')';
+          }
+        };
+
+        window.testimonialsNext = function() {
+          window.goToTestimonial(currentIdx + 1);
+        };
+
+        window.testimonialsPrev = function() {
+          window.goToTestimonial(currentIdx - 1);
+        };
+
+        if (nextBtn) {
+          nextBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            window.testimonialsNext();
+          });
+        }
+
+        if (prevBtn) {
+          prevBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            window.testimonialsPrev();
+          });
+        }
+
+        // Touch swipe support
+        let touchStart = 0;
+        const viewport = document.getElementById('testimonialsViewport') || track;
+        viewport.addEventListener('touchstart', function(e) {
+          touchStart = e.changedTouches[0].screenX;
+        }, { passive: true });
+        viewport.addEventListener('touchend', function(e) {
+          const touchEnd = e.changedTouches[0].screenX;
+          if (touchStart - touchEnd > 40) {
+            window.testimonialsNext();
+          } else if (touchEnd - touchStart > 40) {
+            window.testimonialsPrev();
+          }
+        }, { passive: true });
+
+        window.addEventListener('resize', function() {
+          window.goToTestimonial(currentIdx);
+        });
+
+        window.goToTestimonial(0);
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initCarousel);
+      } else {
+        initCarousel();
+      }
+    })();
+  </script>
+</body>
+</html>

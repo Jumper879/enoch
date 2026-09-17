@@ -1,0 +1,185 @@
+Selected Projects
+Brand Design & Identity
+Ewamaka — Building a Recognizable Jewelry Brand for Social Commerce
+ClientWomen-focused jewelry brand built around self-expression, beauty, and personal style.
+ChallengeEwamaka needed a visual identity that could communicate femininity and confidence while giving its social media presence a recognizable look that could consistently showcase its products.
+ApproachBuilt the identity around the meaning behind the name, “Wear Your Beauty,” combining an elegant visual direction with a flexible social media system designed for product-led content.
+Solution
+Complete logo and brand identity system 
+Defined typography, colors, and visual guidelines 
+Developed social media design templates 
+Created product-focused promotional visuals 
+Established a consistent visual language for online communication 
+Outcome
+Created a recognizable identity across social platforms 
+Made product communication more consistent and visually engaging 
+Helped the brand build a stronger social presence 
+Grew the existing social following by approximately 10× through the new visual direction 
+
+Adehomes — Creating a Trusted Identity for a Modern Shortlet Brand
+ClientShortlet and staycation brand offering accommodation and curated stays.
+ChallengeA growing shortlet business needed a recognizable identity that could stand out online, build trust with potential guests, and create a more consistent experience across its marketing touchpoints.
+ApproachDeveloped the brand around a clear, approachable visual direction suited to modern travelers, focusing on consistency, recognition, and trust across digital platforms.
+Solution
+Complete brand identity and logo design 
+Defined typography, color palette, and visual direction 
+Designed a consistent system for digital and social media use 
+Created visual assets for promotional touchpoints 
+Built a flexible identity that could scale across the business 
+Outcome
+Created a more distinctive and recognizable online presence 
+Improved consistency across brand communications 
+Helped elevate perceived customer trust 
+Supported increased visibility and sales through a stronger brand presentation 
+
+The Source Collective — Building a Luxury Brand from Strategy to Identity
+ClientLuxury personal shopping service targeting high-net-worth individuals and busy executives.
+ChallengeThe business had a strong concept but no established identity, visual system, or clearly defined positioning to communicate its premium service or support early customer and investor conversations.
+ApproachStarted from the audience rather than the visuals. Conducted buyer-persona and competitor research to understand the expectations of a luxury audience before developing the brand's positioning and visual language.
+Solution
+Refined logo design 
+Complete luxury brand identity system 
+Defined brand guidelines and visual standards 
+Developed marketing and social media assets 
+Created supporting brand documents for consistent communication 
+Built the visual system around premium, trustworthy, and service-led positioning 
+Outcome
+Helped secure the brand's first paying client 
+Gave the business a professional foundation for online presentation 
+Supported its transition toward product manufacturing 
+Created a scalable identity that could grow with the business 
+
+UI Design
+VisionPro — Designing a Futuristic Interface for Smart Glasses
+ClientConcept for a smart-glasses technology product.
+ChallengeSmart-glasses interfaces require information to feel immediate and accessible without overwhelming the user. The product needed a futuristic interface that still felt practical and easy to understand.
+ApproachExplored a technology-led interface direction using clear information hierarchy, minimal visual noise, and futuristic interaction patterns.
+Solution
+Designed the core smart-glasses interface 
+Created futuristic navigation and interaction patterns 
+Established a clean visual hierarchy for real-time information 
+Designed interface elements around quick recognition and accessibility 
+Developed a cohesive UI system for the product experience 
+Outcome
+Created a futuristic interface aligned with emerging wearable technology 
+Demonstrated how complex product information could be presented simply 
+Established a consistent visual language for the smart-glasses concept 
+
+Positivus — Making a Complex Marketing Service Easier to Understand
+ClientDigital marketing services brand offering multiple marketing solutions.
+ChallengeThe business had a wide range of information and services that needed to be communicated without making the website feel overwhelming or difficult to navigate.
+ApproachFocused on information hierarchy and content readability, organizing the interface around the questions a potential client would need answered before choosing a marketing service.
+Solution
+Designed the website interface and page structure 
+Organized extensive content into clear sections 
+Created service-focused information architecture 
+Developed readable typography and content hierarchy 
+Designed calls-to-action around key conversion points 
+Created a consistent UI system across the website 
+Outcome
+Made a content-heavy service offering easier to understand 
+Improved the visual hierarchy of key information 
+Created a clearer path from discovering a service to taking action 
+Established a professional digital experience for the brand 
+
+Dr Pepper — Designing a Digital Experience Around Products, Stores & Content
+ClientConsumer beverage brand requiring a digital product and content experience.
+ChallengeThe interface needed to serve different user intentions at once — discovering products, finding where to purchase them, and exploring brand content.
+ApproachDesigned the experience around three primary user journeys: product discovery, store finding, and content exploration.
+Solution
+Designed product browsing interfaces 
+Created product detail layouts 
+Designed store locator experience 
+Developed blog and editorial sections 
+Structured navigation around different customer needs 
+Created reusable UI components for consistency 
+Outcome
+Connected product discovery with purchase-location information 
+Created a more structured experience for brand content 
+Made multiple sections of the digital experience feel like one cohesive product 
+
+Croxy.io — Turning a Marketing Solution into a Conversion-Focused Landing Page
+ClientMarketing solutions platform focused on helping teams improve their marketing workflow and performance.
+ChallengeThe landing page needed to explain the value of the service quickly while guiding visitors toward understanding the product and taking the next step.
+ApproachFocused on conversion-oriented information hierarchy, using concise messaging, visual sections, and clear calls-to-action to reduce friction throughout the page.
+Solution
+Designed the complete landing page UI 
+Created a clear hero and value proposition 
+Structured features and benefits into digestible sections 
+Designed supporting visual elements 
+Built a conversion-focused content flow 
+Created a consistent visual system throughout the page 
+Outcome
+Made the product proposition easier to understand 
+Created a clearer journey from awareness to action 
+Gave the marketing team a polished interface for communicating its solutions 
+
+Website Design
+DigiSafes — Turning a Crypto Product into a Trust-Building Lead Generation Experience
+ClientCrypto-focused digital product requiring a website to explain its offering and generate potential customer leads.
+ChallengeCrypto products can be difficult for new users to understand and trust. DigiSafes needed a website that could communicate the product clearly while making the brand feel credible enough for visitors to engage.
+ApproachCombined product education, brand storytelling, and conversion-focused content to create a website that could take visitors from understanding the product to becoming potential leads.
+Solution
+Designed the complete website experience 
+Developed supporting brand visuals 
+Created clear product explanations and content hierarchy 
+Designed engaging visual sections around the product 
+Built lead-generation touchpoints throughout the experience 
+Created a consistent visual language across the website 
+Outcome
+Improved awareness and understanding of the product 
+Created a more credible digital presence for the crypto brand 
+Generated and tracked leads through the website 
+Used content and visual storytelling to support conversion 
+
+Huge — Rebuilding an Ecommerce Experience Around the Brand
+ClientSkincare brand selling beauty and skincare products online.
+ChallengeThe existing website needed a stronger connection to the brand and a more intuitive shopping experience. The homepage, navigation, and overall presentation needed to feel more intentional to both the brand and its customers.
+ApproachReworked the experience around the customer's journey — discovering the brand, understanding products, navigating the store, and exploring content — while bringing the website closer to the brand's visual personality.
+Solution
+Redesigned the homepage 
+Reworked website navigation and information architecture 
+Improved product presentation 
+Created a stronger visual connection between the brand and website 
+Refined content hierarchy and page layouts 
+Designed the experience around longer, more engaging browsing sessions 
+Outcome
+Client felt the redesigned website represented the brand more authentically 
+Created a more cohesive experience between brand and ecommerce store 
+Customers spent more time exploring the website based on traffic data shared by the client 
+Improved the overall experience of discovering and browsing products 
+
+Escape — Turning Travel Data into a Scalable Destination Experience
+ClientTravel and destination brand helping customers discover and explore travel locations.
+ChallengeThe business had a large amount of destination information that needed to be presented in a way that was easy for customers to browse while remaining manageable as the number of destinations grew.
+ApproachDesigned the website around structured destination discovery and created a system that could turn spreadsheet-based information into organized website content.
+Solution
+Designed the website from scratch 
+Created destination discovery and information pages 
+Translated Excel-based destination data into structured web content 
+Developed a scalable content structure for multiple destinations 
+Designed navigation around travel discovery 
+Applied SEO-focused page structures and content hierarchy 
+Outcome
+Gave the brand a dedicated digital home for customers to discover its services 
+Created a scalable system for managing destination information 
+Improved the presentation and organization of travel content 
+Increased search visibility through improved SEO implementation 
+Helped the brand establish a more credible and polished digital presence 
+
+Dexo — Bringing a Creative Agency's Vision to Life Through Brand & Web
+ClientDesign and development agency looking to establish a stronger identity and digital presence.
+ChallengeThe agency was starting without a complete visual identity or website that could communicate the quality and direction of its work.
+ApproachBuilt the brand from the ground up, translating the agency's vision into a cohesive identity and website that could position it as a modern creative and technology-focused studio.
+Solution
+Designed the logo from scratch 
+Developed the complete brand identity 
+Defined typography, colors, and visual direction 
+Designed the agency website 
+Created a visual system for presenting services and capabilities 
+Connected the brand identity and website into one cohesive experience 
+Outcome
+Gave the agency a complete visual identity from the ground up 
+Created a sleek website that better represented the company's capabilities 
+Turned the client's vision into a tangible digital experience 
+Established a stronger foundation for presenting the agency to prospective clients

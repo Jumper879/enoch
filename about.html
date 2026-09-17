@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Enoch's Portfolio</title>
+  <meta name="description" content="About Enoch — Brand and web designer designing strategic brand identities, marketing visuals, and user-focused websites.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="assets/images/dexo-icon.png">
+</head>
+<body>
+
+  <!-- =========================================================================
+       1. CANVAS RULER BAR & LIVE CLOCK
+       ========================================================================= -->
+  <div class="canvas-ruler-wrap" aria-hidden="true">
+    <div class="canvas-ruler-ticks" id="rulerTicks"></div>
+  </div>
+
+  <!-- =========================================================================
+       2. TOP NAVIGATION HEADER
+       ========================================================================= -->
+  <header class="top-header-bar">
+    <div class="nav-left-group">
+      <!-- Dexo Logo (Icon & Wordmark) -->
+      <a href="index.html" class="dexo-logo-link" aria-label="Enoch's Portfolio Home">
+        <img src="assets/images/dexo-logo-icon.png" alt="Dexo Icon" class="dexo-icon-img">
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links-row">
+          <li><a href="index.html" class="nav-tab-item"><span class="tab-icon">🏠</span> HOME</a></li>
+          <li><a href="about.html" class="nav-tab-item active"><span class="tab-icon">✱</span> ABOUT</a></li>
+          <li><a href="case-study.html" class="nav-tab-item"><span class="tab-icon">🗂</span> CASE STUDIES</a></li>
+          <li><a href="services.html" class="nav-tab-item"><span class="tab-icon">💼</span> SERVICES</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="nav-right-group">
+      <a href="mailto:dara.daodu@gmail.com" class="mini-badge-btn em" title="Email Enoch">EM</a>
+      <a href="tel:+2347067511942" class="mini-badge-btn ph" title="Call Enoch">PH</a>
+
+      <a href="contact.html" class="nav-tab-contact">
+        <span style="color: var(--token-pink);">♥</span> CONTACT
+      </a>
+
+      <div class="floating-cursor-badge" aria-hidden="true">
+        <svg class="cursor-arrow-svg" viewBox="0 0 16 16" fill="none">
+          <path d="M0 0L6 14L8.5 8.5L14 6L0 0Z" fill="#36c5f0" stroke="#111212" stroke-width="1.5" stroke-linejoin="round"/>
+        </svg>
+        <a href="mailto:dara.daodu@gmail.com" class="cursor-tag-pill" style="text-decoration: none; color: inherit;">dara.daodu@gmail.com</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       3. ABOUT HERO & MAIN BIO
+       ========================================================================= -->
+  <main>
+    <section class="container" style="padding: 60px 0 40px;">
+      
+      <div style="text-align: center; margin-bottom: 40px;">
+        <span class="handwritten-intro-note" style="font-size: 32px; color: var(--token-cyan);">about me!</span>
+        <br>
+        <div class="figma-selection" style="padding: 10px 48px; margin-top: 10px;">
+          <div class="figma-handle handle-tl"></div>
+          <div class="figma-handle handle-tc"></div>
+          <div class="figma-handle handle-tr"></div>
+          <div class="figma-handle handle-ml"></div>
+          <div class="figma-handle handle-mr"></div>
+          <div class="figma-handle handle-bl"></div>
+          <div class="figma-handle handle-bc"></div>
+          <div class="figma-handle handle-br"></div>
+          <h1 class="leave-a-note-title">About</h1>
+        </div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 48px; align-items: center;">
+        <div>
+          <h2 style="font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 700; line-height: 1.2; letter-spacing: -0.025em; margin-bottom: 20px;">
+            Daodu Dara E. (Enoch)<br>
+            <span style="font-size: 0.65em; color: var(--token-gray-sub); font-weight: 500;">Brand &amp; Web Designer</span>
+          </h2>
+          <p style="font-size: 1.25rem; font-weight: 500; line-height: 1.55; color: var(--token-dark);">
+            Brand and web designer with 3+ years of experience designing strategic brand identities, marketing visuals, and user-focused websites for startups, agencies, and founders.
+          </p>
+          <p style="font-size: 1.05rem; color: #4a4b4b; line-height: 1.6; margin-top: 16px;">
+            When I'm not designing, you'll find me thinking about why some interfaces feel intuitive and others make you want to throw your laptop out a window. Usually with good music and coffee.
+          </p>
+
+          <div style="display: flex; gap: 12px; margin-top: 28px; flex-wrap: wrap;">
+            <span class="meta-sticker green">Interaction Design</span>
+            <span class="meta-sticker yellow">Brand Systems</span>
+            <span class="meta-sticker pink">Framer Translation</span>
+            <span class="meta-sticker cyan">Creative Direction</span>
+          </div>
+        </div>
+
+        <div>
+          <div class="polaroid-frame" style="transform: rotate(2deg); padding: 14px 14px 20px;">
+            <div class="polaroid-img-box" style="aspect-ratio: 4/3; height: 320px;">
+              <img src="assets/images/enoch-photo.jpg" alt="Daodu Dara E. (Enoch)" style="object-position: center 20%;">
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px; font-family: var(--font-mono); font-size: 12px; color: var(--token-gray-sub);">
+              <span>Chicago / Lagos</span>
+              <span>Remote Worldwide</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- =========================================================================
+         4. DESIGN PHILOSOPHY
+         ========================================================================= -->
+    <section class="container" style="padding: 60px 0;">
+      <div style="text-align: center; margin-bottom: 36px;">
+        <span class="handwritten-intro-note" style="font-size: 28px; color: var(--token-amber);">how I think</span>
+        <h2 style="font-family: var(--font-flux); font-weight: 1000; font-size: clamp(2.5rem, 6vw, 4.5rem); letter-spacing: -0.02em; text-transform: uppercase;">
+          DESIGN PHILOSOPHY
+        </h2>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+        <div class="folder-project-card" style="padding: 28px;">
+          <span style="font-family: var(--font-mono); font-size: 12px; color: var(--token-cyan); font-weight: 700;">(01)</span>
+          <h3 style="font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; margin: 8px 0 12px;">Research Before Design</h3>
+          <p style="font-size: 1rem; color: #4a4b4b; line-height: 1.55;">
+            Every project starts with research—understanding the market, competitors, and target audience. This ensures design decisions are intentional and grounded in context, not assumptions.
+          </p>
+        </div>
+
+        <div class="folder-project-card" style="padding: 28px;">
+          <span style="font-family: var(--font-mono); font-size: 12px; color: var(--token-amber); font-weight: 700;">(02)</span>
+          <h3 style="font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; margin: 8px 0 12px;">Clarifying What Clients Can't Express</h3>
+          <p style="font-size: 1rem; color: #4a4b4b; line-height: 1.55;">
+            Many clients struggle to articulate what they truly need. I help uncover the real problem through analysis of past data, timelines, user behavior, and brand goals—then design solutions around that clarity.
+          </p>
+        </div>
+
+        <div class="folder-project-card" style="padding: 28px;">
+          <span style="font-family: var(--font-mono); font-size: 12px; color: var(--token-green); font-weight: 700;">(03)</span>
+          <h3 style="font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; margin: 8px 0 12px;">User-First Thinking</h3>
+          <p style="font-size: 1rem; color: #4a4b4b; line-height: 1.55;">
+            Aesthetics matter, but usability and experience come first. I design with the end user in mind, ensuring clarity, ease of interaction, and emotional connection before visual polish.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         4.5. MY APPROACH (RESULT & GROWTH)
+         ========================================================================= -->
+    <section class="container" id="my-approach" style="padding: 60px 0;">
+      <div style="text-align: center; margin-bottom: 36px;">
+        <span class="handwritten-intro-note" style="font-size: 28px; color: var(--token-cyan);">how I work</span>
+        <h2 style="font-family: var(--font-flux); font-weight: 1000; font-size: clamp(2.5rem, 6vw, 4.5rem); letter-spacing: -0.02em; text-transform: uppercase;">
+          MY APPROACH
+        </h2>
+      </div>
+
+      <!-- Approach Canvas Card -->
+      <div class="approach-canvas-card">
+        <!-- Top Folder Tab Badge -->
+        <div class="approach-folder-tab">
+          <span style="color: var(--token-cyan);">❖</span> APPROACH // 02
+        </div>
+
+        <div class="approach-board-grid">
+          
+          <!-- Item 1: Stat Circle 1 (Top Left) -->
+          <div class="approach-item-circle-left">
+            <div class="approach-stat-circle">
+              <span class="approach-circle-plus">+</span>
+              <span class="approach-circle-val">120%</span>
+              <span class="approach-circle-label">Engagement Rate</span>
+            </div>
+          </div>
+
+          <!-- Item 2: Main Display Title (Center Top) -->
+          <div class="approach-item-title">
+            <h3 class="approach-display-title">
+              Result <span class="ampersand">&amp;</span><br>Growth
+            </h3>
+          </div>
+
+          <!-- Item 3: Stat Circle 3 (Top Right) -->
+          <div class="approach-item-circle-right">
+            <div class="approach-stat-circle">
+              <span class="approach-circle-plus">+</span>
+              <span class="approach-circle-val">60%</span>
+              <span class="approach-circle-label">Reach Increase</span>
+            </div>
+          </div>
+
+          <!-- Item 4: Summary Narrative Text (Bottom Left) -->
+          <div class="approach-item-text">
+            <p class="approach-summary-p">
+              Consistent strategy and audience-focused content helped improve overall engagement and visibility.
+            </p>
+          </div>
+
+          <!-- Item 5: Stat Circle 2 (Center Bottom) -->
+          <div class="approach-item-circle-center">
+            <div class="approach-stat-circle">
+              <span class="approach-circle-plus">+</span>
+              <span class="approach-circle-val">80%</span>
+              <span class="approach-circle-label">Follower Growth</span>
+            </div>
+          </div>
+
+          <!-- Item 6: Key Metrics Dark Box (Bottom Right) -->
+          <div class="approach-item-metrics">
+            <div class="approach-dark-card">
+              <div class="approach-dark-card-header">
+                <span class="approach-dark-card-title">Key Metrics</span>
+                <span class="approach-dark-card-check" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </span>
+              </div>
+              <ul class="approach-metrics-list">
+                <li class="approach-metric-item">
+                  <span class="approach-metric-bullet">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="12" cy="12" r="9"></circle>
+                      <polyline points="15 9 10 14 8 12"></polyline>
+                    </svg>
+                  </span>
+                  <span>3 campaigns managed</span>
+                </li>
+                <li class="approach-metric-item">
+                  <span class="approach-metric-bullet">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="12" cy="12" r="9"></circle>
+                      <polyline points="15 9 10 14 8 12"></polyline>
+                    </svg>
+                  </span>
+                  <span>6 months growth</span>
+                </li>
+                <li class="approach-metric-item">
+                  <span class="approach-metric-bullet">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="12" cy="12" r="9"></circle>
+                      <polyline points="15 9 10 14 8 12"></polyline>
+                    </svg>
+                  </span>
+                  <span>Multi-platform optimization</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         5. CAREER TIMELINE
+         ========================================================================= -->
+    <section class="container" style="padding: 60px 0 80px;">
+      <div style="text-align: center; margin-bottom: 36px;">
+        <span class="handwritten-intro-note" style="font-size: 28px; color: var(--token-pink);">my path</span>
+        <h2 style="font-family: var(--font-flux); font-weight: 1000; font-size: clamp(2.5rem, 6vw, 4.5rem); letter-spacing: -0.02em; text-transform: uppercase;">
+          EXPERIENCE
+        </h2>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 20px; max-width: 880px; margin: 0 auto;">
+        
+        <div class="folder-project-card" style="padding: 24px 32px; display: grid; grid-template-columns: 240px 1fr; gap: 24px; align-items: center;">
+          <div>
+            <h4 style="font-family: var(--font-display); font-size: 1.25rem; font-weight: 700;">Founder &amp; Lead</h4>
+            <div style="font-family: var(--font-mono); font-size: 12px; color: var(--token-gray-sub);">Dexo Agency</div>
+            <div style="font-family: var(--font-mono); font-size: 11px; color: var(--token-green); font-weight: 600; margin-top: 4px;">2025 – PRESENT</div>
+          </div>
+          <div style="font-size: 1rem; color: #4a4b4b; line-height: 1.5;">
+            Working directly with early-stage startups, SaaS founders, and venture-backed teams to build high-converting landing pages, brand identity systems, and product UI workflows.
+          </div>
+        </div>
+
+        <div class="folder-project-card" style="padding: 24px 32px; display: grid; grid-template-columns: 240px 1fr; gap: 24px; align-items: center;">
+          <div>
+            <h4 style="font-family: var(--font-display); font-size: 1.25rem; font-weight: 700;">Product &amp; UI Designer</h4>
+            <div style="font-family: var(--font-mono); font-size: 12px; color: var(--token-gray-sub);">Meridian Health</div>
+            <div style="font-family: var(--font-mono); font-size: 11px; color: var(--token-cyan); font-weight: 600; margin-top: 4px;">SEP 2025 – PRESENT</div>
+          </div>
+          <div style="font-size: 1rem; color: #4a4b4b; line-height: 1.5;">
+            Redesigned the primary clinical intake documentation workflow, reducing therapist completion time by 50% and supporting over 1,200 concurrent therapy sessions daily.
+          </div>
+        </div>
+
+        <div class="folder-project-card" style="padding: 24px 32px; display: grid; grid-template-columns: 240px 1fr; gap: 24px; align-items: center;">
+          <div>
+            <h4 style="font-family: var(--font-display); font-size: 1.25rem; font-weight: 700;">Brand &amp; Web Designer</h4>
+            <div style="font-family: var(--font-mono); font-size: 12px; color: var(--token-gray-sub);">Ewamaka Jewelry</div>
+            <div style="font-family: var(--font-mono); font-size: 11px; color: var(--token-amber); font-weight: 600; margin-top: 4px;">2024 – 2025</div>
+          </div>
+          <div style="font-size: 1rem; color: #4a4b4b; line-height: 1.5;">
+            Spearheaded visual rebranding, digital storefront architecture, custom packaging guidelines, and high-conversion editorial campaigns resulting in a 42% sales lift.
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         5.5. PURPOSE STATEMENT & FLOATING DESIGN TOOLS
+         ========================================================================= -->
+    <section class="container" id="purpose-statement" style="padding: 100px 0 120px;">
+      <div class="purpose-statement-wrap">
+        
+        <!-- Floating Tool 1: Photoshop (Top Left) -->
+        <div class="floating-tool-sticker tool-ps" style="--rot: -10deg;" title="Adobe Photoshop">
+          <img src="assets/images/tool-photoshop.svg" alt="Adobe Photoshop">
+        </div>
+
+        <!-- Floating Tool 2: Figma (Mid Top Over 'people') -->
+        <div class="floating-tool-sticker tool-figma" style="--rot: 12deg;" title="Figma">
+          <img src="assets/images/tool-figma.svg" alt="Figma">
+        </div>
+
+        <!-- Floating Tool 3: Illustrator (Top Right Over 'need') -->
+        <div class="floating-tool-sticker tool-ai" style="--rot: -8deg;" title="Adobe Illustrator">
+          <img src="assets/images/tool-illustrator.svg" alt="Adobe Illustrator">
+        </div>
+
+        <!-- Floating Tool 4: Blender (Mid Left Over 'solve') -->
+        <div class="floating-tool-sticker tool-blender" style="--rot: -14deg;" title="Blender 3D">
+          <img src="assets/images/tool-blender.svg" alt="Blender">
+        </div>
+
+        <!-- Floating Tool 5: Framer (Center Over 'problems') -->
+        <div class="floating-tool-sticker tool-framer" style="--rot: 10deg;" title="Framer">
+          <img src="assets/images/tool-framer.svg" alt="Framer">
+        </div>
+
+        <!-- Floating Tool 6: WordPress (Bottom Right Over 'purpose') -->
+        <div class="floating-tool-sticker tool-wp" style="--rot: -6deg;" title="WordPress">
+          <img src="assets/images/tool-wordpress.svg" alt="WordPress">
+        </div>
+
+        <h2 class="purpose-statement-text">
+          I design around <br>
+          <span class="figma-highlight-phrase">
+            <span class="figma-corner-handle handle-tl"></span>
+            <span class="figma-corner-handle handle-tr"></span>
+            <span class="figma-corner-handle handle-bl"></span>
+            <span class="figma-corner-handle handle-br"></span>
+            what people need
+          </span> <br>
+          and solve problems <br>
+          with purpose.
+        </h2>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       6. FOOTER: GREEN MASCOT + LET'S TALK + GIANT CONTACT CARD
+       ========================================================================= -->
+  <footer class="nudge-footer-section">
+    <div class="container">
+      <div class="footer-top-grid">
+        
+        <div>
+          <div class="footer-mascot-row">
+            <div class="green-blob-character">
+              <div class="blob-eyes">
+                <div class="blob-pill-eye"></div>
+                <div class="blob-pill-eye"></div>
+              </div>
+            </div>
+            <h2 class="lets-talk-flux-title">LET'S<br>TALK</h2>
+          </div>
+
+          <p class="footer-bio-desc">
+            I'm most energized by projects where I can dig into complex problems, collaborate with smart people, and ship things that genuinely improve someone's day.
+          </p>
+
+          <p style="font-family: var(--font-mono); font-size: 13px; color: var(--token-gray-sub); margin-top: 14px;">
+            Open to contract work, full-time roles, and interesting conversations about hard design problems.
+          </p>
+        </div>
+
+        <div>
+          <div class="lightning-contact-card">
+            <a href="contact.html" class="cyan-contact-banner-btn">
+              <span>CONTACT</span>
+              <div class="diamond-badge-icon">❖</div>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom-strip">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <img src="assets/images/dexo-icon.png" alt="Dexo" style="width: 20px; height: 20px; border-radius: 4px;">
+          <span>© all rights reserved for enoch · dexo</span>
+        </div>
+        <div class="footer-social-links">
+          <a href="https://linkedin.com/in/enochd/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://behance.net/daradaodu" target="_blank" rel="noopener">Behance</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

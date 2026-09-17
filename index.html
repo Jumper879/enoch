@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enoch's Portfolio</title>
+  <meta name="description" content="Enoch's portfolio — Brand identity, product design, and web experiences built for high-growth businesses.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="assets/images/dexo-icon.png">
+</head>
+<body>
+
+  <!-- =========================================================================
+       1. CANVAS RULER BAR (Top edge ruler)
+       ========================================================================= -->
+  <div class="canvas-ruler-wrap" aria-hidden="true">
+    <div class="canvas-ruler-ticks" id="rulerTicks"></div>
+  </div>
+
+  <!-- =========================================================================
+       2. TOP NAVIGATION HEADER
+       ========================================================================= -->
+  <header class="top-header-bar">
+    <div class="nav-left-group">
+      <!-- Dexo Logo (Icon & Wordmark) -->
+      <a href="index.html" class="dexo-logo-link" aria-label="Enoch's Portfolio Home">
+        <img src="assets/images/dexo-logo-icon.png" alt="Dexo Icon" class="dexo-icon-img">
+      </a>
+
+      <!-- Navigation Tabs -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links-row">
+          <li><a href="index.html" class="nav-tab-item active"><span class="tab-icon">🏠</span> HOME</a></li>
+          <li><a href="about.html" class="nav-tab-item"><span class="tab-icon">✱</span> ABOUT</a></li>
+          <li><a href="case-study.html" class="nav-tab-item"><span class="tab-icon">🗂</span> CASE STUDIES</a></li>
+          <li><a href="services.html" class="nav-tab-item"><span class="tab-icon">💼</span> SERVICES</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="nav-right-group">
+      <!-- Quick badges -->
+      <a href="mailto:dara.daodu@gmail.com" class="mini-badge-btn em" title="Email Enoch">EM</a>
+      <a href="tel:+2347067511942" class="mini-badge-btn ph" title="Call Enoch">PH</a>
+
+      <!-- Contact Pill -->
+      <a href="contact.html" class="nav-tab-contact">
+        <span style="color: var(--token-pink);">♥</span> CONTACT
+      </a>
+
+      <!-- Multiplayer Cursor Tooltip Badge -->
+      <div class="floating-cursor-badge" aria-hidden="true">
+        <svg class="cursor-arrow-svg" viewBox="0 0 16 16" fill="none">
+          <path d="M0 0L6 14L8.5 8.5L14 6L0 0Z" fill="#36c5f0" stroke="#111212" stroke-width="1.5" stroke-linejoin="round"/>
+        </svg>
+        <a href="mailto:dara.daodu@gmail.com" class="cursor-tag-pill" style="text-decoration: none; color: inherit;">dara.daodu@gmail.com</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       3. HERO SECTION (Exact Screenshot 1)
+       ========================================================================= -->
+  <main>
+    <section class="hero-nudge-section">
+      <div class="container">
+        
+        <!-- Handwritten greeting note -->
+        <div>
+          <span class="handwritten-intro-note">my name is</span>
+        </div>
+
+        <!-- Figma Selection Bounding Box with Handles & Badges -->
+        <div class="figma-selection">
+          <!-- 8 Selection Handles -->
+          <div class="figma-handle handle-tl"></div>
+          <div class="figma-handle handle-tc"></div>
+          <div class="figma-handle handle-tr"></div>
+          <div class="figma-handle handle-ml"></div>
+          <div class="figma-handle handle-mr"></div>
+          <div class="figma-handle handle-bl"></div>
+          <div class="figma-handle handle-bc"></div>
+          <div class="figma-handle handle-br"></div>
+
+          <!-- Attached Rotated Badges -->
+          <div class="box-badge-left">Head at Dexo Agency</div>
+          <div class="box-badge-right">Remote Contract Freelancer</div>
+
+          <!-- Giant Display Name in Flux Variable -->
+          <h1 class="hero-flux-display">ENOCH</h1>
+        </div>
+
+        <!-- Enoch Attribution & Subtitle -->
+        <div style="margin-top: 6px;">
+          <span style="font-family: var(--font-mono); font-size: 13px; color: var(--token-gray-sub); background: rgba(0,0,0,0.04); padding: 4px 12px; border-radius: 999px;">
+            Daodu Dara E. (Enoch) · Brand &amp; Web Designer
+          </span>
+        </div>
+
+        <!-- Availability Status Pill -->
+        <div class="hero-status-sub">
+          <span class="cyan-pulse-dot"></span>
+          <span>AVAILABLE FOR THOUGHTFUL PROJECTS</span>
+        </div>
+
+        <!-- Designer Role Badges in a straight line -->
+        <div class="hero-stickers-row">
+          <span class="tape-sticker-pill tape-sticker-yellow">
+            PRODUCT DESIGNER <span>↗</span>
+          </span>
+          <span class="tape-sticker-pill tape-sticker-cyan">
+            UI DESIGNER <span>↗</span>
+          </span>
+          <span class="tape-sticker-pill tape-sticker-green">
+            WEB DESIGNER <span>↗</span>
+          </span>
+          <span class="tape-sticker-pill tape-sticker-pink">
+            BRAND DESIGNER <span>↗</span>
+          </span>
+        </div>
+
+        <!-- Hero Statement with Inline Graphics -->
+        <p class="hero-statement-main">
+          I design <img src="assets/images/sticker-sphere.png" alt="sphere" class="inline-sticker-img"> outstanding<br>
+          digital products <img src="assets/images/flower-pink.svg" alt="flower" class="inline-sticker-img" style="height: 0.95em;">.
+        </p>
+
+        <!-- CTA Button in Figma Selection Box -->
+        <div class="hero-cta-wrap">
+          <div class="btn-selection-box">
+            <div class="figma-handle handle-tl"></div>
+            <div class="figma-handle handle-tr"></div>
+            <div class="figma-handle handle-bl"></div>
+            <div class="figma-handle handle-br"></div>
+            <a href="contact.html" class="btn-nudge-black">
+              <span class="btn-cyan-arrows">&gt;&gt;</span>
+              <span>CONTACT ME</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         4. CURVED DIVIDER & ABOUT TEASER (Exact Screenshot 1)
+         ========================================================================= -->
+    <section class="about-teaser-section">
+      <div class="container">
+        
+        <!-- Curved Hand-Drawn Arc -->
+        <div class="curved-divider-wrap">
+          <img src="assets/images/curve-divider.svg" alt="hand drawn curve" class="curve-divider-img">
+          <div class="curved-arrow-note">about me! ↘</div>
+        </div>
+
+        <!-- Selection Box: what's up -->
+        <div class="whats-up-selection-box">
+          <div class="figma-handle handle-tl"></div>
+          <div class="figma-handle handle-tr"></div>
+          <div class="figma-handle handle-bl"></div>
+          <div class="figma-handle handle-br"></div>
+          what's up
+        </div>
+
+        <!-- Teaser Content Grid: Left Polaroid | Center Text | Right Polaroid -->
+        <div class="about-teaser-grid">
+          
+          <!-- Left Polaroid: myself Enoch portrait -->
+          <div class="polaroid-frame polaroid-tilt-left">
+            <div class="polaroid-img-box">
+              <img src="assets/images/enoch-photo.jpg" alt="Enoch - myself" style="object-position: center 20%;">
+            </div>
+            <div class="polaroid-hand-label">myself</div>
+          </div>
+
+          <!-- Center Statement with Inline Emojis/Stickers -->
+          <div>
+            <p class="about-statement-bold">
+              I'm Enoch <span class="inline-avatar-badge"><span class="you-tag">YOU</span><img src="assets/images/enoch-photo.jpg" alt="Enoch" class="inline-sticker-img" style="border-radius: 6px; object-fit: cover; object-position: center 20%; width: 34px; height: 34px; border: 1.5px solid var(--token-dark); margin: 0; box-shadow: 1.5px 2px 0 var(--token-dark);"></span> a product designer who gets excited <img src="assets/images/sticker-sparkle.png" alt="sparkle" class="inline-sticker-img"> about making complicated things simple <img src="assets/images/sticker-accordion.png" alt="accordion" class="inline-sticker-img">.
+            </p>
+          </div>
+
+          <!-- Right Polaroid: my workspace -->
+          <div class="polaroid-frame polaroid-tilt-right">
+            <div class="polaroid-img-box">
+              <img src="assets/images/enoch-workspace.jpg" alt="my workspace" style="object-position: center center;">
+            </div>
+            <div class="polaroid-hand-label">my workspace</div>
+          </div>
+
+        </div>
+
+        <!-- 2x2 Category Pills with Graphic Badges -->
+        <div class="category-pills-2x2">
+          <div class="cat-pill yellow">
+            <span>Interaction Design</span>
+            <div class="cat-pill-icon" style="background: #522e29;">
+              <span style="color: #ecb22e; font-size: 14px;">❖</span>
+            </div>
+          </div>
+
+          <div class="cat-pill green">
+            <span>Prototyping</span>
+            <div class="cat-pill-icon" style="background: #198754;">
+              <span style="color: #36c5f0; font-size: 14px;">✹</span>
+            </div>
+          </div>
+
+          <div class="cat-pill pink">
+            <span>User Research</span>
+            <div class="cat-pill-icon" style="background: #ffffff;">
+              <span style="color: #e01e5a; font-size: 14px;">◉</span>
+            </div>
+          </div>
+
+          <div class="cat-pill cyan">
+            <span>Motion Design</span>
+            <div class="cat-pill-icon" style="background: #111212;">
+              <span style="color: #36c5f0; font-size: 14px;">⁖</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         5. FEATURED PROJECTS (Exact Screenshot 2 — Folder Tab Cards!)
+         ========================================================================= -->
+    <section class="projects-showcase-section">
+      <div class="container">
+        
+        <div style="text-align: center; margin-bottom: 24px;">
+          <span class="handwritten-intro-note" style="font-size: 32px; color: var(--token-dark);">explore my work!</span>
+          <h2 class="featured-works-title">FEATURED WORKS</h2>
+        </div>
+
+        <div class="stacked-folder-list" id="stackedFolderList">
+
+          <!-- PROJECT 01: The Source Collective -->
+          <article class="stacked-tab-folder-card card-theme-dark" id="projectFolder1">
+            <div class="stacked-folder-header-tabs">
+              <div class="folder-tab-tab tab-slot-1" data-project-target="projectFolder1" title="View Project 01">
+                <svg class="tab-step-icon" viewBox="0 0 13 13" fill="currentColor"><rect x="0" y="8" width="3.5" height="5" rx="0.5"/><rect x="4.5" y="4" width="3.5" height="9" rx="0.5"/><rect x="9" y="0" width="3.5" height="13" rx="0.5"/></svg>
+                <span>PROJECT 01</span>
+              </div>
+            </div>
+
+            <div class="stacked-folder-body-grid">
+              <div>
+                <div class="folder-card-date">
+                  <span>●</span>
+                  <span>MAR 3, 2026</span>
+                </div>
+                <h3 class="folder-card-title">The Source Collective</h3>
+                <p class="folder-card-desc">
+                  Building a luxury brand from strategy to identity for high-net-worth personal shopping and executive services. Conducted buyer-persona and competitor research before developing the positioning, guidelines, and visual language that helped secure their first paying client.
+                </p>
+                <div>
+                  <a href="case-study-detail.html?project=the-source-collective" class="view-project-link">
+                    <span>Read Full Case Study</span>
+                    <span style="color: var(--token-cyan);">↗</span>
+                  </a>
+                </div>
+              </div>
+
+              <div>
+                <div class="taped-media-box">
+                  <div class="corner-tape-strip tape-tl"></div>
+                  <div class="corner-tape-strip tape-tr"></div>
+                  <div class="corner-tape-strip tape-bl"></div>
+                  <div class="corner-tape-strip tape-br"></div>
+                  <img src="assets/images/the source collective hero.PNG" alt="The Source Collective Brand Showcase" class="taped-media-img" loading="lazy" decoding="async">
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 02: Huge -->
+          <article class="stacked-tab-folder-card card-theme-yellow" id="projectFolder2">
+            <div class="stacked-folder-header-tabs">
+              <div class="folder-tab-tab tab-slot-2" data-project-target="projectFolder2" title="View Project 02">
+                <svg class="tab-step-icon" viewBox="0 0 13 13" fill="currentColor"><rect x="0" y="8" width="3.5" height="5" rx="0.5"/><rect x="4.5" y="4" width="3.5" height="9" rx="0.5"/><rect x="9" y="0" width="3.5" height="13" rx="0.5"/></svg>
+                <span>PROJECT 02</span>
+              </div>
+            </div>
+
+            <div class="stacked-folder-body-grid">
+              <div>
+                <div class="folder-card-date">
+                  <span>●</span>
+                  <span>JAN 3, 2026</span>
+                </div>
+                <h3 class="folder-card-title">Huge</h3>
+                <p class="folder-card-desc">
+                  Rebuilding an ecommerce experience around the brand for a modern beauty and skincare line. Reworked the homepage, store navigation, and product discovery to foster authentic brand connection and significantly increase time spent on site.
+                </p>
+                <div>
+                  <a href="case-study-detail.html?project=huge" class="view-project-link">
+                    <span>Read Full Case Study</span>
+                    <span>↗</span>
+                  </a>
+                </div>
+              </div>
+
+              <div>
+                <div class="taped-media-box">
+                  <div class="corner-tape-strip tape-tl"></div>
+                  <div class="corner-tape-strip tape-tr"></div>
+                  <div class="corner-tape-strip tape-bl"></div>
+                  <div class="corner-tape-strip tape-br"></div>
+                  <img src="assets/images/Huge hero.png" alt="Huge Skincare Ecommerce Store" class="taped-media-img" loading="lazy" decoding="async">
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 03: Vision Pro -->
+          <article class="stacked-tab-folder-card card-theme-dark" id="projectFolder3">
+            <div class="stacked-folder-header-tabs">
+              <div class="folder-tab-tab tab-slot-3" data-project-target="projectFolder3" title="View Project 03">
+                <svg class="tab-step-icon" viewBox="0 0 13 13" fill="currentColor"><rect x="0" y="8" width="3.5" height="5" rx="0.5"/><rect x="4.5" y="4" width="3.5" height="9" rx="0.5"/><rect x="9" y="0" width="3.5" height="13" rx="0.5"/></svg>
+                <span>PROJECT 03</span>
+              </div>
+            </div>
+
+            <div class="stacked-folder-body-grid">
+              <div>
+                <div class="folder-card-date">
+                  <span>●</span>
+                  <span>FEB 18, 2026</span>
+                </div>
+                <h3 class="folder-card-title">Vision Pro</h3>
+                <p class="folder-card-desc">
+                  Designing a futuristic, glanceable interface for smart glasses technology. Created high-priority real-time information hierarchy and intuitive wearable interaction patterns that present complex product data simply without visual noise.
+                </p>
+                <div>
+                  <a href="case-study-detail.html?project=visionpro" class="view-project-link">
+                    <span>Read Full Case Study</span>
+                    <span style="color: var(--token-cyan);">↗</span>
+                  </a>
+                </div>
+              </div>
+
+              <div>
+                <div class="taped-media-box">
+                  <div class="corner-tape-strip tape-tl"></div>
+                  <div class="corner-tape-strip tape-tr"></div>
+                  <div class="corner-tape-strip tape-bl"></div>
+                  <div class="corner-tape-strip tape-br"></div>
+                  <img src="assets/images/Visionpro hero.png" alt="Vision Pro Smart Glasses HUD" class="taped-media-img" loading="lazy" decoding="async">
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 04: DigiSafes -->
+          <article class="stacked-tab-folder-card card-theme-yellow" id="projectFolder4">
+            <div class="stacked-folder-header-tabs">
+              <div class="folder-tab-tab tab-slot-4" data-project-target="projectFolder4" title="View Project 04">
+                <svg class="tab-step-icon" viewBox="0 0 13 13" fill="currentColor"><rect x="0" y="8" width="3.5" height="5" rx="0.5"/><rect x="4.5" y="4" width="3.5" height="9" rx="0.5"/><rect x="9" y="0" width="3.5" height="13" rx="0.5"/></svg>
+                <span>PROJECT 04</span>
+              </div>
+            </div>
+
+            <div class="stacked-folder-body-grid">
+              <div>
+                <div class="folder-card-date">
+                  <span>●</span>
+                  <span>NOV 12, 2025</span>
+                </div>
+                <h3 class="folder-card-title">DigiSafes</h3>
+                <p class="folder-card-desc">
+                  Turning a crypto product into a trust-building lead generation experience. Combined product education, visual storytelling, and conversion-focused content hierarchy to make web3 technology accessible and generate qualified customer leads.
+                </p>
+                <div>
+                  <a href="case-study-detail.html?project=digisafes" class="view-project-link">
+                    <span>Read Full Case Study</span>
+                    <span>↗</span>
+                  </a>
+                </div>
+              </div>
+
+              <div>
+                <div class="taped-media-box">
+                  <div class="corner-tape-strip tape-tl"></div>
+                  <div class="corner-tape-strip tape-tr"></div>
+                  <div class="corner-tape-strip tape-bl"></div>
+                  <div class="corner-tape-strip tape-br"></div>
+                  <img src="assets/images/Digisafes hero.png" alt="DigiSafes Crypto Platform" class="taped-media-img" loading="lazy" decoding="async">
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       6. HOMEPAGE: LET'S TALK + STRIPED CONTACT BANNER (Exact Image 1: lets talk.png)
+       ========================================================================= -->
+  <footer class="nudge-footer-section" style="padding-top: 40px;">
+    <div class="container">
+      
+      <!-- Top: Let's Talk Section Above Contact -->
+      <section class="home-lets-talk-section">
+        <div class="home-mascot-talk-row">
+          <!-- 4-Lobed Mascot Character -->
+          <div class="mascot-clover-character">
+            <svg class="mascot-clover-svg" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M 52,22 
+                       C 74,12 88,32 90,52 
+                       C 92,32 106,12 128,22 
+                       C 158,34 168,66 148,90 
+                       C 168,114 158,146 128,158 
+                       C 106,168 92,148 90,128 
+                       C 88,148 74,168 52,158 
+                       C 22,146 12,114 32,90 
+                       C 12,66 22,34 52,22 Z" 
+                    fill="#2fbc81" stroke="#111212" stroke-width="4.5" stroke-linejoin="round"/>
+              <rect x="110" y="68" width="10" height="26" rx="5" fill="#111212" />
+              <rect x="127" y="68" width="10" height="26" rx="5" fill="#111212" />
+            </svg>
+          </div>
+
+          <!-- Talk Content -->
+          <div class="home-talk-content">
+            <h2 class="home-talk-title">LET'S<br>TALK</h2>
+            <p class="home-talk-desc">
+              I'm most energized by projects where I can dig into complex problems, collaborate with smart people, and ship things that genuinely improve someone's day.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Bottom: Overlapping Comment Box + Yellow/Brown Striped Contact Banner -->
+      <div class="home-contact-wrapper">
+        
+        <!-- Overlapping Comment Card -->
+        <div class="home-comment-card">
+          <div class="comment-card-header">Comment</div>
+          <div class="comment-card-user-row">
+            <img src="assets/images/enoch-photo.jpg" alt="Enoch" class="comment-card-avatar">
+            <div>
+              <div class="comment-card-author">Enoch</div>
+              <p class="comment-card-text">
+                I design around what people need and solve problems with purpose. Well researched and curated websites are the go to for your brand, send a message to get started!
+              </p>
+              <div class="comment-card-reaction">
+                <span>⚡</span>
+                <span>1</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Yellow & Dark Brown Diagonal Striped Banner -->
+        <div class="home-striped-contact-banner">
+          <a href="contact.html" class="home-banner-contact-btn">
+            <div class="btn-arrow-square">
+              <span class="arrow-icon-fastforward">&gt;&gt;</span>
+            </div>
+            <span class="btn-contact-text">CONTACT</span>
+            <div class="btn-arrow-square square-right">
+              <span class="arrow-icon-fastforward">&gt;&gt;</span>
+            </div>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Bottom Strip -->
+      <div class="footer-bottom-strip">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <img src="assets/images/dexo-icon.png" alt="Dexo" style="width: 20px; height: 20px; border-radius: 4px;">
+          <span>© all rights reserved for enoch · dexo</span>
+        </div>
+        <div class="footer-social-links">
+          <a href="https://linkedin.com/in/enochd/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://behance.net/daradaodu" target="_blank" rel="noopener">Behance</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

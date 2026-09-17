@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Source Collective — Case Study · Enoch's Portfolio</title>
+  <meta name="description" content="Detailed case study of The Source Collective luxury brand identity and strategic positioning by Enoch.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="assets/images/dexo-icon.png">
+</head>
+<body>
+
+  <!-- =========================================================================
+       1. CANVAS RULER BAR & LIVE CLOCK
+       ========================================================================= -->
+  <div class="canvas-ruler-wrap" aria-hidden="true">
+    <div class="canvas-ruler-ticks" id="rulerTicks"></div>
+  </div>
+
+  <!-- =========================================================================
+       2. TOP NAVIGATION HEADER
+       ========================================================================= -->
+  <header class="top-header-bar">
+    <div class="nav-left-group">
+      <!-- Dexo Logo (Icon & Wordmark) -->
+      <a href="index.html" class="dexo-logo-link" aria-label="Enoch's Portfolio Home">
+        <img src="assets/images/dexo-logo-icon.png" alt="Dexo Icon" class="dexo-icon-img">
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links-row">
+          <li><a href="index.html" class="nav-tab-item"><span class="tab-icon">🏠</span> HOME</a></li>
+          <li><a href="about.html" class="nav-tab-item"><span class="tab-icon">✱</span> ABOUT</a></li>
+          <li><a href="case-study.html" class="nav-tab-item active"><span class="tab-icon">🗂</span> CASE STUDIES</a></li>
+          <li><a href="services.html" class="nav-tab-item"><span class="tab-icon">💼</span> SERVICES</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="nav-right-group">
+      <a href="mailto:dara.daodu@gmail.com" class="mini-badge-btn em" title="Email Enoch">EM</a>
+      <a href="tel:+2347067511942" class="mini-badge-btn ph" title="Call Enoch">PH</a>
+
+      <a href="contact.html" class="nav-tab-contact">
+        <span style="color: var(--token-pink);">♥</span> CONTACT
+      </a>
+
+      <div class="floating-cursor-badge" aria-hidden="true">
+        <svg class="cursor-arrow-svg" viewBox="0 0 16 16" fill="none">
+          <path d="M0 0L6 14L8.5 8.5L14 6L0 0Z" fill="#36c5f0" stroke="#111212" stroke-width="1.5" stroke-linejoin="round"/>
+        </svg>
+        <a href="mailto:dara.daodu@gmail.com" class="cursor-tag-pill" style="text-decoration: none; color: inherit;">dara.daodu@gmail.com</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       3. CASE STUDY DETAIL CONTENT
+       ========================================================================= -->
+  <main class="container" style="padding: 70px 0 110px;">
+    
+    <!-- Back breadcrumb -->
+    <div style="margin-bottom: 24px;">
+      <a href="case-study.html" style="font-family: var(--font-mono); font-size: 13px; font-weight: 600; display: inline-flex; align-items: center; gap: 6px; color: var(--token-dark);">
+        <span>←</span> <span>All Selected Projects</span>
+      </a>
+    </div>
+
+    <!-- Title in Figma Selection Box -->
+    <div style="text-align: center; margin-bottom: 40px;">
+      <span class="handwritten-intro-note" id="projectIntroNote" style="font-size: 30px; color: var(--token-green);">luxury brand strategy</span>
+      <br>
+      <div class="figma-selection" style="padding: 10px 48px; margin-top: 10px;">
+        <div class="figma-handle handle-tl"></div>
+        <div class="figma-handle handle-tc"></div>
+        <div class="figma-handle handle-tr"></div>
+        <div class="figma-handle handle-ml"></div>
+        <div class="figma-handle handle-mr"></div>
+        <div class="figma-handle handle-bl"></div>
+        <div class="figma-handle handle-bc"></div>
+        <div class="figma-handle handle-br"></div>
+        <h1 class="leave-a-note-title" id="projectTitle" style="font-size: clamp(2.8rem, 6.5vw, 5.2rem);">The Source Collective</h1>
+      </div>
+
+      <p id="projectTagline" style="font-size: 1.35rem; font-weight: 500; color: #4a4b4b; max-width: 780px; margin: 20px auto 0; line-height: 1.5;">
+        Building a luxury brand from strategy to identity for high-net-worth personal shopping and executive services. Taking a compelling concept into an authoritative, client-winning brand system.
+      </p>
+
+      <!-- Metadata Stickers -->
+      <div class="metadata-stickers-grid" id="projectTags" style="justify-content: center; margin-top: 24px;">
+        <span class="meta-sticker green">Lead Brand Designer</span>
+        <span class="meta-sticker yellow">Luxury Strategy</span>
+        <span class="meta-sticker cyan">Client: HNWIs &amp; Executives</span>
+        <span class="meta-sticker pink">Brand Identity System</span>
+      </div>
+    </div>
+
+    <!-- Showcase Media (Unboxed Full-Width Presentation - No Box, No Restrictive Margins) -->
+    <div class="case-study-full-showcase">
+      <img id="projectShowcaseImg" src="assets/images/the source collective.PNG" alt="Project Showcase" class="case-study-unboxed-img">
+    </div>
+
+    <!-- Quantitative Metrics Strip -->
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 900px; margin: 0 auto 60px;">
+      <div class="folder-project-card" style="text-align: center; padding: 28px;">
+        <div id="stat1Val" style="font-family: var(--font-flux); font-weight: 1000; font-size: 3.4rem; line-height: 1; color: var(--token-dark);">1st</div>
+        <div id="stat1Label" style="font-family: var(--font-mono); font-size: 12px; color: var(--token-gray-sub); margin-top: 8px;">Paying Client Secured</div>
+      </div>
+
+      <div class="folder-project-card" style="text-align: center; padding: 28px;">
+        <div id="stat2Val" style="font-family: var(--font-flux); font-weight: 1000; font-size: 3.4rem; line-height: 1; color: var(--token-dark);">100%</div>
+        <div id="stat2Label" style="font-family: var(--font-mono); font-size: 12px; color: var(--token-gray-sub); margin-top: 8px;">Consistent Luxury Guidelines</div>
+      </div>
+
+      <div class="folder-project-card" style="text-align: center; padding: 28px;">
+        <div id="stat3Val" style="font-family: var(--font-flux); font-weight: 1000; font-size: 3.4rem; line-height: 1; color: var(--token-dark);">Scale</div>
+        <div id="stat3Label" style="font-family: var(--font-mono); font-size: 12px; color: var(--token-gray-sub); margin-top: 8px;">Product Manufacturing Foundation</div>
+      </div>
+    </div>
+
+    <!-- Story Breakdown -->
+    <div style="max-width: 820px; margin: 0 auto; display: flex; flex-direction: column; gap: 36px; font-size: 1.18rem; line-height: 1.7; color: #2b2b2b;">
+      <div>
+        <h2 style="font-family: var(--font-display); font-size: 2.2rem; font-weight: 800; letter-spacing: -0.025em; margin-bottom: 16px;">The Strategic Challenge</h2>
+        <p id="projectChallenge">
+          The business had a strong concept catering to high-net-worth individuals and busy executives seeking bespoke personal shopping and concierge sourcing. However, they lacked an established visual identity, brand guidelines, or cohesive positioning. Without a polished presentation, early client pitches and investor conversations were at risk.
+        </p>
+      </div>
+
+      <!-- Quote Box -->
+      <div class="folder-project-card" id="projectQuote" style="background: #fbfbfb; border-left: 6px solid var(--token-dark); padding: 24px 32px; font-style: italic; font-size: 1.25rem;">
+        "To win high-net-worth clients, the brand identity must whisper authority, discretion, and effortless precision from the very first impression."
+      </div>
+
+      <div>
+        <h2 style="font-family: var(--font-display); font-size: 2.2rem; font-weight: 800; letter-spacing: -0.025em; margin-bottom: 16px;">Audience-First Approach</h2>
+        <p id="projectApproach">
+          Rather than jumping straight to aesthetic styling, I started directly with buyer-persona and competitor research across the luxury concierge and private client sector. We mapped the expectations of time-poor executives who value trust, swift execution, and understated elegance.
+        </p>
+      </div>
+
+      <div>
+        <h2 style="font-family: var(--font-display); font-size: 2.2rem; font-weight: 800; letter-spacing: -0.025em; margin-bottom: 16px;">The Solution</h2>
+        <ul id="projectSolutionList" style="margin: 14px 0 0 24px; display: flex; flex-direction: column; gap: 10px; font-family: var(--font-sans);">
+          <li>Refined logo design</li>
+          <li>Complete luxury brand identity system</li>
+          <li>Defined brand guidelines and visual standards</li>
+          <li>Developed marketing and social media assets</li>
+          <li>Created supporting brand documents for consistent communication</li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 style="font-family: var(--font-display); font-size: 2.2rem; font-weight: 800; letter-spacing: -0.025em; margin-bottom: 16px;">Measurable Impact &amp; Outcome</h2>
+        <ul id="projectOutcomeList" style="margin: 14px 0 0 24px; display: flex; flex-direction: column; gap: 10px; font-family: var(--font-sans);">
+          <li>Helped secure the brand's first paying client</li>
+          <li>Gave the business a professional foundation for online presentation</li>
+          <li>Supported its transition toward product manufacturing</li>
+          <li>Created a scalable identity that could grow with the business</li>
+        </ul>
+      </div>
+
+      <!-- Next Project Navigation Card -->
+      <div style="margin-top: 40px; padding-top: 36px; border-top: 2px solid var(--token-dark); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+        <a href="#" id="prevProjectBtn" class="btn-nudge-black">
+          <span>← Previous Project</span>
+        </a>
+        <a href="case-study.html" class="btn-nudge-black" style="background: rgba(0,0,0,0.06); color: var(--token-dark); border-color: rgba(0,0,0,0.15);">
+          <span>All 10 Projects</span>
+        </a>
+        <a href="#" id="nextProjectBtn" class="btn-nudge-black">
+          <span>Next Project →</span>
+        </a>
+        <a href="contact.html" class="btn-nudge-black" style="background: var(--token-amber); color: var(--token-dark);">
+          <span>Work with Enoch ↗</span>
+        </a>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- =========================================================================
+       4. FOOTER: GREEN MASCOT + LET'S TALK + GIANT CONTACT CARD
+       ========================================================================= -->
+  <footer class="nudge-footer-section">
+    <div class="container">
+      <div class="footer-top-grid">
+        
+        <div>
+          <div class="footer-mascot-row">
+            <div class="green-blob-character">
+              <div class="blob-eyes">
+                <div class="blob-pill-eye"></div>
+                <div class="blob-pill-eye"></div>
+              </div>
+            </div>
+            <h2 class="lets-talk-flux-title">LET'S<br>TALK</h2>
+          </div>
+
+          <p class="footer-bio-desc">
+            I'm most energized by projects where I can dig into complex problems, collaborate with smart people, and ship things that genuinely improve someone's day.
+          </p>
+
+          <p style="font-family: var(--font-mono); font-size: 13px; color: var(--token-gray-sub); margin-top: 14px;">
+            Open to contract work, full-time roles, and interesting conversations about hard design problems.
+          </p>
+        </div>
+
+        <div>
+          <div class="lightning-contact-card">
+            <a href="contact.html" class="cyan-contact-banner-btn">
+              <span>CONTACT</span>
+              <div class="diamond-badge-icon">❖</div>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom-strip">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <img src="assets/images/dexo-icon.png" alt="Dexo" style="width: 20px; height: 20px; border-radius: 4px;">
+          <span>© all rights reserved for enoch · dexo</span>
+        </div>
+        <div class="footer-social-links">
+          <a href="https://linkedin.com/in/enochd/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://behance.net/daradaodu" target="_blank" rel="noopener">Behance</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/case-study-data.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      let projectId = urlParams.get('project');
+      if (!projectId || !PROJECTS_DATA[projectId]) {
+        projectId = 'the-source-collective';
+      }
+
+      const p = PROJECTS_DATA[projectId];
+      if (p) {
+        document.title = `${p.name} — Case Study · Enoch's Portfolio`;
+        
+        const introNoteEl = document.getElementById('projectIntroNote');
+        if (introNoteEl) introNoteEl.textContent = p.introNote || p.category;
+
+        const titleEl = document.getElementById('projectTitle');
+        if (titleEl) titleEl.textContent = p.name;
+
+        const taglineEl = document.getElementById('projectTagline');
+        if (taglineEl) taglineEl.textContent = p.tagline;
+
+        const showcaseImgEl = document.getElementById('projectShowcaseImg');
+        if (showcaseImgEl) {
+          showcaseImgEl.src = p.showcaseImage;
+          showcaseImgEl.alt = `${p.name} Full Showcase Presentation`;
+        }
+
+        const tagsEl = document.getElementById('projectTags');
+        if (tagsEl && p.tags) {
+          const colors = ['green', 'yellow', 'cyan', 'pink'];
+          tagsEl.innerHTML = p.tags.map((tag, idx) => {
+            const c = colors[idx % colors.length];
+            return `<span class="meta-sticker ${c}">${tag}</span>`;
+          }).join('');
+        }
+
+        const stat1Val = document.getElementById('stat1Val');
+        if (stat1Val) stat1Val.textContent = p.stat1;
+        const stat1Label = document.getElementById('stat1Label');
+        if (stat1Label) stat1Label.textContent = p.stat1Label;
+
+        const stat2Val = document.getElementById('stat2Val');
+        if (stat2Val) stat2Val.textContent = p.stat2;
+        const stat2Label = document.getElementById('stat2Label');
+        if (stat2Label) stat2Label.textContent = p.stat2Label;
+
+        const stat3Val = document.getElementById('stat3Val');
+        if (stat3Val) stat3Val.textContent = p.stat3;
+        const stat3Label = document.getElementById('stat3Label');
+        if (stat3Label) stat3Label.textContent = p.stat3Label;
+
+        const challengeEl = document.getElementById('projectChallenge');
+        if (challengeEl) challengeEl.textContent = p.challenge;
+
+        const quoteEl = document.getElementById('projectQuote');
+        if (quoteEl) quoteEl.textContent = p.quote;
+
+        const approachEl = document.getElementById('projectApproach');
+        if (approachEl) approachEl.textContent = p.approach;
+
+        const solutionListEl = document.getElementById('projectSolutionList');
+        if (solutionListEl && p.solution) {
+          solutionListEl.innerHTML = p.solution.map(s => `<li>${s}</li>`).join('');
+        }
+
+        const outcomeListEl = document.getElementById('projectOutcomeList');
+        if (outcomeListEl && p.outcome) {
+          outcomeListEl.innerHTML = p.outcome.map(o => `<li>${o}</li>`).join('');
+        }
+
+        // Setup Previous / Next buttons
+        const currentIndex = PROJECT_KEYS.indexOf(projectId);
+        const prevIndex = (currentIndex - 1 + PROJECT_KEYS.length) % PROJECT_KEYS.length;
+        const nextIndex = (currentIndex + 1) % PROJECT_KEYS.length;
+        const prevKey = PROJECT_KEYS[prevIndex];
+        const nextKey = PROJECT_KEYS[nextIndex];
+
+        const prevBtn = document.getElementById('prevProjectBtn');
+        if (prevBtn) {
+          prevBtn.href = `case-study-detail.html?project=${prevKey}`;
+          prevBtn.querySelector('span').textContent = `← ${PROJECTS_DATA[prevKey].name}`;
+        }
+
+        const nextBtn = document.getElementById('nextProjectBtn');
+        if (nextBtn) {
+          nextBtn.href = `case-study-detail.html?project=${nextKey}`;
+          nextBtn.querySelector('span').textContent = `${PROJECTS_DATA[nextKey].name} →`;
+        }
+      }
+    });
+  </script>
+  <script src="js/main.js"></script>
+</body>
+</html>
