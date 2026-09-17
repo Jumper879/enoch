@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About — Enoch's Portfolio</title>
   <meta name="description" content="About Enoch — Brand and web designer designing strategic brand identities, marketing visuals, and user-focused websites.">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=6.0">
   <link rel="icon" type="image/png" href="assets/images/dexo-icon.png">
 </head>
 <body>
@@ -51,8 +51,32 @@
         </svg>
         <a href="mailto:dara.daodu@gmail.com" class="cursor-tag-pill" style="text-decoration: none; color: inherit;">dara.daodu@gmail.com</a>
       </div>
+
+      <!-- Mobile Hamburger Menu Button -->
+      <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle navigation menu" type="button" onclick="window.toggleMobileMenu && window.toggleMobileMenu(event)">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
     </div>
   </header>
+
+  <!-- Mobile Navigation Drawer Dropdown -->
+  <div class="mobile-nav-drawer" id="mobileNavDrawer">
+    <nav aria-label="Mobile Navigation">
+      <ul class="mobile-nav-list">
+        <li><a href="index.html" class="nav-tab-item"><span class="tab-icon">🏠</span> HOME</a></li>
+        <li><a href="about.html" class="nav-tab-item active"><span class="tab-icon">✱</span> ABOUT</a></li>
+        <li><a href="case-study.html" class="nav-tab-item"><span class="tab-icon">🗂</span> CASE STUDIES</a></li>
+        <li><a href="services.html" class="nav-tab-item"><span class="tab-icon">💼</span> SERVICES</a></li>
+        <li><a href="contact.html" class="nav-tab-item"><span class="tab-icon" style="color: var(--token-pink);">♥</span> CONTACT</a></li>
+      </ul>
+      <div class="mobile-drawer-contact-row">
+        <a href="mailto:dara.daodu@gmail.com" class="mini-badge-btn em">EM: dara.daodu@gmail.com</a>
+        <a href="tel:+2347067511942" class="mini-badge-btn ph">PH: +234 706 751 1942</a>
+      </div>
+    </nav>
+  </div>
 
   <!-- =========================================================================
        3. ABOUT HERO & MAIN BIO
@@ -76,8 +100,8 @@
         </div>
       </div>
 
-      <div style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 48px; align-items: center;">
-        <div>
+      <div class="about-bio-grid">
+        <div class="about-bio-text">
           <h2 style="font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 700; line-height: 1.2; letter-spacing: -0.025em; margin-bottom: 20px;">
             Daodu Dara E. (Enoch)<br>
             <span style="font-size: 0.65em; color: var(--token-gray-sub); font-weight: 500;">Brand &amp; Web Designer</span>
@@ -97,7 +121,7 @@
           </div>
         </div>
 
-        <div>
+        <div class="about-bio-media">
           <div class="polaroid-frame" style="transform: rotate(2deg); padding: 14px 14px 20px;">
             <div class="polaroid-img-box" style="aspect-ratio: 4/3; height: 320px;">
               <img src="assets/images/enoch-photo.jpg" alt="Daodu Dara E. (Enoch)" style="object-position: center 20%;">
@@ -123,7 +147,7 @@
         </h2>
       </div>
 
-      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+      <div class="philosophy-grid">
         <div class="folder-project-card" style="padding: 28px;">
           <span style="font-family: var(--font-mono); font-size: 12px; color: var(--token-cyan); font-weight: 700;">(01)</span>
           <h3 style="font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; margin: 8px 0 12px;">Research Before Design</h3>
@@ -271,35 +295,35 @@
 
       <div style="display: flex; flex-direction: column; gap: 20px; max-width: 880px; margin: 0 auto;">
         
-        <div class="folder-project-card" style="padding: 24px 32px; display: grid; grid-template-columns: 240px 1fr; gap: 24px; align-items: center;">
-          <div>
+        <div class="folder-project-card experience-card">
+          <div class="experience-card-meta">
             <h4 style="font-family: var(--font-display); font-size: 1.25rem; font-weight: 700;">Founder &amp; Lead</h4>
             <div style="font-family: var(--font-mono); font-size: 12px; color: var(--token-gray-sub);">Dexo Agency</div>
             <div style="font-family: var(--font-mono); font-size: 11px; color: var(--token-green); font-weight: 600; margin-top: 4px;">2025 – PRESENT</div>
           </div>
-          <div style="font-size: 1rem; color: #4a4b4b; line-height: 1.5;">
+          <div class="experience-card-desc" style="font-size: 1rem; color: #4a4b4b; line-height: 1.5;">
             Working directly with early-stage startups, SaaS founders, and venture-backed teams to build high-converting landing pages, brand identity systems, and product UI workflows.
           </div>
         </div>
 
-        <div class="folder-project-card" style="padding: 24px 32px; display: grid; grid-template-columns: 240px 1fr; gap: 24px; align-items: center;">
-          <div>
+        <div class="folder-project-card experience-card">
+          <div class="experience-card-meta">
             <h4 style="font-family: var(--font-display); font-size: 1.25rem; font-weight: 700;">Product &amp; UI Designer</h4>
             <div style="font-family: var(--font-mono); font-size: 12px; color: var(--token-gray-sub);">Meridian Health</div>
             <div style="font-family: var(--font-mono); font-size: 11px; color: var(--token-cyan); font-weight: 600; margin-top: 4px;">SEP 2025 – PRESENT</div>
           </div>
-          <div style="font-size: 1rem; color: #4a4b4b; line-height: 1.5;">
+          <div class="experience-card-desc" style="font-size: 1rem; color: #4a4b4b; line-height: 1.5;">
             Redesigned the primary clinical intake documentation workflow, reducing therapist completion time by 50% and supporting over 1,200 concurrent therapy sessions daily.
           </div>
         </div>
 
-        <div class="folder-project-card" style="padding: 24px 32px; display: grid; grid-template-columns: 240px 1fr; gap: 24px; align-items: center;">
-          <div>
+        <div class="folder-project-card experience-card">
+          <div class="experience-card-meta">
             <h4 style="font-family: var(--font-display); font-size: 1.25rem; font-weight: 700;">Brand &amp; Web Designer</h4>
             <div style="font-family: var(--font-mono); font-size: 12px; color: var(--token-gray-sub);">Ewamaka Jewelry</div>
             <div style="font-family: var(--font-mono); font-size: 11px; color: var(--token-amber); font-weight: 600; margin-top: 4px;">2024 – 2025</div>
           </div>
-          <div style="font-size: 1rem; color: #4a4b4b; line-height: 1.5;">
+          <div class="experience-card-desc" style="font-size: 1rem; color: #4a4b4b; line-height: 1.5;">
             Spearheaded visual rebranding, digital storefront architecture, custom packaging guidelines, and high-conversion editorial campaigns resulting in a 42% sales lift.
           </div>
         </div>
@@ -412,6 +436,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script src="js/main.js?v=6.0"></script>
 </body>
 </html>

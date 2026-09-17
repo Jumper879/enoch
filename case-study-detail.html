@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Source Collective — Case Study · Enoch's Portfolio</title>
   <meta name="description" content="Detailed case study of The Source Collective luxury brand identity and strategic positioning by Enoch.">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=6.0">
   <link rel="icon" type="image/png" href="assets/images/dexo-icon.png">
 </head>
 <body>
@@ -51,8 +51,32 @@
         </svg>
         <a href="mailto:dara.daodu@gmail.com" class="cursor-tag-pill" style="text-decoration: none; color: inherit;">dara.daodu@gmail.com</a>
       </div>
+
+      <!-- Mobile Hamburger Menu Button -->
+      <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle navigation menu" type="button" onclick="window.toggleMobileMenu && window.toggleMobileMenu(event)">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
     </div>
   </header>
+
+  <!-- Mobile Navigation Drawer Dropdown -->
+  <div class="mobile-nav-drawer" id="mobileNavDrawer">
+    <nav aria-label="Mobile Navigation">
+      <ul class="mobile-nav-list">
+        <li><a href="index.html" class="nav-tab-item"><span class="tab-icon">🏠</span> HOME</a></li>
+        <li><a href="about.html" class="nav-tab-item"><span class="tab-icon">✱</span> ABOUT</a></li>
+        <li><a href="case-study.html" class="nav-tab-item active"><span class="tab-icon">🗂</span> CASE STUDIES</a></li>
+        <li><a href="services.html" class="nav-tab-item"><span class="tab-icon">💼</span> SERVICES</a></li>
+        <li><a href="contact.html" class="nav-tab-item"><span class="tab-icon" style="color: var(--token-pink);">♥</span> CONTACT</a></li>
+      </ul>
+      <div class="mobile-drawer-contact-row">
+        <a href="mailto:dara.daodu@gmail.com" class="mini-badge-btn em">EM: dara.daodu@gmail.com</a>
+        <a href="tel:+2347067511942" class="mini-badge-btn ph">PH: +234 706 751 1942</a>
+      </div>
+    </nav>
+  </div>
 
   <!-- =========================================================================
        3. CASE STUDY DETAIL CONTENT
@@ -323,6 +347,6 @@
       }
     });
   </script>
-  <script src="js/main.js"></script>
+  <script src="js/main.js?v=6.0"></script>
 </body>
 </html>

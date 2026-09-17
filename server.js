@@ -50,10 +50,13 @@ const server = http.createServer((req, res) => {
       'Access-Control-Allow-Origin': '*'
     };
 
-    if (ext === '.html') {
-      headers['Cache-Control'] = 'no-cache';
-    } else {
+    const staticAssetExts = ['.png', '.jpg', '.jpeg', '.svg', '.woff2', '.woff', '.ttf', '.webp'];
+    if (staticAssetExts.includes(ext)) {
       headers['Cache-Control'] = 'public, max-age=86400, stale-while-revalidate=604800';
+    } else {
+      headers['Cache-Control'] = 'no-cache, no-store, must-revalidate';
+      headers['Pragma'] = 'no-cache';
+      headers['Expires'] = '0';
     }
 
     res.writeHead(200, headers);

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Services — Enoch's Portfolio</title>
   <meta name="description" content="Services by Enoch: Product Design, Brand Identity, Web Design &amp; Framer Translation, and Creative Direction.">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=6.0">
   <link rel="icon" type="image/png" href="assets/images/dexo-icon.png">
 </head>
 <body>
@@ -51,8 +51,32 @@
         </svg>
         <a href="mailto:dara.daodu@gmail.com" class="cursor-tag-pill" style="text-decoration: none; color: inherit;">dara.daodu@gmail.com</a>
       </div>
+
+      <!-- Mobile Hamburger Menu Button -->
+      <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle navigation menu" type="button" onclick="window.toggleMobileMenu && window.toggleMobileMenu(event)">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
     </div>
   </header>
+
+  <!-- Mobile Navigation Drawer Dropdown -->
+  <div class="mobile-nav-drawer" id="mobileNavDrawer">
+    <nav aria-label="Mobile Navigation">
+      <ul class="mobile-nav-list">
+        <li><a href="index.html" class="nav-tab-item"><span class="tab-icon">🏠</span> HOME</a></li>
+        <li><a href="about.html" class="nav-tab-item"><span class="tab-icon">✱</span> ABOUT</a></li>
+        <li><a href="case-study.html" class="nav-tab-item"><span class="tab-icon">🗂</span> CASE STUDIES</a></li>
+        <li><a href="services.html" class="nav-tab-item active"><span class="tab-icon">💼</span> SERVICES</a></li>
+        <li><a href="contact.html" class="nav-tab-item"><span class="tab-icon" style="color: var(--token-pink);">♥</span> CONTACT</a></li>
+      </ul>
+      <div class="mobile-drawer-contact-row">
+        <a href="mailto:dara.daodu@gmail.com" class="mini-badge-btn em">EM: dara.daodu@gmail.com</a>
+        <a href="tel:+2347067511942" class="mini-badge-btn ph">PH: +234 706 751 1942</a>
+      </div>
+    </nav>
+  </div>
 
   <!-- =========================================================================
        3. SERVICES HERO
@@ -77,7 +101,7 @@
       </p>
 
       <!-- 4 Core Services Grid -->
-      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; margin-top: 50px; text-align: left;">
+      <div class="services-core-grid">
         
         <!-- Service 01 -->
         <div class="folder-project-card">
@@ -161,7 +185,7 @@
         </h2>
       </div>
 
-      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;">
+      <div class="process-steps-grid">
         <div class="folder-project-card" style="padding: 24px;">
           <div style="font-family: var(--font-mono); font-size: 12px; color: var(--token-cyan); font-weight: 700;">STEP (01)</div>
           <h3 style="font-family: var(--font-display); font-size: 1.35rem; font-weight: 700; margin: 8px 0 10px;">Discover</h3>
@@ -202,19 +226,19 @@
       <div style="display: flex; flex-direction: column; gap: 16px; max-width: 840px; margin: 0 auto;">
         
         <div class="folder-project-card faq-item open" style="padding: 0; overflow: hidden;">
-          <button class="faq-question" style="width: 100%; padding: 22px 28px; display: flex; justify-content: space-between; align-items: center; font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; text-align: left;">
+          <button type="button" class="faq-question" style="width: 100%; padding: 22px 28px; display: flex; justify-content: space-between; align-items: center; font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; text-align: left; cursor: pointer; background: transparent; border: none;">
             <span>What is your typical project timeline?</span>
-            <span class="faq-icon" style="font-family: var(--font-mono); font-size: 18px; width: 28px; height: 28px; border: 1.5px solid var(--token-dark); border-radius: 50%; display: flex; align-items: center; justify-content: center;">+</span>
+            <span class="faq-icon" style="font-family: var(--font-mono); font-size: 18px; width: 28px; height: 28px; border: 1.5px solid var(--token-dark); border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer;">−</span>
           </button>
-          <div class="faq-answer" style="padding: 0 28px 24px; font-size: 1rem; color: #4a4b4b; line-height: 1.6;">
+          <div class="faq-answer" style="padding: 0 28px 24px; font-size: 1rem; color: #4a4b4b; line-height: 1.6; display: block;">
             Timelines vary depending on project scope. A focused brand identity or landing page typically takes 2–4 weeks. Comprehensive product UI/UX systems or full multi-page websites generally take 4–8 weeks with clear milestone deliverables.
           </div>
         </div>
 
         <div class="folder-project-card faq-item" style="padding: 0; overflow: hidden;">
-          <button class="faq-question" style="width: 100%; padding: 22px 28px; display: flex; justify-content: space-between; align-items: center; font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; text-align: left;">
+          <button type="button" class="faq-question" style="width: 100%; padding: 22px 28px; display: flex; justify-content: space-between; align-items: center; font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; text-align: left; cursor: pointer; background: transparent; border: none;">
             <span>How do we communicate throughout the engagement?</span>
-            <span class="faq-icon" style="font-family: var(--font-mono); font-size: 18px; width: 28px; height: 28px; border: 1.5px solid var(--token-dark); border-radius: 50%; display: flex; align-items: center; justify-content: center;">+</span>
+            <span class="faq-icon" style="font-family: var(--font-mono); font-size: 18px; width: 28px; height: 28px; border: 1.5px solid var(--token-dark); border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer;">+</span>
           </button>
           <div class="faq-answer" style="padding: 0 28px 24px; font-size: 1rem; color: #4a4b4b; line-height: 1.6; display: none;">
             I prioritize low-friction communication. We stay connected via a dedicated Slack channel or email, with weekly video syncs (Google Meet/Zoom) for major milestone walk-throughs and Loom async screen reviews.
@@ -222,9 +246,9 @@
         </div>
 
         <div class="folder-project-card faq-item" style="padding: 0; overflow: hidden;">
-          <button class="faq-question" style="width: 100%; padding: 22px 28px; display: flex; justify-content: space-between; align-items: center; font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; text-align: left;">
+          <button type="button" class="faq-question" style="width: 100%; padding: 22px 28px; display: flex; justify-content: space-between; align-items: center; font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; text-align: left; cursor: pointer; background: transparent; border: none;">
             <span>Do you offer web development or just design?</span>
-            <span class="faq-icon" style="font-family: var(--font-mono); font-size: 18px; width: 28px; height: 28px; border: 1.5px solid var(--token-dark); border-radius: 50%; display: flex; align-items: center; justify-content: center;">+</span>
+            <span class="faq-icon" style="font-family: var(--font-mono); font-size: 18px; width: 28px; height: 28px; border: 1.5px solid var(--token-dark); border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer;">+</span>
           </button>
           <div class="faq-answer" style="padding: 0 28px 24px; font-size: 1rem; color: #4a4b4b; line-height: 1.6; display: none;">
             Yes, I provide end-to-end design and build services. For portfolio, brand, and marketing websites, I build directly in Framer or clean HTML/CSS/JS. For complex engineering apps, I provide developer-ready Figma specifications and design tokens.
@@ -563,7 +587,7 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=3.0"></script>
+  <script src="js/main.js?v=6.0"></script>
   <script>
     (function() {
       let currentIdx = 0;

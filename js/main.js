@@ -5,9 +5,12 @@
  * - Live real-time clock ticker in DM Mono
  * - Sticky note multi-step contact form controller
  * - FAQ accordion toggles
+ * - Testimonial carousel
+ * - Scroll-stacking folder depth controller (desktop & mobile)
+ * - Mobile navigation toggle & drawer
  */
 
-document.addEventListener('DOMContentLoaded', () => {
+function initMainFolio() {
   // 1. DYNAMIC CANVAS RULER TICKS GENERATOR
   const rulerTicksContainers = document.querySelectorAll('.canvas-ruler-ticks');
   function buildRuler() {
@@ -124,29 +127,59 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 4. FAQ ACCORDION
+  // 4. FAQ ACCORDION CONTROLLER (Services Page)
   const faqItems = document.querySelectorAll('.faq-item');
-  faqItems.forEach(item => {
+  faqItems.forEach((item, index) => {
     const questionBtn = item.querySelector('.faq-question');
     const answer = item.querySelector('.faq-answer');
-    if (questionBtn && answer) {
-      questionBtn.addEventListener('click', () => {
-        const isOpen = item.classList.contains('open');
-        faqItems.forEach(other => {
+    const icon = item.querySelector('.faq-icon');
+
+    // Ensure first item is open by default, others closed
+    if (index === 0 && !item.classList.contains('closed')) {
+      item.classList.add('open');
+      if (answer) answer.style.display = 'block';
+      if (icon) icon.textContent = '−';
+    } else if (!item.classList.contains('open')) {
+      if (answer) answer.style.display = 'none';
+      if (icon) icon.textContent = '+';
+    }
+
+    function toggleItem(e) {
+      if (e) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
+      const isCurrentlyOpen = item.classList.contains('open') && answer && answer.style.display !== 'none';
+
+      // Close all other items
+      faqItems.forEach(other => {
+        if (other !== item) {
           other.classList.remove('open');
           const otherAns = other.querySelector('.faq-answer');
           if (otherAns) otherAns.style.display = 'none';
           const otherIcon = other.querySelector('.faq-icon');
           if (otherIcon) otherIcon.textContent = '+';
-        });
-
-        if (!isOpen) {
-          item.classList.add('open');
-          answer.style.display = 'block';
-          const icon = item.querySelector('.faq-icon');
-          if (icon) icon.textContent = '×';
         }
       });
+
+      if (isCurrentlyOpen) {
+        item.classList.remove('open');
+        if (answer) answer.style.display = 'none';
+        if (icon) icon.textContent = '+';
+      } else {
+        item.classList.add('open');
+        if (answer) answer.style.display = 'block';
+        if (icon) icon.textContent = '−';
+      }
+    }
+
+    if (questionBtn) {
+      questionBtn.style.cursor = 'pointer';
+      questionBtn.addEventListener('click', toggleItem);
+    }
+    if (icon) {
+      icon.style.cursor = 'pointer';
+      icon.addEventListener('click', toggleItem);
     }
   });
 
@@ -162,7 +195,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const totalCards = cards.length;
     let currentIndex = 0;
 
-    // Helper: update dots and counter
     function updateActiveState(index) {
       currentIndex = Math.max(0, Math.min(index, totalCards - 1));
       const dots = dotsContainer ? dotsContainer.querySelectorAll('.carousel-dot') : [];
@@ -174,10 +206,9 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
 
-    // Direct, reliable scrolling function
     function scrollToCard(index) {
       if (index < 0) index = 0;
-      if (index >= totalCards) index = 0; // loop back to first
+      if (index >= totalCards) index = 0;
       currentIndex = index;
 
       const target = cards[currentIndex];
@@ -194,7 +225,6 @@ document.addEventListener('DOMContentLoaded', () => {
       updateActiveState(currentIndex);
     }
 
-    // Generate dots
     if (dotsContainer && totalCards > 0) {
       dotsContainer.innerHTML = '';
       cards.forEach((_, idx) => {
@@ -227,7 +257,6 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 
-    // Sync state when user manually scrolls or swipes
     let scrollTimeout;
     track.addEventListener('scroll', () => {
       clearTimeout(scrollTimeout);
@@ -249,11 +278,10 @@ document.addEventListener('DOMContentLoaded', () => {
       }, 60);
     }, { passive: true });
 
-    // Initialize state
     updateActiveState(0);
   }
 
-  // 6. HOMEPAGE STACKED FOLDER INTERACTION CONTROLLER
+  // 6. HOMEPAGE STACKED FOLDER INTERACTION (Desktop & Mobile Scroll Stacking)
   const folderList = document.getElementById('stackedFolderList');
   if (folderList) {
     const cards = Array.from(folderList.querySelectorAll('.stacked-tab-folder-card'));
@@ -266,7 +294,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const targetId = tab.getAttribute('data-project-target');
         const targetCard = document.getElementById(targetId);
         if (targetCard) {
-          const navOffset = 96;
+          const navOffset = window.innerWidth <= 860 ? 76 : 96;
           const cardRect = targetCard.getBoundingClientRect();
           const targetY = window.pageYOffset + cardRect.top - navOffset;
           window.scrollTo({
@@ -277,24 +305,17 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
-    // Subtle interactive depth scaling as folders stack on scroll
+    // Interactive depth scaling as folders stack on scroll (Runs on both desktop and mobile!)
     function updateFolderStacking() {
-      if (window.innerWidth <= 860) {
-        cards.forEach(card => {
-          card.style.transform = '';
-          card.style.opacity = '';
-        });
-        return;
-      }
+      const isMobile = window.innerWidth <= 860;
+      const stickyTop = isMobile ? 74 : 96;
+      const overlapDistance = isMobile ? 180 : 250;
 
-      const stickyTop = 96;
       cards.forEach((card, index) => {
         const nextCard = cards[index + 1];
         if (nextCard) {
           const nextRect = nextCard.getBoundingClientRect();
-          // How close nextCard is to stacking on top of this card
           const dist = nextRect.top - stickyTop;
-          const overlapDistance = 250;
           if (dist < overlapDistance && dist > 0) {
             const progress = 1 - (dist / overlapDistance);
             const scale = 1 - (progress * 0.035);
@@ -320,67 +341,103 @@ document.addEventListener('DOMContentLoaded', () => {
     updateFolderStacking();
   }
 
-  // 6. RESPONSIVE MOBILE NAVIGATION DRAWER & TOGGLE
-  const topHeader = document.querySelector('.top-header-bar');
-  if (topHeader) {
-    let toggleBtn = topHeader.querySelector('.mobile-nav-toggle');
-    if (!toggleBtn) {
-      toggleBtn = document.createElement('button');
-      toggleBtn.className = 'mobile-nav-toggle';
-      toggleBtn.setAttribute('aria-label', 'Toggle navigation menu');
-      toggleBtn.setAttribute('aria-expanded', 'false');
-      toggleBtn.innerHTML = `<span></span><span></span><span></span>`;
+  // 7. RESPONSIVE MOBILE NAVIGATION DRAWER & TOGGLE CONTROLLER
+  const toggleBtns = document.querySelectorAll('.mobile-nav-toggle');
+  const drawer = document.getElementById('mobileNavDrawer');
 
-      const rightGroup = topHeader.querySelector('.nav-right-group');
-      if (rightGroup) {
-        rightGroup.appendChild(toggleBtn);
-      } else {
-        topHeader.appendChild(toggleBtn);
+  toggleBtns.forEach(btn => {
+    btn.onclick = (e) => {
+      if (window.toggleMobileMenu) {
+        window.toggleMobileMenu(e);
       }
-    }
+    };
+  });
 
-    let drawer = document.getElementById('mobileNavDrawer');
-    if (!drawer) {
-      const currentPath = window.location.pathname.split('/').pop() || 'index.html';
-      const isHome = currentPath === 'index.html' || currentPath === '';
-      const isAbout = currentPath === 'about.html';
-      const isCaseStudy = currentPath === 'case-study.html' || currentPath === 'case-study-detail.html';
-      const isServices = currentPath === 'services.html';
-      const isContact = currentPath === 'contact.html';
-
-      drawer = document.createElement('div');
-      drawer.id = 'mobileNavDrawer';
-      drawer.className = 'mobile-nav-drawer';
-      drawer.innerHTML = `
-        <nav aria-label="Mobile Navigation">
-          <ul class="mobile-nav-list">
-            <li><a href="index.html" class="nav-tab-item ${isHome ? 'active' : ''}"><span class="tab-icon">🏠</span> HOME</a></li>
-            <li><a href="about.html" class="nav-tab-item ${isAbout ? 'active' : ''}"><span class="tab-icon">✱</span> ABOUT</a></li>
-            <li><a href="case-study.html" class="nav-tab-item ${isCaseStudy ? 'active' : ''}"><span class="tab-icon">🗂</span> CASE STUDIES</a></li>
-            <li><a href="services.html" class="nav-tab-item ${isServices ? 'active' : ''}"><span class="tab-icon">💼</span> SERVICES</a></li>
-            <li><a href="contact.html" class="nav-tab-item ${isContact ? 'active' : ''}"><span class="tab-icon" style="color: var(--token-pink);">♥</span> CONTACT</a></li>
-          </ul>
-          <div class="mobile-drawer-contact-row">
-            <a href="mailto:dara.daodu@gmail.com" class="mini-badge-btn em">EM: dara.daodu@gmail.com</a>
-            <a href="tel:+2347067511942" class="mini-badge-btn ph">PH: +234 706 751 1942</a>
-          </div>
-        </nav>
-      `;
-      topHeader.parentNode.insertBefore(drawer, topHeader.nextSibling);
-    }
-
-    toggleBtn.addEventListener('click', () => {
-      const isOpen = drawer.classList.toggle('open');
-      toggleBtn.classList.toggle('active', isOpen);
-      toggleBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-    });
-
+  if (drawer) {
     drawer.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
-        drawer.classList.remove('open');
-        toggleBtn.classList.remove('active');
-        toggleBtn.setAttribute('aria-expanded', 'false');
+        if (window.closeMobileMenu) {
+          window.closeMobileMenu();
+        }
       });
     });
+
+    document.addEventListener('click', (e) => {
+      if (drawer.classList.contains('open')) {
+        let isToggle = false;
+        toggleBtns.forEach(btn => {
+          if (btn === e.target || btn.contains(e.target)) isToggle = true;
+        });
+        if (!drawer.contains(e.target) && !isToggle) {
+          if (window.closeMobileMenu) {
+            window.closeMobileMenu();
+          }
+        }
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && drawer.classList.contains('open')) {
+        if (window.closeMobileMenu) {
+          window.closeMobileMenu();
+        }
+      }
+    });
   }
-});
+}
+
+// Global mobile menu controller functions available immediately anywhere
+let _lastToggleTime = 0;
+
+window.closeMobileMenu = function() {
+  const drawer = document.getElementById('mobileNavDrawer');
+  const toggleBtns = document.querySelectorAll('.mobile-nav-toggle');
+  if (drawer) drawer.classList.remove('open');
+  toggleBtns.forEach(btn => {
+    btn.classList.remove('active');
+    btn.setAttribute('aria-expanded', 'false');
+  });
+  document.body.classList.remove('drawer-open');
+};
+
+window.openMobileMenu = function() {
+  const drawer = document.getElementById('mobileNavDrawer');
+  const toggleBtns = document.querySelectorAll('.mobile-nav-toggle');
+  if (drawer) drawer.classList.add('open');
+  toggleBtns.forEach(btn => {
+    btn.classList.add('active');
+    btn.setAttribute('aria-expanded', 'true');
+  });
+  document.body.classList.add('drawer-open');
+};
+
+window.toggleMobileMenu = function(e) {
+  const now = Date.now();
+  if (now - _lastToggleTime < 200) {
+    if (e && e.preventDefault) e.preventDefault();
+    if (e && e.stopPropagation) e.stopPropagation();
+    return;
+  }
+  _lastToggleTime = now;
+
+  if (e) {
+    if (e.preventDefault) e.preventDefault();
+    if (e.stopPropagation) e.stopPropagation();
+  }
+  const drawer = document.getElementById('mobileNavDrawer');
+  if (!drawer) return;
+  const isCurrentlyOpen = drawer.classList.contains('open');
+  if (isCurrentlyOpen) {
+    window.closeMobileMenu();
+  } else {
+    window.openMobileMenu();
+  }
+};
+
+
+// Robust execution whether DOM is loading, interactive, or complete
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initMainFolio);
+} else {
+  initMainFolio();
+}
