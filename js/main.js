@@ -10,6 +10,54 @@
  * - Mobile navigation toggle & drawer
  */
 
+// Global mobile menu controller functions available immediately anywhere
+let _lastToggleTime = 0;
+
+window.closeMobileMenu = function () {
+  const drawer = document.getElementById('mobileNavDrawer');
+  const toggleBtns = document.querySelectorAll('.mobile-nav-toggle');
+  if (drawer) drawer.classList.remove('open');
+  toggleBtns.forEach(btn => {
+    btn.classList.remove('active');
+    btn.setAttribute('aria-expanded', 'false');
+  });
+  document.body.classList.remove('drawer-open');
+};
+
+window.openMobileMenu = function () {
+  const drawer = document.getElementById('mobileNavDrawer');
+  const toggleBtns = document.querySelectorAll('.mobile-nav-toggle');
+  if (drawer) drawer.classList.add('open');
+  toggleBtns.forEach(btn => {
+    btn.classList.add('active');
+    btn.setAttribute('aria-expanded', 'true');
+  });
+  document.body.classList.add('drawer-open');
+};
+
+window.toggleMobileMenu = function (e) {
+  const now = Date.now();
+  if (now - _lastToggleTime < 200) {
+    if (e && e.preventDefault) e.preventDefault();
+    if (e && e.stopPropagation) e.stopPropagation();
+    return;
+  }
+  _lastToggleTime = now;
+
+  if (e) {
+    if (e.preventDefault) e.preventDefault();
+    if (e.stopPropagation) e.stopPropagation();
+  }
+  const drawer = document.getElementById('mobileNavDrawer');
+  if (!drawer) return;
+  const isCurrentlyOpen = drawer.classList.contains('open');
+  if (isCurrentlyOpen) {
+    window.closeMobileMenu();
+  } else {
+    window.openMobileMenu();
+  }
+};
+
 function initMainFolio() {
   // 1. DYNAMIC CANVAS RULER TICKS GENERATOR
   const rulerTicksContainers = document.querySelectorAll('.canvas-ruler-ticks');
@@ -70,11 +118,11 @@ function initMainFolio() {
   const step2 = document.getElementById('formStep2');
   const stepSuccess = document.getElementById('formStepSuccess');
   const stepIndicator = document.getElementById('stepIndicator');
-  const nextBtn = document.getElementById('btnNextStep');
-  const backBtn = document.getElementById('btnBackStep');
+  const formNextBtn = document.getElementById('btnNextStep');
+  const formBackBtn = document.getElementById('btnBackStep');
 
-  if (nextBtn && step1 && step2) {
-    nextBtn.addEventListener('click', (e) => {
+  if (formNextBtn && step1 && step2) {
+    formNextBtn.addEventListener('click', (e) => {
       e.preventDefault();
       const messageInput = document.getElementById('projectDetails');
       const nameInput = document.getElementById('contactName');
@@ -108,8 +156,8 @@ function initMainFolio() {
     });
   }
 
-  if (backBtn && step1 && step2) {
-    backBtn.addEventListener('click', (e) => {
+  if (formBackBtn && step1 && step2) {
+    formBackBtn.addEventListener('click', (e) => {
       e.preventDefault();
       step2.style.display = 'none';
       step1.style.display = 'block';
@@ -144,42 +192,30 @@ function initMainFolio() {
       if (icon) icon.textContent = '+';
     }
 
-    function toggleItem(e) {
-      if (e) {
-        e.preventDefault();
-        e.stopPropagation();
-      }
-      const isCurrentlyOpen = item.classList.contains('open') && answer && answer.style.display !== 'none';
+    if (questionBtn) {
+      questionBtn.style.cursor = 'pointer';
+      questionBtn.onclick = (e) => {
+        if (e) {
+          e.preventDefault();
+        }
+        const isCurrentlyOpen = item.classList.contains('open');
 
-      // Close all other items
-      faqItems.forEach(other => {
-        if (other !== item) {
+        // Close all items
+        faqItems.forEach(other => {
           other.classList.remove('open');
           const otherAns = other.querySelector('.faq-answer');
           if (otherAns) otherAns.style.display = 'none';
           const otherIcon = other.querySelector('.faq-icon');
           if (otherIcon) otherIcon.textContent = '+';
+        });
+
+        // Toggle clicked item
+        if (!isCurrentlyOpen) {
+          item.classList.add('open');
+          if (answer) answer.style.display = 'block';
+          if (icon) icon.textContent = '−';
         }
-      });
-
-      if (isCurrentlyOpen) {
-        item.classList.remove('open');
-        if (answer) answer.style.display = 'none';
-        if (icon) icon.textContent = '+';
-      } else {
-        item.classList.add('open');
-        if (answer) answer.style.display = 'block';
-        if (icon) icon.textContent = '−';
-      }
-    }
-
-    if (questionBtn) {
-      questionBtn.style.cursor = 'pointer';
-      questionBtn.addEventListener('click', toggleItem);
-    }
-    if (icon) {
-      icon.style.cursor = 'pointer';
-      icon.addEventListener('click', toggleItem);
+      };
     }
   });
 
@@ -384,60 +420,10 @@ function initMainFolio() {
       }
     });
   }
-}
 
-// Global mobile menu controller functions available immediately anywhere
-let _lastToggleTime = 0;
-
-window.closeMobileMenu = function() {
-  const drawer = document.getElementById('mobileNavDrawer');
-  const toggleBtns = document.querySelectorAll('.mobile-nav-toggle');
-  if (drawer) drawer.classList.remove('open');
-  toggleBtns.forEach(btn => {
-    btn.classList.remove('active');
-    btn.setAttribute('aria-expanded', 'false');
-  });
-  document.body.classList.remove('drawer-open');
-};
-
-window.openMobileMenu = function() {
-  const drawer = document.getElementById('mobileNavDrawer');
-  const toggleBtns = document.querySelectorAll('.mobile-nav-toggle');
-  if (drawer) drawer.classList.add('open');
-  toggleBtns.forEach(btn => {
-    btn.classList.add('active');
-    btn.setAttribute('aria-expanded', 'true');
-  });
-  document.body.classList.add('drawer-open');
-};
-
-window.toggleMobileMenu = function(e) {
-  const now = Date.now();
-  if (now - _lastToggleTime < 200) {
-    if (e && e.preventDefault) e.preventDefault();
-    if (e && e.stopPropagation) e.stopPropagation();
-    return;
-  }
-  _lastToggleTime = now;
-
-  if (e) {
-    if (e.preventDefault) e.preventDefault();
-    if (e.stopPropagation) e.stopPropagation();
-  }
-  const drawer = document.getElementById('mobileNavDrawer');
-  if (!drawer) return;
-  const isCurrentlyOpen = drawer.classList.contains('open');
-  if (isCurrentlyOpen) {
-    window.closeMobileMenu();
+  // Robust execution whether DOM is loading, interactive, or complete
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initMainFolio);
   } else {
-    window.openMobileMenu();
+    initMainFolio();
   }
-};
-
-
-// Robust execution whether DOM is loading, interactive, or complete
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', initMainFolio);
-} else {
-  initMainFolio();
-}

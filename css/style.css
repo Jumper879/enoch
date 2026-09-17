@@ -92,7 +92,7 @@ body {
   color: var(--token-dark);
   font-family: var(--font-sans);
   line-height: 1.5;
-  overflow-x: hidden;
+  overflow-x: clip;
   position: relative;
 }
 
@@ -2959,7 +2959,7 @@ img, svg {
    HOMEPAGE "LET'S TALK" + CONTACT (Exact Image 1: lets talk.png)
    ========================================================================== */
 .home-lets-talk-section {
-  padding: 90px 0 30px;
+  padding: 24px 0 14px;
   text-align: center;
 }
 
@@ -2967,25 +2967,29 @@ img, svg {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 52px;
+  gap: 40px;
   max-width: 960px;
   margin: 0 auto;
   text-align: left;
 }
 
 @media (max-width: 768px) {
+  .home-lets-talk-section {
+    padding: 14px 0 10px !important;
+  }
+
   .home-mascot-talk-row {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 28px;
+    gap: 20px;
   }
 }
 
-/* 4-lobed mascot character enlarged by ~40% (150px -> 210px) */
+/* 4-lobed mascot character */
 .mascot-clover-character {
-  width: 210px;
-  height: 210px;
+  width: 190px;
+  height: 190px;
   position: relative;
   flex-shrink: 0;
 }
@@ -3005,18 +3009,18 @@ img, svg {
 .home-talk-title {
   font-family: var(--font-flux);
   font-weight: 1000;
-  font-size: clamp(3.6rem, 8.5vw, 6.8rem);
-  line-height: 0.85;
+  font-size: clamp(3.2rem, 7.5vw, 6.2rem);
+  line-height: 0.88;
   letter-spacing: -0.025em;
   color: var(--token-dark);
   text-transform: uppercase;
-  margin-bottom: 18px;
+  margin-bottom: 14px;
 }
 
 .home-talk-desc {
-  font-size: 1.15rem;
+  font-size: 1.12rem;
   color: #333333;
-  line-height: 1.55;
+  line-height: 1.5;
   max-width: 540px;
 }
 
@@ -3024,13 +3028,19 @@ img, svg {
 .home-contact-wrapper {
   position: relative;
   max-width: 1000px;
-  margin: 80px auto 70px;
+  margin: 44px auto 28px;
 }
 
-/* Overlapping Comment Box raised by ~60px and widened by ~60px */
+@media (max-width: 768px) {
+  .home-contact-wrapper {
+    margin: 24px auto 16px !important;
+  }
+}
+
+/* Overlapping Comment Box */
 .home-comment-card {
   position: absolute;
-  top: -105px;
+  top: -85px;
   left: 60px;
   z-index: 10;
   background: #ffffff;
@@ -3392,6 +3402,40 @@ img, svg {
   .case-studies-container .hero-folder-img {
     aspect-ratio: 16 / 9.6;
   }
+/* Case Study Quantitative Stats Grid (Desktop) */
+.project-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 900px;
+  margin: 0 auto 60px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.project-stat-card {
+  text-align: center;
+  padding: 28px;
+  background: #ffffff;
+  border: 1.5px solid var(--token-dark);
+  border-radius: 12px;
+  box-shadow: 2.5px 3px 0 var(--token-dark);
+  box-sizing: border-box;
+}
+
+.project-stat-num {
+  font-family: var(--font-flux);
+  font-weight: 1000;
+  font-size: 3.4rem;
+  line-height: 1;
+  color: var(--token-dark);
+}
+
+.project-stat-lbl {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--token-gray-sub);
+  margin-top: 8px;
 }
 
 /* Tablet and Mobile Responsive Overrides */
@@ -3661,27 +3705,73 @@ img, svg {
     box-sizing: border-box !important;
   }
 
+  /* Vertical Stacking: Case Study Quantitative Stats Grid */
+  .project-stats-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 16px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto 36px !important;
+    box-sizing: border-box !important;
+    padding: 0 !important;
+  }
+
+  .project-stats-grid .project-stat-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 24px 18px !important;
+  }
+
+  .project-stat-num {
+    font-size: 2.6rem !important;
+  }
+
   /* Vertical Stacking: Result & Growth My Approach Board */
   .approach-board-grid {
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
-    gap: 24px !important;
+    gap: 20px !important;
     width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
   }
 
+  .approach-item-circle-left,
+  .approach-item-title,
+  .approach-item-circle-right,
   .approach-item-text,
+  .approach-item-circle-center,
   .approach-item-metrics {
     width: 100% !important;
     max-width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
     text-align: center !important;
+    box-sizing: border-box !important;
+  }
+
+  .approach-stat-circle {
+    width: 160px !important;
+    height: 160px !important;
+    max-width: 88vw !important;
+    margin: 0 auto !important;
+  }
+
+  .approach-dark-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
   }
 }
 
 /* Phone Screen Adaptations (Strict Zero Overflow & Clean Vertical Flow) */
 @media (max-width: 600px) {
   html, body {
-    overflow-x: hidden !important;
+    overflow-x: clip !important;
     width: 100% !important;
     max-width: 100vw !important;
     position: relative !important;
