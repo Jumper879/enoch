@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Source Collective — Case Study · Enoch's Portfolio</title>
   <meta name="description" content="Detailed case study of The Source Collective luxury brand identity and strategic positioning by Enoch.">
-  <link rel="stylesheet" href="css/style.css?v=7.0">
+  <link rel="stylesheet" href="css/style.css?v=8.0">
   <link rel="icon" type="image/png" href="assets/images/dexo-icon.png">
 </head>
 <body>
@@ -61,22 +61,98 @@
     </div>
   </header>
 
-  <!-- Mobile Navigation Drawer Dropdown -->
-  <div class="mobile-nav-drawer" id="mobileNavDrawer">
-    <nav aria-label="Mobile Navigation">
-      <ul class="mobile-nav-list">
-        <li><a href="index.html" class="nav-tab-item"><span class="tab-icon">🏠</span> HOME</a></li>
-        <li><a href="about.html" class="nav-tab-item"><span class="tab-icon">✱</span> ABOUT</a></li>
-        <li><a href="case-study.html" class="nav-tab-item active"><span class="tab-icon">🗂</span> CASE STUDIES</a></li>
-        <li><a href="services.html" class="nav-tab-item"><span class="tab-icon">💼</span> SERVICES</a></li>
-        <li><a href="contact.html" class="nav-tab-item"><span class="tab-icon" style="color: var(--token-pink);">♥</span> CONTACT</a></li>
-      </ul>
-      <div class="mobile-drawer-contact-row">
-        <a href="mailto:dara.daodu@gmail.com" class="mini-badge-btn em">EM: dara.daodu@gmail.com</a>
-        <a href="tel:+2347067511942" class="mini-badge-btn ph">PH: +234 706 751 1942</a>
+  <!-- Fullscreen Dark Mobile Navigation Drawer (Exact Uploaded Reference Style) -->
+  <div class="mobile-nav-drawer mobile-nav-fullscreen" id="mobileNavDrawer" aria-label="Mobile Navigation Drawer">
+    <div class="mobile-menu-inner">
+      <div class="mobile-menu-topbar">
+        <a href="case-study.html" class="mobile-menu-search-tag" aria-label="Search and Explore Projects">
+          <span class="mobile-search-text">SEARCH</span>
+          <svg class="mobile-search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f6ad55" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </a>
+        <button type="button" class="mobile-menu-close-btn" id="mobileNavClose" aria-label="Close navigation menu" onclick="window.closeMobileMenu && window.closeMobileMenu(event)">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
       </div>
-    </nav>
+
+      <nav class="mobile-menu-nav" aria-label="Mobile Navigation Links">
+        <ul class="mobile-menu-list">
+          <li class="mobile-menu-item">
+            <a href="index.html" class="mobile-menu-link">
+              <span class="mobile-link-text">HOME</span>
+              <span class="mobile-link-num" style="color: #ff6b4a;">00.</span>
+            </a>
+          </li>
+          <li class="mobile-menu-item">
+            <a href="about.html" class="mobile-menu-link">
+              <span class="mobile-link-text">ABOUT</span>
+              <span class="mobile-link-num" style="color: #ff5c8d;">01.</span>
+            </a>
+          </li>
+          <li class="mobile-menu-item">
+            <a href="case-study.html" class="mobile-menu-link active">
+              <span class="mobile-link-text">CASE STUDIES</span>
+              <span class="mobile-link-num" style="color: #36c5f0;">02.</span>
+            </a>
+          </li>
+          <li class="mobile-menu-item">
+            <a href="services.html" class="mobile-menu-link">
+              <span class="mobile-link-text">SERVICES</span>
+              <span class="mobile-link-num" style="color: #ffb800;">03.</span>
+            </a>
+          </li>
+          <li class="mobile-menu-item">
+            <a href="contact.html" class="mobile-menu-link">
+              <span class="mobile-link-text">CONTACT</span>
+              <span class="mobile-link-num" style="color: #ffffff;">04.</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="mobile-menu-sublinks">
+        <a href="contact.html" class="mobile-sublink">CONTACT</a>
+        <a href="mailto:dara.daodu@gmail.com" class="mobile-sublink">DARA.DAODU@GMAIL.COM</a>
+        <a href="tel:+2347067511942" class="mobile-sublink">+234 706 751 1942</a>
+        <a href="https://linkedin.com/in/enochd/" target="_blank" rel="noopener" class="mobile-sublink">LINKEDIN</a>
+        <a href="https://behance.net/daradaodu" target="_blank" rel="noopener" class="mobile-sublink">BEHANCE</a>
+      </div>
+    </div>
   </div>
+
+  <script>
+    window.closeMobileMenu = function(e) {
+      if (e && e.preventDefault) e.preventDefault();
+      var d = document.getElementById('mobileNavDrawer');
+      var btns = document.querySelectorAll('.mobile-nav-toggle');
+      if (d) d.classList.remove('open');
+      btns.forEach(function(b) { b.classList.remove('active'); b.setAttribute('aria-expanded', 'false'); });
+      document.body.classList.remove('drawer-open');
+    };
+    window.openMobileMenu = function(e) {
+      if (e && e.preventDefault) e.preventDefault();
+      var d = document.getElementById('mobileNavDrawer');
+      var btns = document.querySelectorAll('.mobile-nav-toggle');
+      if (d) d.classList.add('open');
+      btns.forEach(function(b) { b.classList.add('active'); b.setAttribute('aria-expanded', 'true'); });
+      document.body.classList.add('drawer-open');
+    };
+    window.toggleMobileMenu = function(e) {
+      if (e && e.preventDefault) e.preventDefault();
+      var d = document.getElementById('mobileNavDrawer');
+      if (!d) return;
+      if (d.classList.contains('open')) {
+        window.closeMobileMenu(e);
+      } else {
+        window.openMobileMenu(e);
+      }
+    };
+  </script>
 
   <!-- =========================================================================
        3. CASE STUDY DETAIL CONTENT
@@ -347,6 +423,6 @@
       }
     });
   </script>
-  <script src="js/main.js?v=7.0"></script>
+  <script src="js/main.js?v=8.0"></script>
 </body>
 </html>

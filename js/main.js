@@ -11,9 +11,8 @@
  */
 
 // Global mobile menu controller functions available immediately anywhere
-let _lastToggleTime = 0;
-
-window.closeMobileMenu = function () {
+window.closeMobileMenu = function (e) {
+  if (e && e.preventDefault) e.preventDefault();
   const drawer = document.getElementById('mobileNavDrawer');
   const toggleBtns = document.querySelectorAll('.mobile-nav-toggle');
   if (drawer) drawer.classList.remove('open');
@@ -24,7 +23,8 @@ window.closeMobileMenu = function () {
   document.body.classList.remove('drawer-open');
 };
 
-window.openMobileMenu = function () {
+window.openMobileMenu = function (e) {
+  if (e && e.preventDefault) e.preventDefault();
   const drawer = document.getElementById('mobileNavDrawer');
   const toggleBtns = document.querySelectorAll('.mobile-nav-toggle');
   if (drawer) drawer.classList.add('open');
@@ -36,14 +36,6 @@ window.openMobileMenu = function () {
 };
 
 window.toggleMobileMenu = function (e) {
-  const now = Date.now();
-  if (now - _lastToggleTime < 200) {
-    if (e && e.preventDefault) e.preventDefault();
-    if (e && e.stopPropagation) e.stopPropagation();
-    return;
-  }
-  _lastToggleTime = now;
-
   if (e) {
     if (e.preventDefault) e.preventDefault();
     if (e.stopPropagation) e.stopPropagation();
@@ -52,11 +44,12 @@ window.toggleMobileMenu = function (e) {
   if (!drawer) return;
   const isCurrentlyOpen = drawer.classList.contains('open');
   if (isCurrentlyOpen) {
-    window.closeMobileMenu();
+    window.closeMobileMenu(e);
   } else {
-    window.openMobileMenu();
+    window.openMobileMenu(e);
   }
 };
+
 
 function initMainFolio() {
   // 1. DYNAMIC CANVAS RULER TICKS GENERATOR
@@ -380,6 +373,7 @@ function initMainFolio() {
   // 7. RESPONSIVE MOBILE NAVIGATION DRAWER & TOGGLE CONTROLLER
   const toggleBtns = document.querySelectorAll('.mobile-nav-toggle');
   const drawer = document.getElementById('mobileNavDrawer');
+  const closeBtn = document.getElementById('mobileNavClose');
 
   toggleBtns.forEach(btn => {
     btn.onclick = (e) => {
@@ -388,6 +382,14 @@ function initMainFolio() {
       }
     };
   });
+
+  if (closeBtn) {
+    closeBtn.onclick = (e) => {
+      if (window.closeMobileMenu) {
+        window.closeMobileMenu(e);
+      }
+    };
+  }
 
   if (drawer) {
     drawer.querySelectorAll('a').forEach(link => {
@@ -420,10 +422,12 @@ function initMainFolio() {
       }
     });
   }
+}
 
-  // Robust execution whether DOM is loading, interactive, or complete
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initMainFolio);
-  } else {
-    initMainFolio();
-  }
+// Robust execution whether DOM is loading, interactive, or complete
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initMainFolio);
+} else {
+  initMainFolio();
+}
+
