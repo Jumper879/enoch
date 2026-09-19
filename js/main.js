@@ -10,42 +10,34 @@
  * - Mobile navigation toggle & drawer
  */
 
-// Global mobile menu controller — bulletproof for all mobile browsers
-var _mobileMenuBusy = false;
+// =====================================================
+// GLOBAL MOBILE MENU — called by inline onclick on buttons
+// =====================================================
 
-window.closeMobileMenu = function (e) {
-  if (e && e.preventDefault) e.preventDefault();
-  if (e && e.stopPropagation) e.stopPropagation();
+window.closeMobileMenu = function() {
   var drawer = document.getElementById('mobileNavDrawer');
   var btns = document.querySelectorAll('.mobile-nav-toggle');
   if (drawer) drawer.classList.remove('open');
-  btns.forEach(function(btn) {
+  if (btns) btns.forEach(function(btn) {
     btn.classList.remove('active');
     btn.setAttribute('aria-expanded', 'false');
   });
   document.body.classList.remove('drawer-open');
 };
 
-window.openMobileMenu = function (e) {
-  if (e && e.preventDefault) e.preventDefault();
-  if (e && e.stopPropagation) e.stopPropagation();
+window.openMobileMenu = function() {
   var drawer = document.getElementById('mobileNavDrawer');
   var btns = document.querySelectorAll('.mobile-nav-toggle');
   if (drawer) drawer.classList.add('open');
-  btns.forEach(function(btn) {
+  if (btns) btns.forEach(function(btn) {
     btn.classList.add('active');
     btn.setAttribute('aria-expanded', 'true');
   });
   document.body.classList.add('drawer-open');
 };
 
-window.toggleMobileMenu = function (e) {
-  if (e && e.preventDefault) e.preventDefault();
+window.toggleMobileMenu = function(e) {
   if (e && e.stopPropagation) e.stopPropagation();
-  // Debounce: prevent double-firing from click + touchstart on mobile
-  if (_mobileMenuBusy) return;
-  _mobileMenuBusy = true;
-  setTimeout(function() { _mobileMenuBusy = false; }, 350);
   var drawer = document.getElementById('mobileNavDrawer');
   if (!drawer) return;
   if (drawer.classList.contains('open')) {
@@ -375,65 +367,35 @@ function initMainFolio() {
     updateFolderStacking();
   }
 
-  // 7. RESPONSIVE MOBILE NAVIGATION DRAWER & TOGGLE CONTROLLER
-  const toggleBtns = document.querySelectorAll('.mobile-nav-toggle');
-  const drawer = document.getElementById('mobileNavDrawer');
-  const closeBtn = document.getElementById('mobileNavClose');
-
-  // Wire up hamburger buttons — use addEventListener for reliability
-  toggleBtns.forEach(btn => {
-    // Remove any existing inline onclick to avoid double-firing
-    btn.removeAttribute('onclick');
-    // Use click event listener
-    btn.addEventListener('click', function(e) {
-      e.preventDefault();
-      e.stopPropagation();
-      window.toggleMobileMenu(e);
-    });
-    // Also wire touchstart for snappy mobile response (passive: false to allow preventDefault)
-    btn.addEventListener('touchstart', function(e) {
-      e.preventDefault();
-      e.stopPropagation();
-      window.toggleMobileMenu(e);
-    }, { passive: false });
-  });
-
-  // Wire up close button inside drawer
-  if (closeBtn) {
-    closeBtn.removeAttribute('onclick');
-    closeBtn.addEventListener('click', function(e) {
-      e.preventDefault();
-      e.stopPropagation();
-      window.closeMobileMenu();
-    });
-    closeBtn.addEventListener('touchstart', function(e) {
-      e.preventDefault();
-      e.stopPropagation();
-      window.closeMobileMenu();
-    }, { passive: false });
-  }
+  // 7. MOBILE NAVIGATION DRAWER
+  // NOTE: The hamburger button uses inline onclick="window.toggleMobileMenu(event)"
+  // and the close button uses inline onclick="window.closeMobileMenu(event)".
+  // We do NOT touch those buttons here — the inline handlers call the globally
+  // defined window functions above. We only set up the supporting behaviours.
+  var toggleBtns = document.querySelectorAll('.mobile-nav-toggle');
+  var drawer = document.getElementById('mobileNavDrawer');
 
   if (drawer) {
-    // Close drawer when a nav link is clicked
-    drawer.querySelectorAll('a').forEach(link => {
+    // Close drawer when any nav link inside it is clicked
+    drawer.querySelectorAll('a').forEach(function(link) {
       link.addEventListener('click', function() {
         window.closeMobileMenu();
       });
     });
 
-    // Close when clicking outside the drawer
+    // Close when clicking/tapping outside the open drawer
     document.addEventListener('click', function(e) {
       if (!drawer.classList.contains('open')) return;
-      let isToggle = false;
-      toggleBtns.forEach(btn => {
-        if (btn === e.target || btn.contains(e.target)) isToggle = true;
+      var clickedToggle = false;
+      toggleBtns.forEach(function(btn) {
+        if (btn === e.target || btn.contains(e.target)) clickedToggle = true;
       });
-      if (!drawer.contains(e.target) && !isToggle) {
+      if (!drawer.contains(e.target) && !clickedToggle) {
         window.closeMobileMenu();
       }
     });
 
-    // Close on Escape key
+    // Escape key closes drawer
     document.addEventListener('keydown', function(e) {
       if (e.key === 'Escape' && drawer.classList.contains('open')) {
         window.closeMobileMenu();
