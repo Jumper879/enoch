@@ -200,6 +200,8 @@ img, svg {
   display: flex;
   align-items: center;
   gap: 20px;
+  min-width: 0;
+  overflow: hidden;
 }
 
 .rainbow-logo-link,
@@ -395,6 +397,10 @@ img, svg {
   margin-left: 8px;
   flex-shrink: 0;
   outline: none;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 .mobile-nav-toggle:hover {
@@ -527,10 +533,18 @@ body.drawer-open {
   border-radius: 8px !important;
   transition: background 0.15s ease, transform 0.15s ease !important;
   padding: 0 !important;
+  touch-action: manipulation !important;
+  -webkit-tap-highlight-color: transparent !important;
+  user-select: none !important;
+  -webkit-user-select: none !important;
+}
+
+.mobile-menu-close-btn:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
 }
 
 .mobile-menu-close-btn:active {
-  background: rgba(255, 255, 255, 0.12) !important;
+  background: rgba(255, 255, 255, 0.18) !important;
   transform: scale(0.92) !important;
 }
 
@@ -3480,23 +3494,28 @@ body.drawer-open {
     backdrop-filter: blur(14px) !important;
     -webkit-backdrop-filter: blur(14px) !important;
     border-bottom: 1.5px solid rgba(0, 0, 0, 0.08) !important;
+    overflow: hidden !important;
   }
 
   .nav-left-group {
     display: flex !important;
     align-items: center !important;
     gap: 10px !important;
+    flex-shrink: 0 !important;
+    min-width: 0 !important;
+  }
+
+  /* Hide desktop nav entirely on mobile — the nav element AND the ul */
+  .nav-left-group nav,
+  .nav-links-row {
+    display: none !important;
   }
 
   .nav-right-group {
     display: flex !important;
     align-items: center !important;
     gap: 8px !important;
-    margin-left: auto !important;
-  }
-
-  .nav-links-row {
-    display: none !important;
+    flex-shrink: 0 !important;
   }
 
   .floating-cursor-badge {
@@ -3555,6 +3574,10 @@ body.drawer-open {
     flex-shrink: 0 !important;
     transition: transform 0.15s ease, background 0.15s ease !important;
     outline: none !important;
+    touch-action: manipulation !important;
+    -webkit-tap-highlight-color: transparent !important;
+    user-select: none !important;
+    -webkit-user-select: none !important;
   }
 
   .mobile-nav-toggle:hover {
