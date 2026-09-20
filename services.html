@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Services — Enoch's Portfolio</title>
   <meta name="description" content="Services by Enoch: Product Design, Brand Identity, Web Design &amp; Framer Translation, and Creative Direction.">
-  <link rel="stylesheet" href="css/style.css?v=10.2">
+  <link rel="stylesheet" href="css/style.css?v=10.3">
   <link rel="icon" type="image/png" href="assets/images/dexo-icon.png">
 </head>
 <body>
@@ -65,12 +65,8 @@
   <div class="mobile-nav-drawer mobile-nav-fullscreen" id="mobileNavDrawer" aria-label="Mobile Navigation Drawer">
     <div class="mobile-menu-inner">
       <div class="mobile-menu-topbar">
-        <a href="case-study.html" class="mobile-menu-search-tag" aria-label="Search and Explore Projects">
-          <span class="mobile-search-text">SEARCH</span>
-          <svg class="mobile-search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f6ad55" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="11" cy="11" r="8"></circle>
-            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-          </svg>
+        <a href="index.html" class="dexo-logo-link mobile-menu-logo" aria-label="Enoch's Portfolio Home">
+          <img src="assets/images/dexo-logo-icon.png" alt="Dexo Icon" class="dexo-icon-img">
         </a>
         <button type="button" class="mobile-menu-close-btn" id="mobileNavClose" aria-label="Close navigation menu" onclick="window.closeMobileMenu && window.closeMobileMenu(event)">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
@@ -85,31 +81,26 @@
           <li class="mobile-menu-item">
             <a href="index.html" class="mobile-menu-link">
               <span class="mobile-link-text">HOME</span>
-              <span class="mobile-link-num" style="color: #ff6b4a;">00.</span>
             </a>
           </li>
           <li class="mobile-menu-item">
             <a href="about.html" class="mobile-menu-link">
               <span class="mobile-link-text">ABOUT</span>
-              <span class="mobile-link-num" style="color: #ff5c8d;">01.</span>
             </a>
           </li>
           <li class="mobile-menu-item">
             <a href="case-study.html" class="mobile-menu-link">
               <span class="mobile-link-text">CASE STUDIES</span>
-              <span class="mobile-link-num" style="color: #36c5f0;">02.</span>
             </a>
           </li>
           <li class="mobile-menu-item">
             <a href="services.html" class="mobile-menu-link active">
               <span class="mobile-link-text">SERVICES</span>
-              <span class="mobile-link-num" style="color: #ffb800;">03.</span>
             </a>
           </li>
           <li class="mobile-menu-item">
             <a href="contact.html" class="mobile-menu-link">
               <span class="mobile-link-text">CONTACT</span>
-              <span class="mobile-link-num" style="color: #ffffff;">04.</span>
             </a>
           </li>
         </ul>
@@ -305,7 +296,7 @@
         <div class="folder-project-card faq-item open" style="padding: 0; overflow: hidden;">
           <button type="button" class="faq-question" style="width: 100%; padding: 22px 28px; display: flex; justify-content: space-between; align-items: center; font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; text-align: left; cursor: pointer; background: transparent; border: none;">
             <span>What is your typical project timeline?</span>
-            <span class="faq-icon" style="font-family: var(--font-mono); font-size: 18px; width: 28px; height: 28px; border: 1.5px solid var(--token-dark); border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer;">−</span>
+            <span class="faq-icon">−</span>
           </button>
           <div class="faq-answer" style="padding: 0 28px 24px; font-size: 1rem; color: #4a4b4b; line-height: 1.6; display: block;">
             Timelines vary depending on project scope. A focused brand identity or landing page typically takes 2–4 weeks. Comprehensive product UI/UX systems or full multi-page websites generally take 4–8 weeks with clear milestone deliverables.
@@ -315,7 +306,7 @@
         <div class="folder-project-card faq-item" style="padding: 0; overflow: hidden;">
           <button type="button" class="faq-question" style="width: 100%; padding: 22px 28px; display: flex; justify-content: space-between; align-items: center; font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; text-align: left; cursor: pointer; background: transparent; border: none;">
             <span>How do we communicate throughout the engagement?</span>
-            <span class="faq-icon" style="font-family: var(--font-mono); font-size: 18px; width: 28px; height: 28px; border: 1.5px solid var(--token-dark); border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer;">+</span>
+            <span class="faq-icon">+</span>
           </button>
           <div class="faq-answer" style="padding: 0 28px 24px; font-size: 1rem; color: #4a4b4b; line-height: 1.6; display: none;">
             I prioritize low-friction communication. We stay connected via a dedicated Slack channel or email, with weekly video syncs (Google Meet/Zoom) for major milestone walk-throughs and Loom async screen reviews.
@@ -325,7 +316,7 @@
         <div class="folder-project-card faq-item" style="padding: 0; overflow: hidden;">
           <button type="button" class="faq-question" style="width: 100%; padding: 22px 28px; display: flex; justify-content: space-between; align-items: center; font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; text-align: left; cursor: pointer; background: transparent; border: none;">
             <span>Do you offer web development or just design?</span>
-            <span class="faq-icon" style="font-family: var(--font-mono); font-size: 18px; width: 28px; height: 28px; border: 1.5px solid var(--token-dark); border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer;">+</span>
+            <span class="faq-icon">+</span>
           </button>
           <div class="faq-answer" style="padding: 0 28px 24px; font-size: 1rem; color: #4a4b4b; line-height: 1.6; display: none;">
             Yes, I provide end-to-end design and build services. For portfolio, brand, and marketing websites, I build directly in Framer or clean HTML/CSS/JS. For complex engineering apps, I provide developer-ready Figma specifications and design tokens.

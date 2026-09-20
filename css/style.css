@@ -489,35 +489,17 @@ body.drawer-open {
   background: #111212 !important;
 }
 
-/* Top bar in drawer: SEARCH with magnifying glass on left, Close button on right */
+/* Top bar in drawer: logo icon on the left, Close button on the right.
+   Same padding/size as the page header so the two line up when the menu opens. */
 .mobile-menu-topbar {
   display: flex !important;
   align-items: center !important;
   justify-content: space-between !important;
-  padding: 18px 22px !important;
+  padding: 10px 16px !important;
   border-bottom: 1px solid rgba(255, 255, 255, 0.18) !important;
   width: 100% !important;
   box-sizing: border-box !important;
   background: #111212 !important;
-}
-
-.mobile-menu-search-tag {
-  display: inline-flex !important;
-  align-items: center !important;
-  gap: 8px !important;
-  text-decoration: none !important;
-  color: #ffffff !important;
-  cursor: pointer !important;
-}
-
-.mobile-search-text {
-  font-family: 'Flux Variable', Impact, 'Arial Narrow Bold', 'Arial Black', sans-serif !important;
-  font-size: 26px !important;
-  font-weight: 900 !important;
-  letter-spacing: -0.01em !important;
-  color: #ffffff !important;
-  line-height: 1 !important;
-  text-transform: uppercase !important;
 }
 
 .mobile-menu-close-btn {
@@ -525,8 +507,8 @@ body.drawer-open {
   border: none !important;
   color: #ffffff !important;
   cursor: pointer !important;
-  width: 42px !important;
-  height: 42px !important;
+  width: 38px !important;
+  height: 38px !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
@@ -574,7 +556,7 @@ body.drawer-open {
   align-items: flex-start !important;
   justify-content: flex-start !important;
   gap: 8px !important;
-  padding: 16px 22px !important;
+  padding: 14px 20px !important;
   text-decoration: none !important;
   color: #ffffff !important;
   width: 100% !important;
@@ -585,34 +567,25 @@ body.drawer-open {
 .mobile-menu-link:hover,
 .mobile-menu-link:active {
   background: rgba(255, 255, 255, 0.08) !important;
-  padding-left: 26px !important;
+  padding-left: 24px !important;
 }
 
 .mobile-link-text {
   font-family: 'Flux Variable', Impact, 'Arial Narrow Bold', 'Barlow Condensed', 'Arial Black', sans-serif !important;
   font-weight: 900 !important;
-  font-size: clamp(2.6rem, 12vw, 4.2rem) !important;
-  line-height: 0.95 !important;
-  letter-spacing: -0.015em !important;
+  font-size: clamp(1.4rem, 6.6vw, 1.75rem) !important;
+  line-height: 1 !important;
+  letter-spacing: -0.01em !important;
   text-transform: uppercase !important;
   color: #ffffff !important;
-}
-
-.mobile-link-num {
-  font-family: var(--font-mono), monospace !important;
-  font-size: clamp(0.95rem, 3.8vw, 1.25rem) !important;
-  font-weight: 700 !important;
-  letter-spacing: 0.02em !important;
-  line-height: 1 !important;
-  margin-top: 3px !important;
 }
 
 /* Bottom Secondary Links (Exact Uploaded Reference Layout) */
 .mobile-menu-sublinks {
   display: flex !important;
   flex-direction: column !important;
-  gap: 16px !important;
-  padding: 32px 22px 52px !important;
+  gap: 14px !important;
+  padding: 28px 20px 44px !important;
   margin-top: auto !important;
   background: #111212 !important;
   box-sizing: border-box !important;
@@ -620,7 +593,7 @@ body.drawer-open {
 
 .mobile-sublink {
   font-family: var(--font-sans), -apple-system, BlinkMacSystemFont, sans-serif !important;
-  font-size: 14px !important;
+  font-size: 12px !important;
   font-weight: 600 !important;
   letter-spacing: 0.05em !important;
   text-transform: uppercase !important;
@@ -4095,4 +4068,52 @@ body.drawer-open {
 
 body.lightbox-open {
   overflow: hidden;
+}
+
+/* ==========================================================================
+   FAQ ICON — a fixed, perfectly round circle with a centered + / −
+   Drawn with CSS (the +/− text is hidden) so it can't be squeezed into an
+   oval by long question text or sit off-center because of font metrics.
+   ========================================================================== */
+.faq-question {
+  gap: 16px;
+}
+
+.faq-icon {
+  position: relative;
+  flex: 0 0 28px;
+  width: 28px;
+  height: 28px;
+  box-sizing: border-box;
+  border: 1.5px solid var(--token-dark);
+  border-radius: 50%;
+  font-size: 0;
+  line-height: 0;
+  color: transparent;
+  cursor: pointer;
+}
+
+.faq-icon::before,
+.faq-icon::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: var(--token-dark);
+  border-radius: 1px;
+  transform: translate(-50%, -50%);
+}
+
+.faq-icon::before {
+  width: 12px;
+  height: 2px;
+}
+
+.faq-icon::after {
+  width: 2px;
+  height: 12px;
+}
+
+.faq-item.open .faq-icon::after {
+  display: none;
 }
