@@ -1339,11 +1339,7 @@ body.drawer-open {
   margin: 0 auto;
   border-radius: 8px;
   box-shadow: 0 16px 48px rgba(0, 0, 0, 0.09);
-  transition: transform 0.3s ease;
-}
-
-.case-study-unboxed-img:hover {
-  transform: scale(1.008);
+  cursor: zoom-in;
 }
 
 .project-details-pane {
@@ -2657,17 +2653,16 @@ body.drawer-open {
   overflow: hidden;
 }
 
+/* Show the WHOLE image at its own proportions (never cropped or zoomed).
+   Clicking opens it enlarged in a lightbox (see main.js). */
 .hero-folder-img {
   width: 100%;
-  aspect-ratio: 16 / 9.5;
-  object-fit: cover;
+  height: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
   border-radius: 3px;
   display: block;
-  transition: transform 0.35s ease;
-}
-
-.hero-folder-card:hover .hero-folder-img {
-  transform: scale(1.025);
+  cursor: zoom-in;
 }
 
 .hero-card-meta {
@@ -3032,10 +3027,12 @@ body.drawer-open {
 
 .taped-media-img {
   width: 100%;
-  aspect-ratio: 16 / 10;
-  object-fit: cover;
+  height: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
   display: block;
   border-radius: 2px;
+  cursor: zoom-in;
 }
 
 .corner-tape-strip {
@@ -3093,7 +3090,7 @@ body.drawer-open {
 
 @media (max-width: 768px) {
   .home-lets-talk-section {
-    padding: 14px 0 10px !important;
+    padding: 14px 0 0 !important;
   }
 
   .home-mascot-talk-row {
@@ -3434,9 +3431,6 @@ body.drawer-open {
   .case-studies-container .hero-folder-inner-frame {
     padding: 14px;
   }
-  .case-studies-container .hero-folder-img {
-    aspect-ratio: 16 / 9.6;
-  }
 }
 
 /* Case Study Quantitative Stats Grid (Desktop) */
@@ -3605,7 +3599,8 @@ body.drawer-open {
   }
 
   .taped-media-img {
-    aspect-ratio: 16 / 10 !important;
+    aspect-ratio: auto !important;
+    height: auto !important;
     width: 100% !important;
   }
 
@@ -3627,10 +3622,7 @@ body.drawer-open {
     gap: 24px !important;
   }
 
-  .about-teaser-grid > div:nth-child(2) {
-    order: -1;
-  }
-
+  /* Mobile order follows the HTML: myself photo, then the text, then workspace */
   .polaroid-frame {
     max-width: 220px !important;
     margin: 0 auto !important;
@@ -3649,6 +3641,12 @@ body.drawer-open {
     gap: 24px !important;
   }
 
+  /* In a stacked (column) layout the desktop flex-basis of 520px becomes a
+     520px HEIGHT, leaving a big empty gap under the text. Size to content. */
+  .home-talk-content {
+    flex: 0 0 auto !important;
+  }
+
   .mascot-clover-character {
     width: 160px !important;
     height: 160px !important;
@@ -3665,8 +3663,9 @@ body.drawer-open {
     margin: 0 auto !important;
   }
 
+  /* Top margin matches the space above the mascot (footer line to mascot) */
   .home-contact-wrapper {
-    margin: 40px auto 40px !important;
+    margin: 29px auto 40px !important;
   }
 
   .home-comment-card {
@@ -3854,37 +3853,46 @@ body.drawer-open {
     white-space: nowrap !important;
   }
 
-  /* Figma selection box — spans full container width */
+  /* Figma selection box — hugs the ENOCH text like desktop (not full width) */
   .figma-selection {
     display: block !important;
-    width: calc(100vw - 32px) !important;
-    max-width: calc(100vw - 32px) !important;
+    width: fit-content !important;
+    max-width: calc(100vw - 48px) !important;
     box-sizing: border-box !important;
-    padding: 28px 8px 16px !important;
+    padding: 26px 30px 14px !important;
     margin: 28px auto 0 !important;
     text-align: center !important;
     position: relative !important;
   }
 
-  /* Badges — restore absolute positioning at top of box like reference */
+  /* The badges cover the top corners, so drop the top handles to keep the
+     badge text clean (the other five handles stay visible). */
+  .figma-selection > .handle-tl,
+  .figma-selection > .handle-tc,
+  .figma-selection > .handle-tr {
+    display: none !important;
+  }
+
+  /* Badges — sit on the top corners of the box, tilted like desktop.
+     Font scales with the screen so both fit on narrow phones. */
   .box-badge-left {
     position: absolute !important;
-    top: -16px !important;
-    left: 6px !important;
-    transform: rotate(-3deg) !important;
-    font-size: 10px !important;
-    padding: 3px 9px !important;
+    top: -15px !important;
+    left: -12px !important;
+    transform: rotate(-4deg) !important;
+    font-size: clamp(8.5px, 2.4vw, 9.5px) !important;
+    padding: 3px 6px !important;
     white-space: nowrap !important;
     display: inline-block !important;
   }
 
   .box-badge-right {
     position: absolute !important;
-    top: -16px !important;
-    right: 6px !important;
-    transform: rotate(3deg) !important;
-    font-size: 10px !important;
-    padding: 3px 9px !important;
+    top: -15px !important;
+    right: -12px !important;
+    transform: rotate(4deg) !important;
+    font-size: clamp(8.5px, 2.4vw, 9.5px) !important;
+    padding: 3px 6px !important;
     white-space: nowrap !important;
     display: inline-block !important;
   }
@@ -4032,3 +4040,59 @@ body.drawer-open {
 
 
 
+/* ==========================================================================
+   IMAGE LIGHTBOX — click a case-study / featured-work image to view it enlarged
+   ========================================================================== */
+.img-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 2147483000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  box-sizing: border-box;
+  background: rgba(17, 18, 18, 0.88);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0.2s;
+  cursor: zoom-out;
+}
+
+.img-lightbox.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.img-lightbox-img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 6px;
+  background: #ffffff;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.img-lightbox-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 1.5px solid var(--token-dark);
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 2px 2px 0 var(--token-dark);
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+body.lightbox-open {
+  overflow: hidden;
+}

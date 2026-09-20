@@ -402,6 +402,58 @@ function initMainFolio() {
       }
     });
   }
+
+  // 8. IMAGE LIGHTBOX
+  // Case-study / featured-work images are shown in full, never cropped or
+  // zoomed. Clicking (or Enter/Space on a focused image) opens it enlarged.
+  var zoomables = document.querySelectorAll('.hero-folder-img, .taped-media-img, .case-study-unboxed-img');
+  if (zoomables.length) {
+    var box = document.createElement('div');
+    box.className = 'img-lightbox';
+    box.setAttribute('role', 'dialog');
+    box.setAttribute('aria-modal', 'true');
+    box.setAttribute('aria-label', 'Enlarged image');
+    box.innerHTML =
+      '<button type="button" class="img-lightbox-close" aria-label="Close enlarged image">' +
+        '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#111212" stroke-width="2.4" stroke-linecap="round">' +
+          '<line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line>' +
+        '</svg>' +
+      '</button>' +
+      '<img class="img-lightbox-img" alt="">';
+    document.body.appendChild(box);
+    var boxImg = box.querySelector('.img-lightbox-img');
+    var lastFocus = null;
+
+    var openLightbox = function(img) {
+      lastFocus = img;
+      // The detail page swaps the image src after load, so read it at click time.
+      boxImg.src = img.currentSrc || img.src;
+      boxImg.alt = img.alt || '';
+      box.classList.add('open');
+      document.body.classList.add('lightbox-open');
+      box.querySelector('.img-lightbox-close').focus();
+    };
+    var closeLightbox = function() {
+      if (!box.classList.contains('open')) return;
+      box.classList.remove('open');
+      document.body.classList.remove('lightbox-open');
+      if (lastFocus) lastFocus.focus();
+    };
+
+    zoomables.forEach(function(img) {
+      img.setAttribute('tabindex', '0');
+      img.setAttribute('role', 'button');
+      img.setAttribute('aria-label', 'View larger: ' + (img.alt || 'project image'));
+      img.addEventListener('click', function() { openLightbox(img); });
+      img.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openLightbox(img); }
+      });
+    });
+    box.addEventListener('click', closeLightbox);
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeLightbox();
+    });
+  }
 }
 
 // Robust execution whether DOM is loading, interactive, or complete
