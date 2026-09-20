@@ -3437,6 +3437,8 @@ body.drawer-open {
   .case-studies-container .hero-folder-img {
     aspect-ratio: 16 / 9.6;
   }
+}
+
 /* Case Study Quantitative Stats Grid (Desktop) */
 .project-stats-grid {
   display: grid;
