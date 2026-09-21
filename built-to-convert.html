@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Built to Convert — Websites That Turn Visitors Into Customers | Enoch</title>
+  <meta name="description" content="Enoch designs websites that help customers understand what you offer, trust your business and take the next step: more inquiries, easier bookings, more sales.">
+  <meta property="og:title" content="Your website should do more than look good.">
+  <meta property="og:description" content="Websites designed to generate leads, take bookings and turn visitors into customers.">
+  <link rel="stylesheet" href="css/style.css?v=10.3">
+  <link rel="stylesheet" href="css/built-to-convert.css?v=1.0">
+  <link rel="icon" type="image/png" href="assets/images/dexo-icon.png">
+</head>
+<body>
+
+  <!-- =========================================================================
+       CANVAS RULER BAR
+       ========================================================================= -->
+  <div class="canvas-ruler-wrap" aria-hidden="true">
+    <div class="canvas-ruler-ticks" id="rulerTicks"></div>
+  </div>
+
+  <!-- =========================================================================
+       TOP NAVIGATION HEADER (same as every page)
+       ========================================================================= -->
+  <header class="top-header-bar">
+    <div class="nav-left-group">
+      <a href="index.html" class="dexo-logo-link" aria-label="Enoch's Portfolio Home">
+        <img src="assets/images/dexo-logo-icon.png" alt="Dexo Icon" class="dexo-icon-img">
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links-row">
+          <li><a href="index.html" class="nav-tab-item"><span class="tab-icon">🏠</span> HOME</a></li>
+          <li><a href="about.html" class="nav-tab-item"><span class="tab-icon">✱</span> ABOUT</a></li>
+          <li><a href="case-study.html" class="nav-tab-item"><span class="tab-icon">🗂</span> CASE STUDIES</a></li>
+          <li><a href="services.html" class="nav-tab-item"><span class="tab-icon">💼</span> SERVICES</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="nav-right-group">
+      <a href="mailto:dara.daodu@gmail.com" class="mini-badge-btn em" title="Email Enoch">EM</a>
+      <a href="tel:+2347067511942" class="mini-badge-btn ph" title="Call Enoch">PH</a>
+
+      <a href="contact.html" class="nav-tab-contact">
+        <span style="color: var(--token-pink);">♥</span> CONTACT
+      </a>
+
+      <div class="floating-cursor-badge" aria-hidden="true">
+        <svg class="cursor-arrow-svg" viewBox="0 0 16 16" fill="none">
+          <path d="M0 0L6 14L8.5 8.5L14 6L0 0Z" fill="#36c5f0" stroke="#111212" stroke-width="1.5" stroke-linejoin="round"/>
+        </svg>
+        <a href="mailto:dara.daodu@gmail.com" class="cursor-tag-pill" style="text-decoration: none; color: inherit;">dara.daodu@gmail.com</a>
+      </div>
+
+      <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle navigation menu" type="button" onclick="window.toggleMobileMenu && window.toggleMobileMenu(event)">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Fullscreen Dark Mobile Navigation Drawer -->
+  <div class="mobile-nav-drawer mobile-nav-fullscreen" id="mobileNavDrawer" aria-label="Mobile Navigation Drawer">
+    <div class="mobile-menu-inner">
+      <div class="mobile-menu-topbar">
+        <a href="index.html" class="dexo-logo-link mobile-menu-logo" aria-label="Enoch's Portfolio Home">
+          <img src="assets/images/dexo-logo-icon.png" alt="Dexo Icon" class="dexo-icon-img">
+        </a>
+        <button type="button" class="mobile-menu-close-btn" id="mobileNavClose" aria-label="Close navigation menu" onclick="window.closeMobileMenu && window.closeMobileMenu(event)">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <nav class="mobile-menu-nav" aria-label="Mobile Navigation Links">
+        <ul class="mobile-menu-list">
+          <li class="mobile-menu-item"><a href="index.html" class="mobile-menu-link"><span class="mobile-link-text">HOME</span></a></li>
+          <li class="mobile-menu-item"><a href="about.html" class="mobile-menu-link"><span class="mobile-link-text">ABOUT</span></a></li>
+          <li class="mobile-menu-item"><a href="case-study.html" class="mobile-menu-link"><span class="mobile-link-text">CASE STUDIES</span></a></li>
+          <li class="mobile-menu-item"><a href="services.html" class="mobile-menu-link"><span class="mobile-link-text">SERVICES</span></a></li>
+          <li class="mobile-menu-item"><a href="contact.html" class="mobile-menu-link"><span class="mobile-link-text">CONTACT</span></a></li>
+        </ul>
+      </nav>
+
+      <div class="mobile-menu-sublinks">
+        <a href="contact.html" class="mobile-sublink">CONTACT</a>
+        <a href="mailto:dara.daodu@gmail.com" class="mobile-sublink">DARA.DAODU@GMAIL.COM</a>
+        <a href="tel:+2347067511942" class="mobile-sublink">+234 706 751 1942</a>
+        <a href="https://linkedin.com/in/enochd/" target="_blank" rel="noopener" class="mobile-sublink">LINKEDIN</a>
+        <a href="https://behance.net/daradaodu" target="_blank" rel="noopener" class="mobile-sublink">BEHANCE</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    window.closeMobileMenu = function(e) {
+      if (e && e.preventDefault) e.preventDefault();
+      var d = document.getElementById('mobileNavDrawer');
+      var btns = document.querySelectorAll('.mobile-nav-toggle');
+      if (d) d.classList.remove('open');
+      btns.forEach(function(b) { b.classList.remove('active'); b.setAttribute('aria-expanded', 'false'); });
+      document.body.classList.remove('drawer-open');
+    };
+    window.openMobileMenu = function(e) {
+      if (e && e.preventDefault) e.preventDefault();
+      var d = document.getElementById('mobileNavDrawer');
+      var btns = document.querySelectorAll('.mobile-nav-toggle');
+      if (d) d.classList.add('open');
+      btns.forEach(function(b) { b.classList.add('active'); b.setAttribute('aria-expanded', 'true'); });
+      document.body.classList.add('drawer-open');
+    };
+    window.toggleMobileMenu = function(e) {
+      if (e && e.preventDefault) e.preventDefault();
+      var d = document.getElementById('mobileNavDrawer');
+      if (!d) return;
+      if (d.classList.contains('open')) {
+        window.closeMobileMenu(e);
+      } else {
+        window.openMobileMenu(e);
+      }
+    };
+  </script>
+
+  <main>
+
+    <!-- =========================================================================
+         1. HERO — start with the business owner's problem
+         ========================================================================= -->
+    <section class="btc-hero">
+      <div class="container">
+        <span class="handwritten-intro-note" style="color: var(--token-cyan);">built to convert</span>
+
+        <h1 class="btc-h1">
+          Your website should
+          <span class="btc-mark">
+            <span class="figma-handle handle-tl"></span>
+            <span class="figma-handle handle-tr"></span>
+            <span class="figma-handle handle-bl"></span>
+            <span class="figma-handle handle-br"></span>
+            do more
+          </span>
+          than look good.
+        </h1>
+
+        <p class="btc-sub">
+          I design websites that make it easier for customers to understand what you
+          <span class="btc-nowrap">offer<img src="assets/images/sticker-sphere.png" alt="" class="inline-sticker-img">,</span>
+          trust your business and take the
+          <span class="btc-nowrap">next step<img src="assets/images/flower-pink.svg" alt="" class="inline-sticker-img" style="height: 0.95em;">.</span>
+        </p>
+
+        <div class="hero-stickers-row">
+          <span class="tape-sticker-pill tape-sticker-cyan">GET MORE INQUIRIES <span>↗</span></span>
+          <span class="tape-sticker-pill tape-sticker-yellow">MAKE BOOKING EASIER <span>↗</span></span>
+          <span class="tape-sticker-pill tape-sticker-green">TURN VISITORS INTO CUSTOMERS <span>↗</span></span>
+        </div>
+
+        <div class="btc-cta-row">
+          <div class="btn-selection-box">
+            <div class="figma-handle handle-tl"></div>
+            <div class="figma-handle handle-tr"></div>
+            <div class="figma-handle handle-bl"></div>
+            <div class="figma-handle handle-br"></div>
+            <a href="#start" class="btn-nudge-black">
+              <span class="btn-cyan-arrows">&gt;&gt;</span>
+              <span>START A PROJECT</span>
+            </a>
+          </div>
+          <a href="#work" class="btn-nudge-outline">VIEW MY WORK <span>↓</span></a>
+        </div>
+
+        <div class="hero-status-sub">
+          <span class="cyan-pulse-dot"></span>
+          <span>Usually replies within 1 business day</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         2. QUICK PROOF — what customers actually do before they buy
+         ========================================================================= -->
+    <section class="btc-section btc-tight-top">
+      <div class="container">
+        <div class="btc-head">
+          <span class="handwritten-intro-note" style="color: var(--token-pink);">why it matters</span>
+          <h2 class="btc-title">Customers check before they buy.</h2>
+          <p class="btc-lede">Real research on what people do when they look up a business, and what they find when they get to your website (or don&rsquo;t).</p>
+        </div>
+
+        <div class="btc-stats">
+          <div class="btc-stat" style="--accent: var(--token-cyan);">
+            <div class="btc-stat-num">58%</div>
+            <p class="btc-stat-txt">often or always check a business&rsquo;s website to confirm what they saw on social media or Google.</p>
+            <p class="btc-src"><a href="https://www.dreamhost.com/blog/dreamhost-2026-local-business-trust-index/" target="_blank" rel="noopener">DreamHost Local Business Trust Index 2026</a> · 1,201 US consumers</p>
+          </div>
+
+          <div class="btc-stat" style="--accent: var(--token-pink);">
+            <div class="btc-stat-num">39%</div>
+            <p class="btc-stat-txt">have declined to buy from a business specifically because it had no website.</p>
+            <p class="btc-src"><a href="https://www.dreamhost.com/blog/dreamhost-2026-local-business-trust-index/" target="_blank" rel="noopener">DreamHost Local Business Trust Index 2026</a> · 1,201 US consumers</p>
+          </div>
+
+          <div class="btc-stat" style="--accent: var(--token-amber);">
+            <div class="btc-stat-num">$177</div>
+            <p class="btc-stat-txt">is what consumers feel comfortable spending with a business that has a website, versus just <strong>$36</strong> with an Instagram or TikTok shop.</p>
+            <p class="btc-src"><a href="https://www.dreamhost.com/blog/dreamhost-2026-local-business-trust-index/" target="_blank" rel="noopener">DreamHost Local Business Trust Index 2026</a> · 1,201 US consumers</p>
+          </div>
+
+          <div class="btc-stat" style="--accent: var(--token-green);">
+            <div class="btc-stat-num">46.1%</div>
+            <p class="btc-stat-txt">cited the overall look and design of a site (layout, typography, colour) when judging whether it&rsquo;s credible.</p>
+            <p class="btc-src"><a href="https://credibility.stanford.edu/pdf/How_Do_People_Evaluate_a_Web_Site%27s_Credibility_v37.pdf" target="_blank" rel="noopener">Stanford Persuasive Technology Lab</a> · 2,684 participants</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         3. WHAT SHOULD YOUR WEBSITE BE DOING FOR YOU?
+         ========================================================================= -->
+    <section class="btc-section">
+      <div class="container">
+        <div class="btc-head">
+          <span class="handwritten-intro-note" style="color: var(--token-amber);">what it should do</span>
+          <h2 class="btc-title">What should your website be doing for you?</h2>
+        </div>
+
+        <div class="btc-cards-2">
+          <div class="folder-project-card">
+            <div class="folder-tab-badge"><span>(01)</span><span>LEADS</span></div>
+            <h3 class="btc-card-title">Generate Leads</h3>
+            <p class="btc-card-text">Turn visitors into qualified inquiries instead of sending them back to Instagram or WhatsApp, where they get lost in the scroll.</p>
+            <div class="btc-chips">
+              <span class="meta-sticker cyan">Inquiry forms</span>
+              <span class="meta-sticker yellow">Clear calls to action</span>
+              <span class="meta-sticker green">Lead capture</span>
+            </div>
+          </div>
+
+          <div class="folder-project-card">
+            <div class="folder-tab-badge yellow"><span>(02)</span><span>BOOKINGS</span></div>
+            <h3 class="btc-card-title">Take Bookings</h3>
+            <p class="btc-card-text">Let customers view your services, choose what they need and request or schedule an appointment without the back-and-forth.</p>
+            <div class="btc-chips">
+              <span class="meta-sticker yellow">Service pages</span>
+              <span class="meta-sticker pink">Booking flow</span>
+              <span class="meta-sticker cyan">Availability</span>
+            </div>
+          </div>
+
+          <div class="folder-project-card">
+            <div class="folder-tab-badge"><span>(03)</span><span>PRODUCTS</span></div>
+            <h3 class="btc-card-title">Sell Products</h3>
+            <p class="btc-card-text">Give customers a proper place to discover your products, understand them and buy or enquire, on any screen.</p>
+            <div class="btc-chips">
+              <span class="meta-sticker green">Product catalog</span>
+              <span class="meta-sticker cyan">Easy checkout</span>
+              <span class="meta-sticker pink">Mobile-first</span>
+            </div>
+          </div>
+
+          <div class="folder-project-card">
+            <div class="folder-tab-badge yellow"><span>(04)</span><span>TRUST</span></div>
+            <h3 class="btc-card-title">Build Trust</h3>
+            <p class="btc-card-text">Make your business look as credible online as it already is offline, so people feel safe choosing you.</p>
+            <div class="btc-chips">
+              <span class="meta-sticker pink">Proof &amp; work</span>
+              <span class="meta-sticker yellow">Testimonials</span>
+              <span class="meta-sticker green">Clear process</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         4. THE PROBLEMS I FIX (the biggest section)
+         ========================================================================= -->
+    <section class="btc-section" id="problems">
+      <div class="container">
+        <div class="btc-head">
+          <span class="handwritten-intro-note" style="color: var(--token-cyan);">the problems i fix</span>
+          <h2 class="btc-title">If your customers have to ask, your website can probably do it.</h2>
+          <p class="btc-lede">Every question you keep answering in DMs is a sign your website isn&rsquo;t doing its job. Here&rsquo;s what I build in its place, and what the research says about it.</p>
+        </div>
+
+        <div class="btc-problems">
+
+          <article class="btc-problem" style="--accent: var(--token-cyan);">
+            <div class="btc-ask">&ldquo;How much is it?&rdquo;</div>
+            <div class="btc-arrow" aria-hidden="true">→</div>
+            <div class="btc-fix">
+              <h3>Put your services and pricing in one place.</h3>
+              <p>No more sending the same price list to every new enquiry. Customers see what you offer and what to expect before they ever message you.</p>
+              <p class="btc-fact"><strong>34%</strong> of consumers say outdated or inaccurate information is the most frustrating thing on a business website. <a href="https://www.dreamhost.com/blog/dreamhost-2026-local-business-trust-index/" target="_blank" rel="noopener">DreamHost, 2026</a></p>
+            </div>
+          </article>
+
+          <article class="btc-problem" style="--accent: var(--token-amber);">
+            <div class="btc-ask">&ldquo;Are you available?&rdquo;</div>
+            <div class="btc-arrow" aria-hidden="true">→</div>
+            <div class="btc-fix">
+              <h3>Give customers a booking and availability flow.</h3>
+              <p>Let people see when you&rsquo;re free and request a slot at 11pm on a Sunday, without waiting for you to reply.</p>
+              <p class="btc-fact"><strong>Nearly 70%</strong> of consumers said they&rsquo;d choose to book online when it&rsquo;s offered. <a href="https://www.getapp.com/resources/research-online-booking-importance-of-appointment-scheduling/" target="_blank" rel="noopener">GetApp survey, 2021 (217 respondents)</a></p>
+            </div>
+          </article>
+
+          <article class="btc-problem" style="--accent: var(--token-green);">
+            <div class="btc-ask">&ldquo;What products do you have?&rdquo;</div>
+            <div class="btc-arrow" aria-hidden="true">→</div>
+            <div class="btc-fix">
+              <h3>Build a proper product catalog.</h3>
+              <p>Every product with photos, details, prices and reviews in one place, ready to browse at any hour.</p>
+              <p class="btc-fact"><strong>270%</strong> higher purchase likelihood for a product with 5 reviews versus none, in a study of online retailers. <a href="https://spiegel.medill.northwestern.edu/how-online-reviews-influence-sales/" target="_blank" rel="noopener">Northwestern Spiegel Research Center</a></p>
+            </div>
+          </article>
+
+          <article class="btc-problem" style="--accent: var(--token-pink);">
+            <div class="btc-ask">&ldquo;How do I book?&rdquo;</div>
+            <div class="btc-arrow" aria-hidden="true">→</div>
+            <div class="btc-fix">
+              <h3>Give them a clear path from discovery to booking.</h3>
+              <p>One obvious next step on every page, and a checkout or booking form with no unnecessary friction.</p>
+              <p class="btc-fact"><strong>35.26%</strong> conversion gain is available to the average large e-commerce site from better checkout design alone. <a href="https://baymard.com/lists/cart-abandonment-rate" target="_blank" rel="noopener">Baymard Institute</a></p>
+            </div>
+          </article>
+
+          <article class="btc-problem" style="--accent: var(--token-cyan);">
+            <div class="btc-ask">&ldquo;Can I trust you?&rdquo;</div>
+            <div class="btc-arrow" aria-hidden="true">→</div>
+            <div class="btc-fix">
+              <h3>Put your work, testimonials, process and proof where customers can see them.</h3>
+              <p>Show the real thing: your projects, your results, how you work and who you&rsquo;ve helped.</p>
+              <p class="btc-fact"><strong>60%</strong> of consumers say an outdated-looking website hurts a business&rsquo;s credibility. <a href="https://www.dreamhost.com/blog/dreamhost-2026-local-business-trust-index/" target="_blank" rel="noopener">DreamHost, 2026</a></p>
+            </div>
+          </article>
+
+          <article class="btc-problem" style="--accent: var(--token-amber);">
+            <div class="btc-ask">&ldquo;I want more information.&rdquo;</div>
+            <div class="btc-arrow" aria-hidden="true">→</div>
+            <div class="btc-fix">
+              <h3>Capture the lead instead of losing them in a DM.</h3>
+              <p>A simple form sends every enquiry, with the details you need, straight to your inbox, ready for a quick reply.</p>
+              <p class="btc-fact">Businesses that contacted a lead within an hour were nearly <strong>7×</strong> as likely to qualify them as those who waited just one more hour (1.25M leads studied). <a href="https://hbr.org/2011/03/the-short-life-of-online-sales-leads" target="_blank" rel="noopener">Harvard Business Review</a></p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         5. ONLY NOW: INTRODUCE YOURSELF
+         ========================================================================= -->
+    <section class="btc-section">
+      <div class="container">
+        <div class="btc-intro">
+          <div class="polaroid-frame polaroid-tilt-left btc-intro-photo">
+            <div class="polaroid-img-box" style="aspect-ratio: 4/5;">
+              <img src="assets/images/enoch-photo.jpg" alt="Enoch, Brand and Web Designer" style="object-position: center 20%;">
+            </div>
+            <div class="polaroid-hand-label">that&rsquo;s me, Enoch</div>
+          </div>
+
+          <div>
+            <span class="handwritten-intro-note" style="color: var(--token-green);">nice to meet you</span>
+            <h2 class="btc-title btc-left">I&rsquo;m Enoch. I design around the problem first.</h2>
+            <p class="btc-body">
+              I&rsquo;m a Brand &amp; Web Designer focused on creating digital experiences that help businesses communicate clearly, build trust and turn attention into action.
+            </p>
+            <p class="btc-body">
+              My approach starts with understanding what your business needs its website to actually accomplish, then designing the experience around that goal.
+            </p>
+            <div class="btc-tags">
+              <span class="tape-sticker-pill tape-sticker-pink">BRANDING</span>
+              <span class="tape-sticker-pill tape-sticker-cyan">WEB DESIGN</span>
+              <span class="tape-sticker-pill tape-sticker-yellow">UI</span>
+              <span class="tape-sticker-pill tape-sticker-green">CONVERSION</span>
+            </div>
+            <a href="about.html" class="view-project-link" style="margin-top: 22px;">
+              <span>More about me</span><span style="color: var(--token-cyan);">↗</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         6. THE RECEIPTS — real published cases (third-party, not my clients)
+         ========================================================================= -->
+    <section class="btc-section">
+      <div class="container">
+        <div class="btc-head">
+          <span class="handwritten-intro-note" style="color: var(--token-pink);">the receipts</span>
+          <h2 class="btc-title">Small changes. Measured results.</h2>
+          <p class="btc-lede">Published, measured cases where clearer design, faster pages and consistent branding moved the numbers. These are third-party studies, not my client results. My own projects come next.</p>
+        </div>
+
+        <div class="btc-proof-grid">
+
+          <article class="folder-project-card btc-proof" style="--accent: var(--token-cyan);">
+            <span class="meta-sticker cyan">TESTING THE PAGE</span>
+            <div class="btc-proof-num">+40.6%</div>
+            <h3>More sign-ups from one button and one image</h3>
+            <p>The 2008 Obama campaign tested 24 combinations of button and media on its splash page. The winner lifted sign-ups from 8.26% to 11.6%, worth about 2.8 million extra email sign-ups and $60 million in donations.</p>
+            <p class="btc-src"><a href="https://www.optimizely.com/insights/blog/how-obama-raised-60-million-by-running-a-simple-experiment/" target="_blank" rel="noopener">Optimizely / Dan Siroker</a></p>
+          </article>
+
+          <article class="folder-project-card btc-proof" style="--accent: var(--token-amber);">
+            <span class="meta-sticker yellow">SPEED</span>
+            <div class="btc-proof-num">+33.13%</div>
+            <h3>Conversion rate, and +53.37% revenue per visitor</h3>
+            <p>Rakuten 24 improved its Core Web Vitals (how fast and stable pages feel) and A/B tested the result. Average order value rose 15.2% and exit rate fell 35.1%.</p>
+            <p class="btc-src"><a href="https://web.dev/case-studies/rakuten" target="_blank" rel="noopener">Google web.dev case study</a></p>
+          </article>
+
+          <article class="folder-project-card btc-proof" style="--accent: var(--token-green);">
+            <span class="meta-sticker green">SPEED</span>
+            <div class="btc-proof-num">0.1s</div>
+            <h3>faster = +8.4% retail and +10.1% travel conversions</h3>
+            <p>Across 37 brands and 30 million+ sessions, a tenth of a second off mobile load time lifted conversions. Lead-generation sites saw form submissions progress 21.6% more.</p>
+            <p class="btc-src"><a href="https://web.dev/case-studies/milliseconds-make-millions" target="_blank" rel="noopener">Google &amp; Deloitte, Milliseconds Make Millions</a></p>
+          </article>
+
+          <article class="folder-project-card btc-proof" style="--accent: var(--token-pink);">
+            <span class="meta-sticker pink">SPEED</span>
+            <div class="btc-proof-num">3×</div>
+            <h3>higher conversion at 1 second than at 5</h3>
+            <p>Across 100 million+ pageviews on 20 sites, B2B lead-generation pages that loaded in 1 second converted around 3× better than pages that took 5.</p>
+            <p class="btc-src"><a href="https://portent.com/blog/analytics/research-site-speed-hurting-everyones-revenue.htm" target="_blank" rel="noopener">Portent, 2022</a></p>
+          </article>
+
+          <article class="folder-project-card btc-proof" style="--accent: var(--token-cyan);">
+            <span class="meta-sticker cyan">SALES &amp; LEADS</span>
+            <div class="btc-proof-num">+8%</div>
+            <h3>more sales, +15% lead-to-visit rate</h3>
+            <p>Vodafone Italy improved its page loading (LCP) by 31% and A/B tested it: 8% more sales, 15% better lead-to-visit rate and 11% better cart-to-visit rate.</p>
+            <p class="btc-src"><a href="https://web.dev/case-studies/vodafone" target="_blank" rel="noopener">Google web.dev case study</a></p>
+          </article>
+
+          <article class="folder-project-card btc-proof" style="--accent: var(--token-amber);">
+            <span class="meta-sticker yellow">BRAND</span>
+            <div class="btc-proof-num">33%</div>
+            <h3>top-end revenue lift reported with consistent branding</h3>
+            <p>Companies that presented their brand consistently across every channel reported up to 33% revenue growth. It&rsquo;s a survey, so it shows a link, not proof of cause.</p>
+            <p class="btc-src"><a href="https://www.prnewswire.com/news-releases/study-finds-companies-with-consistent-branding-can-see-up-to-33-increase-in-revenue-300967219.html" target="_blank" rel="noopener">Lucidpress State of Brand Consistency, 2019</a></p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         7. MY WORK — designed to solve something (existing projects, stacked folders)
+         ========================================================================= -->
+    <section class="btc-section" id="work">
+      <div class="container">
+        <div class="btc-head">
+          <span class="handwritten-intro-note" style="color: var(--token-dark);">my work</span>
+          <h2 class="btc-title">Designed to solve something.</h2>
+          <p class="btc-lede">Every project starts with a problem to fix. Here are four, and what each one was built to do.</p>
+        </div>
+
+        <div class="stacked-folder-list" id="stackedFolderList">
+
+          <!-- DigiSafes -->
+          <article class="stacked-tab-folder-card card-theme-dark" id="projectFolder1">
+            <div class="stacked-folder-header-tabs">
+              <div class="folder-tab-tab tab-slot-1" data-project-target="projectFolder1" title="DigiSafes">
+                <svg class="tab-step-icon" viewBox="0 0 13 13" fill="currentColor"><rect x="0" y="8" width="3.5" height="5" rx="0.5"/><rect x="4.5" y="4" width="3.5" height="9" rx="0.5"/><rect x="9" y="0" width="3.5" height="13" rx="0.5"/></svg>
+                <span>01 · LEADS</span>
+              </div>
+            </div>
+            <div class="stacked-folder-body-grid">
+              <div>
+                <div class="folder-card-date"><span>●</span><span>Lead generation</span></div>
+                <h3 class="folder-card-title">DigiSafes</h3>
+                <p class="btc-card-kicker">From product idea to a clearer path to conversion.</p>
+                <p class="folder-card-desc">
+                  DigiSafes needed a digital experience that could explain a technical crypto product clearly while guiding visitors toward taking action. I combined product education, visual storytelling and a conversion-focused content hierarchy to turn curiosity into qualified leads.
+                </p>
+                <div class="btc-chips">
+                  <span class="meta-sticker cyan">Conversion-focused</span>
+                  <span class="meta-sticker yellow">Clear product communication</span>
+                  <span class="meta-sticker green">Lead-generation experience</span>
+                </div>
+                <a href="case-study-detail.html?project=digisafes" class="view-project-link">
+                  <span>View case study</span><span style="color: var(--token-cyan);">↗</span>
+                </a>
+              </div>
+              <div>
+                <div class="taped-media-box">
+                  <div class="corner-tape-strip tape-tl"></div>
+                  <div class="corner-tape-strip tape-tr"></div>
+                  <div class="corner-tape-strip tape-bl"></div>
+                  <div class="corner-tape-strip tape-br"></div>
+                  <img src="assets/images/Digisafes hero.png" alt="DigiSafes website designed to generate leads" class="taped-media-img" loading="lazy" decoding="async">
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Huge -->
+          <article class="stacked-tab-folder-card card-theme-yellow" id="projectFolder2">
+            <div class="stacked-folder-header-tabs">
+              <div class="folder-tab-tab tab-slot-2" data-project-target="projectFolder2" title="Huge Skincare">
+                <svg class="tab-step-icon" viewBox="0 0 13 13" fill="currentColor"><rect x="0" y="8" width="3.5" height="5" rx="0.5"/><rect x="4.5" y="4" width="3.5" height="9" rx="0.5"/><rect x="9" y="0" width="3.5" height="13" rx="0.5"/></svg>
+                <span>02 · STORE</span>
+              </div>
+            </div>
+            <div class="stacked-folder-body-grid">
+              <div>
+                <div class="folder-card-date"><span>●</span><span>Product discovery</span></div>
+                <h3 class="folder-card-title">Huge Skincare</h3>
+                <p class="btc-card-kicker">A storefront built around product discovery.</p>
+                <p class="folder-card-desc">
+                  The experience was structured to make it easier for customers to discover products, understand what they offer and move toward purchase. I reworked the homepage, navigation and product discovery so the brand felt authentic and shoppers stayed longer.
+                </p>
+                <div class="btc-chips">
+                  <span class="meta-sticker cyan">E-commerce experience</span>
+                  <span class="meta-sticker yellow">Product discovery</span>
+                  <span class="meta-sticker pink">Clear shopping journey</span>
+                </div>
+                <a href="case-study-detail.html?project=huge" class="view-project-link">
+                  <span>View case study</span><span>↗</span>
+                </a>
+              </div>
+              <div>
+                <div class="taped-media-box">
+                  <div class="corner-tape-strip tape-tl"></div>
+                  <div class="corner-tape-strip tape-tr"></div>
+                  <div class="corner-tape-strip tape-bl"></div>
+                  <div class="corner-tape-strip tape-br"></div>
+                  <img src="assets/images/Huge hero.png" alt="Huge Skincare online store" class="taped-media-img" loading="lazy" decoding="async">
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Ewamaka -->
+          <article class="stacked-tab-folder-card card-theme-dark" id="projectFolder3">
+            <div class="stacked-folder-header-tabs">
+              <div class="folder-tab-tab tab-slot-3" data-project-target="projectFolder3" title="Ewamaka">
+                <svg class="tab-step-icon" viewBox="0 0 13 13" fill="currentColor"><rect x="0" y="8" width="3.5" height="5" rx="0.5"/><rect x="4.5" y="4" width="3.5" height="9" rx="0.5"/><rect x="9" y="0" width="3.5" height="13" rx="0.5"/></svg>
+                <span>03 · BRAND</span>
+              </div>
+            </div>
+            <div class="stacked-folder-body-grid">
+              <div>
+                <div class="folder-card-date"><span>●</span><span>Brand + digital</span></div>
+                <h3 class="folder-card-title">Ewamaka</h3>
+                <p class="btc-card-kicker">Turning a brand identity into a consistent customer experience.</p>
+                <p class="folder-card-desc">
+                  Ewamaka needed a look that says femininity and confidence on every screen customers meet it on. I built the identity, then a social and digital system around it so every touchpoint feels like one brand. The social following grew roughly 10×.
+                </p>
+                <div class="btc-chips">
+                  <span class="meta-sticker pink">Brand identity</span>
+                  <span class="meta-sticker cyan">Social design</span>
+                  <span class="meta-sticker yellow">Digital touchpoints</span>
+                </div>
+                <a href="case-study-detail.html?project=ewamaka" class="view-project-link">
+                  <span>View case study</span><span style="color: var(--token-cyan);">↗</span>
+                </a>
+              </div>
+              <div>
+                <div class="taped-media-box">
+                  <div class="corner-tape-strip tape-tl"></div>
+                  <div class="corner-tape-strip tape-tr"></div>
+                  <div class="corner-tape-strip tape-bl"></div>
+                  <div class="corner-tape-strip tape-br"></div>
+                  <img src="assets/images/ewamaka hero.jpg" alt="Ewamaka brand identity and social design" class="taped-media-img" loading="lazy" decoding="async">
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- The Source Collective -->
+          <article class="stacked-tab-folder-card card-theme-yellow" id="projectFolder4">
+            <div class="stacked-folder-header-tabs">
+              <div class="folder-tab-tab tab-slot-4" data-project-target="projectFolder4" title="The Source Collective">
+                <svg class="tab-step-icon" viewBox="0 0 13 13" fill="currentColor"><rect x="0" y="8" width="3.5" height="5" rx="0.5"/><rect x="4.5" y="4" width="3.5" height="9" rx="0.5"/><rect x="9" y="0" width="3.5" height="13" rx="0.5"/></svg>
+                <span>04 · TRUST</span>
+              </div>
+            </div>
+            <div class="stacked-folder-body-grid">
+              <div>
+                <div class="folder-card-date"><span>●</span><span>Trust &amp; positioning</span></div>
+                <h3 class="folder-card-title">The Source Collective</h3>
+                <p class="btc-card-kicker">Building trust around a premium service.</p>
+                <p class="folder-card-desc">
+                  A luxury personal-shopping service with a strong concept but no identity. I started from the audience with buyer-persona and competitor research, then built the positioning, visual identity and guidelines that helped secure their first paying client.
+                </p>
+                <div class="btc-chips">
+                  <span class="meta-sticker green">Brand strategy</span>
+                  <span class="meta-sticker cyan">Visual identity</span>
+                  <span class="meta-sticker pink">Customer positioning</span>
+                </div>
+                <a href="case-study-detail.html?project=the-source-collective" class="view-project-link">
+                  <span>View case study</span><span>↗</span>
+                </a>
+              </div>
+              <div>
+                <div class="taped-media-box">
+                  <div class="corner-tape-strip tape-tl"></div>
+                  <div class="corner-tape-strip tape-tr"></div>
+                  <div class="corner-tape-strip tape-bl"></div>
+                  <div class="corner-tape-strip tape-br"></div>
+                  <img src="assets/images/the source collective hero.PNG" alt="The Source Collective luxury brand identity" class="taped-media-img" loading="lazy" decoding="async">
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         8. MY OWN NUMBERS (only ones I can back up)
+         ========================================================================= -->
+    <section class="btc-section">
+      <div class="container">
+        <div class="btc-head">
+          <span class="handwritten-intro-note" style="color: var(--token-green);">my own results</span>
+          <h2 class="btc-title">Numbers I can stand behind.</h2>
+        </div>
+
+        <div class="project-stats-grid btc-own-stats">
+          <div class="project-stat-card">
+            <div class="project-stat-num">10×</div>
+            <div class="project-stat-lbl">Social following growth</div>
+            <span class="meta-sticker pink btc-stat-tag">Ewamaka</span>
+          </div>
+          <div class="project-stat-card">
+            <div class="project-stat-num">↑</div>
+            <div class="project-stat-lbl">Online visibility &amp; guest trust</div>
+            <span class="meta-sticker cyan btc-stat-tag">Adehomes</span>
+          </div>
+          <div class="project-stat-card">
+            <div class="project-stat-num">1st</div>
+            <div class="project-stat-lbl">Paying client secured</div>
+            <span class="meta-sticker yellow btc-stat-tag">The Source Collective</span>
+          </div>
+        </div>
+        <p class="btc-fineprint">I only publish numbers I can back up. No invented percentages, no made-up conversion rates.</p>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         9. PROCESS
+         ========================================================================= -->
+    <section class="btc-section" id="process">
+      <div class="container">
+        <div class="btc-head">
+          <span class="handwritten-intro-note" style="color: var(--token-amber);">how it works</span>
+          <h2 class="btc-title">I don&rsquo;t start with the homepage.</h2>
+          <p class="btc-lede">I start with your customers, and design backwards from what they need to do.</p>
+        </div>
+
+        <ol class="btc-timeline">
+          <li class="btc-step" style="--accent: var(--token-cyan);">
+            <div class="btc-step-num">01</div>
+            <div class="btc-step-body">
+              <h3>Understand</h3>
+              <p class="btc-step-q">What is the business trying to achieve?</p>
+              <p>Your goals, your customers and what a &ldquo;win&rdquo; looks like: more inquiries, more bookings, more sales.</p>
+            </div>
+          </li>
+          <li class="btc-step" style="--accent: var(--token-amber);">
+            <div class="btc-step-num">02</div>
+            <div class="btc-step-body">
+              <h3>Identify</h3>
+              <p class="btc-step-q">Where are customers currently getting stuck?</p>
+              <p>The questions people keep asking, the drop-off points and the trust gaps on your current site or social pages.</p>
+            </div>
+          </li>
+          <li class="btc-step" style="--accent: var(--token-green);">
+            <div class="btc-step-num">03</div>
+            <div class="btc-step-body">
+              <h3>Structure</h3>
+              <p class="btc-step-q">What information and actions should the website prioritise?</p>
+              <p>The pages, content order and calls to action, so every section has a reason to exist.</p>
+            </div>
+          </li>
+          <li class="btc-step" style="--accent: var(--token-pink);">
+            <div class="btc-step-num">04</div>
+            <div class="btc-step-body">
+              <h3>Design</h3>
+              <p class="btc-step-q">Build the visual experience around the customer journey.</p>
+              <p>A look that feels like your brand and guides people from &ldquo;what is this?&rdquo; to &ldquo;I&rsquo;m in.&rdquo;</p>
+            </div>
+          </li>
+          <li class="btc-step" style="--accent: var(--token-cyan);">
+            <div class="btc-step-num">05</div>
+            <div class="btc-step-body">
+              <h3>Launch</h3>
+              <p class="btc-step-q">Develop, test and deploy the website.</p>
+              <p>Built, tested on real devices, then launched on accounts you own, with support after go-live.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         10. WHAT I BUILD
+         ========================================================================= -->
+    <section class="btc-section">
+      <div class="container">
+        <div class="btc-head">
+          <span class="handwritten-intro-note" style="color: var(--token-pink);">what i build</span>
+          <h2 class="btc-title">Built around what your business needs.</h2>
+        </div>
+
+        <div class="btc-grid-5">
+          <div class="folder-project-card">
+            <div class="folder-tab-badge"><span>(01)</span><span>LEADS</span></div>
+            <h3 class="btc-card-title sm">Lead Generation</h3>
+            <p class="btc-card-text">Landing pages and websites designed to turn visitors into inquiries.</p>
+          </div>
+          <div class="folder-project-card">
+            <div class="folder-tab-badge yellow"><span>(02)</span><span>BOOKING</span></div>
+            <h3 class="btc-card-title sm">Booking</h3>
+            <p class="btc-card-text">Service pages, calendars and booking flows that reduce back-and-forth.</p>
+          </div>
+          <div class="folder-project-card">
+            <div class="folder-tab-badge"><span>(03)</span><span>PRODUCT</span></div>
+            <h3 class="btc-card-title sm">Product</h3>
+            <p class="btc-card-text">Catalogs and e-commerce experiences that make products easier to discover and buy.</p>
+          </div>
+          <div class="folder-project-card">
+            <div class="folder-tab-badge yellow"><span>(04)</span><span>BUSINESS</span></div>
+            <h3 class="btc-card-title sm">Business</h3>
+            <p class="btc-card-text">Professional websites that explain what you do and establish credibility.</p>
+          </div>
+          <div class="folder-project-card">
+            <div class="folder-tab-badge"><span>(05)</span><span>CUSTOM</span></div>
+            <h3 class="btc-card-title sm">Custom</h3>
+            <p class="btc-card-text">Integrations, forms, CMS, automations and other functionality your business actually needs.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         11. PLATFORM APPROACH
+         ========================================================================= -->
+    <section class="btc-section">
+      <div class="container">
+        <div class="btc-platform">
+          <span class="handwritten-intro-note" style="color: var(--token-cyan);">the tools</span>
+          <h2 class="btc-platform-title">Built for your business. Not around a template.</h2>
+          <div class="btc-tools">
+            <span class="btc-tool"><img src="assets/images/tool-figma.svg" alt="">Figma</span>
+            <span class="btc-tool"><span class="btc-tool-mark" aria-hidden="true">W</span>Webflow</span>
+            <span class="btc-tool"><img src="assets/images/tool-framer.svg" alt="">Framer</span>
+            <span class="btc-tool"><img src="assets/images/tool-wordpress.svg" alt="">WordPress</span>
+          </div>
+          <p class="btc-platform-note">The platform depends on what your business needs, not the other way around.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         12. PRICING PHILOSOPHY (no prices)
+         ========================================================================= -->
+    <section class="btc-section">
+      <div class="container">
+        <div class="btc-head">
+          <span class="handwritten-intro-note" style="color: var(--token-amber);">the investment</span>
+          <h2 class="btc-title">Scoped around your business, not a package.</h2>
+        </div>
+
+        <div class="btc-invest-grid">
+          <div class="btc-invest btc-invest-dark">
+            <div class="btc-invest-tag">(01) THE INVESTMENT</div>
+            <h3>A website is an investment in how your customers experience your business.</h3>
+            <p>Every project is scoped around the functionality, content and customer journey your business actually needs. You pay for what moves your goals, not for page counts.</p>
+          </div>
+          <div class="btc-invest btc-invest-yellow">
+            <div class="btc-invest-tag">(02) YOU OWN IT</div>
+            <h3>Your accounts stay yours.</h3>
+            <p>Domain, hosting and third-party platform subscriptions are billed separately and remain under your ownership. Your website is never held hostage by my subscription.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         13. WHAT YOU CAN EXPECT
+         ========================================================================= -->
+    <section class="btc-section">
+      <div class="container">
+        <div class="btc-head">
+          <span class="handwritten-intro-note" style="color: var(--token-green);">the promise</span>
+          <h2 class="btc-title">What you can expect.</h2>
+        </div>
+
+        <div class="btc-grid-5 btc-expect-grid">
+          <div class="btc-expect" style="--accent: var(--token-cyan);">
+            <span class="btc-check" aria-hidden="true">✓</span>
+            <h3>Clear communication</h3>
+            <p>You&rsquo;ll know what I&rsquo;m working on and what happens next.</p>
+          </div>
+          <div class="btc-expect" style="--accent: var(--token-amber);">
+            <span class="btc-check" aria-hidden="true">✓</span>
+            <h3>A website with a purpose</h3>
+            <p>Every section has a reason to exist.</p>
+          </div>
+          <div class="btc-expect" style="--accent: var(--token-green);">
+            <span class="btc-check" aria-hidden="true">✓</span>
+            <h3>Responsive design</h3>
+            <p>The experience works across desktop, tablet and mobile.</p>
+          </div>
+          <div class="btc-expect" style="--accent: var(--token-pink);">
+            <span class="btc-check" aria-hidden="true">✓</span>
+            <h3>Your accounts stay yours</h3>
+            <p>Domains and platform accounts remain under your ownership.</p>
+          </div>
+          <div class="btc-expect" style="--accent: var(--token-cyan);">
+            <span class="btc-check" aria-hidden="true">✓</span>
+            <h3>Post-launch support</h3>
+            <p>You won&rsquo;t be abandoned after the website goes live.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         14. FAQ
+         ========================================================================= -->
+    <section class="btc-section">
+      <div class="container">
+        <div class="btc-head">
+          <span class="handwritten-intro-note" style="color: var(--token-pink);">got questions?</span>
+          <h2 class="btc-title">Frequently asked.</h2>
+        </div>
+
+        <div class="btc-faq">
+          <div class="folder-project-card faq-item open">
+            <button type="button" class="faq-question">
+              <span>How long does a website take?</span>
+              <span class="faq-icon">−</span>
+            </button>
+            <div class="faq-answer" style="display: block;">
+              A focused landing page or brand site usually takes 2–4 weeks. Multi-page websites and stores with booking or product catalogs generally take 4–8 weeks. You&rsquo;ll get a clear timeline before we start.
+            </div>
+          </div>
+
+          <div class="folder-project-card faq-item">
+            <button type="button" class="faq-question">
+              <span>How much does it cost?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              Every project is scoped around the functionality, content and customer journey your business needs, so there&rsquo;s no one-size price. Tell me your goal and budget range in the form below and I&rsquo;ll come back with a recommendation and a clear quote.
+            </div>
+          </div>
+
+          <div class="folder-project-card faq-item">
+            <button type="button" class="faq-question">
+              <span>Which platform will you build on?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              The one that fits your business: Webflow, Framer, WordPress or clean custom code. I&rsquo;ll explain why I&rsquo;m recommending it, and the accounts are yours.
+            </div>
+          </div>
+
+          <div class="folder-project-card faq-item">
+            <button type="button" class="faq-question">
+              <span>Do I own my domain and hosting?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              Yes. Domain, hosting and platform subscriptions are set up under your name and billed by the provider directly to you. I never hold them.
+            </div>
+          </div>
+
+          <div class="folder-project-card faq-item">
+            <button type="button" class="faq-question">
+              <span>I already have a website. Can you improve it?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              Yes, redesigns are a big part of my work. We&rsquo;ll look at where visitors get stuck (an unclear offer, a buried contact button, slow pages, no booking path) and fix that first, instead of just repainting it.
+            </div>
+          </div>
+
+          <div class="folder-project-card faq-item">
+            <button type="button" class="faq-question">
+              <span>What happens after launch?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              You won&rsquo;t be abandoned. I&rsquo;ll walk you through managing your site, stay available for fixes, and can offer ongoing maintenance if you want it.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         15. FINAL CTA + 16. FORM
+         ========================================================================= -->
+    <section class="btc-section btc-final" id="start">
+      <div class="container">
+        <span class="handwritten-intro-note" style="color: var(--token-cyan);">ready when you are</span>
+        <h2 class="btc-final-title">Let&rsquo;s fix what&rsquo;s getting in the way.</h2>
+        <p class="btc-lede">Tell me what you want your website to do, and I&rsquo;ll help you figure out the best way to build it.</p>
+
+        <div class="btc-cta-row">
+          <div class="btn-selection-box">
+            <div class="figma-handle handle-tl"></div>
+            <div class="figma-handle handle-tr"></div>
+            <div class="figma-handle handle-bl"></div>
+            <div class="figma-handle handle-br"></div>
+            <a href="#projectForm" class="btn-nudge-black">
+              <span class="btn-cyan-arrows">&gt;&gt;</span>
+              <span>START A PROJECT →</span>
+            </a>
+          </div>
+        </div>
+        <div class="hero-status-sub">
+          <span class="cyan-pulse-dot"></span>
+          <span>Usually replies within 1 business day</span>
+        </div>
+
+        <div class="sticky-note-card btc-note" id="projectForm">
+          <form id="convertForm" novalidate>
+            <div id="convertFormFields">
+              <div class="sticky-note-header">TELL ME ABOUT YOUR PROJECT</div>
+
+              <div class="btc-row2">
+                <div class="btc-field">
+                  <label for="cfName">Name</label>
+                  <input type="text" id="cfName" name="name" autocomplete="name" required>
+                </div>
+                <div class="btc-field">
+                  <label for="cfEmail">Email</label>
+                  <input type="email" id="cfEmail" name="email" autocomplete="email" required>
+                </div>
+              </div>
+
+              <div class="btc-row2">
+                <div class="btc-field">
+                  <label for="cfBusiness">Business / Brand</label>
+                  <input type="text" id="cfBusiness" name="business" autocomplete="organization">
+                </div>
+                <div class="btc-field">
+                  <label for="cfLink">Website / Instagram</label>
+                  <input type="text" id="cfLink" name="link" placeholder="yoursite.com or @yourbrand">
+                </div>
+              </div>
+
+              <div class="btc-field">
+                <label for="cfGoal">What do you need your website to accomplish?</label>
+                <select id="cfGoal" name="goal" required>
+                  <option value="" selected disabled>Choose one…</option>
+                  <option>Generate more leads</option>
+                  <option>Take bookings</option>
+                  <option>Sell products</option>
+                  <option>Showcase my business</option>
+                  <option>Redesign my existing website</option>
+                  <option>Something else</option>
+                </select>
+              </div>
+
+              <div class="btc-field">
+                <label for="cfBudget">What&rsquo;s your approximate budget?</label>
+                <select id="cfBudget" name="budget">
+                  <option value="" selected disabled>Choose a range…</option>
+                  <option>$500–$1,000</option>
+                  <option>$1,000–$2,000</option>
+                  <option>$2,000–$4,000</option>
+                  <option>$4,000+</option>
+                  <option>Not sure yet</option>
+                </select>
+              </div>
+
+              <div class="btc-field">
+                <label for="cfProblem">Tell me a little about the problem you&rsquo;re trying to solve.</label>
+                <textarea id="cfProblem" name="problem" rows="4" required placeholder="e.g. Customers keep DMing to ask prices and availability, and I lose track of who's serious."></textarea>
+              </div>
+
+              <div class="btc-form-foot">
+                <span class="btc-form-hint">I reply personally, usually within 1 business day.</span>
+                <button type="submit" class="sticky-btn-next btc-submit"><span>SUBMIT</span><span>→</span></button>
+              </div>
+            </div>
+
+            <div id="convertFormDone" class="btc-done" hidden>
+              <div class="btc-done-check">✓</div>
+              <div class="btc-done-title">note received!</div>
+              <p>Your email app should have opened with your details ready to send. Just hit send. If it didn&rsquo;t, email me directly at <a href="mailto:dara.daodu@gmail.com">dara.daodu@gmail.com</a> and I&rsquo;ll pick it up from there.</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       FOOTER (same as services)
+       ========================================================================= -->
+  <footer class="nudge-footer-section">
+    <div class="container">
+      <div class="footer-top-grid">
+
+        <div>
+          <div class="footer-mascot-row">
+            <div class="green-blob-character">
+              <div class="blob-eyes">
+                <div class="blob-pill-eye"></div>
+                <div class="blob-pill-eye"></div>
+              </div>
+            </div>
+            <h2 class="lets-talk-flux-title">LET'S<br>TALK</h2>
+          </div>
+
+          <p class="footer-bio-desc">
+            I'm most energized by projects where I can dig into complex problems, collaborate with smart people, and ship things that genuinely improve someone's day.
+          </p>
+
+          <p style="font-family: var(--font-mono); font-size: 13px; color: var(--token-gray-sub); margin-top: 14px;">
+            Open to contract work, full-time roles, and interesting conversations about hard design problems.
+          </p>
+        </div>
+
+        <div>
+          <div class="lightning-contact-card">
+            <a href="contact.html" class="cyan-contact-banner-btn">
+              <span>CONTACT</span>
+              <div class="diamond-badge-icon">❖</div>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom-strip">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <img src="assets/images/dexo-icon.png" alt="Dexo" style="width: 20px; height: 20px; border-radius: 4px;">
+          <span>© all rights reserved for enoch · dexo</span>
+        </div>
+        <div class="footer-social-links">
+          <a href="https://linkedin.com/in/enochd/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://behance.net/daradaodu" target="_blank" rel="noopener">Behance</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js?v=10.2"></script>
+  <script>
+    // Project enquiry form. There is no backend on this static site, so the
+    // details are packaged into an email to Enoch via the visitor's mail app.
+    (function () {
+      var form = document.getElementById('convertForm');
+      if (!form) return;
+      var fields = document.getElementById('convertFormFields');
+      var done = document.getElementById('convertFormDone');
+      var required = ['cfName', 'cfEmail', 'cfGoal', 'cfProblem'];
+
+      function val(id) { return (document.getElementById(id).value || '').trim(); }
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var firstBad = null;
+        required.forEach(function (id) {
+          var el = document.getElementById(id);
+          var bad = !val(id) || (id === 'cfEmail' && !/^\S+@\S+\.\S+$/.test(val(id)));
+          el.classList.toggle('btc-invalid', bad);
+          if (bad && !firstBad) firstBad = el;
+        });
+        if (firstBad) { firstBad.focus(); return; }
+
+        var business = val('cfBusiness');
+        var subject = 'Project enquiry from ' + val('cfName') + (business ? ' (' + business + ')' : '');
+        var body = [
+          'Name: ' + val('cfName'),
+          'Email: ' + val('cfEmail'),
+          'Business / Brand: ' + (business || '-'),
+          'Website / Instagram: ' + (val('cfLink') || '-'),
+          'Goal: ' + val('cfGoal'),
+          'Budget: ' + (val('cfBudget') || '-'),
+          '',
+          'The problem I want to solve:',
+          val('cfProblem')
+        ].join('\n');
+
+        window.location.href = 'mailto:dara.daodu@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+        fields.hidden = true;
+        done.hidden = false;
+      });
+
+      required.forEach(function (id) {
+        document.getElementById(id).addEventListener('input', function () { this.classList.remove('btc-invalid'); });
+        document.getElementById(id).addEventListener('change', function () { this.classList.remove('btc-invalid'); });
+      });
+    })();
+  </script>
+</body>
+</html>
