@@ -4117,3 +4117,24 @@ body.lightbox-open {
 .faq-item.open .faq-icon::after {
   display: none;
 }
+
+/* ==========================================================================
+   HEADER FIT — five nav tabs (incl. BUILT TO CONVERT) on mid-width desktops
+   Keeps every tab on one line; trims icons/badges progressively as the
+   window narrows so nothing wraps, clips or collides.
+   ========================================================================== */
+.nav-tab-item { white-space: nowrap; }
+
+@media (min-width: 881px) and (max-width: 1320px) {
+  .nav-tab-item { padding: 8px 11px; }
+  .nav-links-row { gap: 2px; }
+  .nav-left-group { gap: 14px; }
+  .floating-cursor-badge { display: none; }
+}
+
+@media (min-width: 881px) and (max-width: 1120px) {
+  .nav-tab-item { padding: 8px 9px; gap: 0; }
+  .nav-tab-item .tab-icon { display: none; }
+  .nav-right-group { gap: 8px; }
+  .mini-badge-btn { display: none; }
+}
