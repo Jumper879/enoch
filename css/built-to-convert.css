@@ -364,6 +364,13 @@ body.btc-page {
   margin-top: 18px;
 }
 
+.btc-sub-2 {
+  font-size: clamp(0.85rem, 1.3vw, 0.98rem);
+  color: #565757;
+  max-width: 560px;
+  margin-top: 8px;
+}
+
 .btc-cta-row {
   display: flex;
   flex-wrap: wrap;
@@ -448,7 +455,7 @@ body.btc-page {
   position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  height: clamp(420px, 36vw, 490px);
+  height: clamp(440px, 37vw, 510px);
   background: var(--token-card-dark);
   color: #ffffff;
   border-radius: var(--r-panel);
@@ -489,6 +496,7 @@ body.btc-page {
   padding: 0 clamp(20px, 6%, 72px) 0 clamp(8px, 5%, 60px);
 }
 .btc-sound-copy .btc-h2 { font-size: clamp(1.4rem, 3.2vw, 2.5rem); }
+.btc-sound-p { margin-top: 12px; max-width: 420px; }
 
 .btc-bubble {
   position: absolute;
@@ -523,7 +531,7 @@ body.btc-page {
 }
 .btc-decision-copy .btc-h2 { margin: 14px 0 22px; max-width: 520px; }
 
-.btc-tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.btc-tiles { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
 .btc-tile {
   position: relative;
   display: flex;
@@ -627,6 +635,35 @@ body.btc-page {
   border-radius: 3px;
 }
 .btc-td-num small { display: block; margin-top: 5px; font-family: var(--font-mono); font-size: 10.5px; color: #777; }
+
+/* Results from real projects — enlarged, dominant own-results tiles (dark section) */
+.btc-why-close { margin-top: 26px; max-width: 640px; }
+
+.btc-results-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(10px, 1.6vw, 20px);
+  margin-top: clamp(28px, 4vw, 48px);
+}
+.btc-result-tile {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: clamp(22px, 2.6vw, 32px) clamp(18px, 2vw, 26px);
+  border-radius: var(--r-tile);
+  color: var(--token-dark);
+  min-height: 190px;
+  justify-content: flex-end;
+}
+.btc-result-tile b {
+  font-family: var(--font-flux);
+  font-weight: 1000;
+  font-size: clamp(2.8rem, 6vw, 4.4rem);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+.btc-result-tile span { font-family: var(--font-display); font-size: 15px; font-weight: 700; line-height: 1.3; }
+.btc-result-tile em { font-style: normal; font-family: var(--font-mono); font-size: 11.5px; opacity: 0.75; }
 
 /* --------------------------------------------------------------------------
    5. Dark block: why it matters (mosaic) · Enoch · receipts
@@ -893,6 +930,7 @@ body.btc-page {
 .btc-tools span { display: inline-flex; align-items: center; gap: 8px; padding: 7px 12px; border-radius: 999px; background: rgba(255, 255, 255, 0.12); font-family: var(--font-display); font-size: 12px; font-weight: 600; color: #ffffff; }
 .btc-tools img { width: 16px; height: 16px; object-fit: contain; }
 .btc-wf { display: grid; place-items: center; width: 16px; height: 16px; border-radius: 4px; background: #146ef5; font-size: 10px; font-weight: 800; }
+.btc-cu { display: grid; place-items: center; width: 16px; height: 16px; border-radius: 4px; background: var(--token-dark); color: var(--accent); font-size: 7px; font-weight: 800; }
 .btc-fine { font-size: 12.5px; color: rgba(255, 255, 255, 0.7); }
 
 .btc-incl { margin-top: 6px; padding-top: 14px; border-top: 1px solid var(--line); font-family: var(--font-mono); font-size: 11px; font-weight: 600; letter-spacing: 0.05em; }
@@ -1052,6 +1090,8 @@ body.btc-page {
 
   .btc-split { grid-template-columns: 1fr; gap: 12px; }
   .btc-mosaic { grid-template-columns: repeat(2, 1fr); }
+  .btc-results-grid { grid-template-columns: repeat(2, 1fr); }
+  .btc-results-grid .btc-result-tile:last-child { grid-column: 1 / -1; }
   .btc-projects { grid-template-columns: 1fr; }
   .btc-build-grid { grid-template-columns: repeat(2, 1fr); }
   .btc-build-grid .btc-bcard:last-child { grid-column: 1 / -1; }
@@ -1072,9 +1112,10 @@ body.btc-page {
 
 @media (max-width: 760px) {
   /* Sound familiar: copy first, checklist below with bubbles overlapping */
-  .btc-panel-dark { grid-template-columns: 1fr; grid-template-rows: auto 1fr; height: 430px; }
+  .btc-panel-dark { grid-template-columns: 1fr; grid-template-rows: auto 1fr; height: 480px; }
   .btc-sound-copy { order: 1; padding: 22px 18px 6px; }
   .btc-sound-copy .btc-h2 { font-size: clamp(1.3rem, 6.4vw, 1.8rem); }
+  .btc-sound-p { font-size: 13px; margin-top: 8px; }
   .btc-checklist { order: 2; padding: 0 16px; margin-top: 8px; }
   .btc-check-row { height: 42px; font-size: 13px; }
   .btc-bubble { font-size: 11.5px; padding: 5px 10px 6px; }
@@ -1122,12 +1163,13 @@ body.btc-page {
   .btc-m-stat small { font-size: 9.5px; }
   .btc-me-copy p { font-size: 14px; }
   .btc-avatar { width: 54px; height: 54px; }
-  .btc-qcard { flex-basis: 250px; padding: 14px; }
+  .btc-why-close { margin-top: 18px; }
 
-  .btc-own-grid { grid-template-columns: 1fr; gap: 8px; }
-  .btc-own-tile { flex-direction: row; align-items: center; gap: 12px; padding: 12px 14px; flex-wrap: wrap; }
-  .btc-own-tile b { font-size: 1.8rem; min-width: 56px; }
-  .btc-own-tile em { margin: 0 0 0 auto; }
+  .btc-results-grid { grid-template-columns: 1fr; gap: 8px; margin-top: 20px; }
+  .btc-result-tile { flex-direction: row; align-items: center; flex-wrap: wrap; gap: 10px 14px; min-height: 0; padding: 14px 16px; }
+  .btc-result-tile b { font-size: 2rem; min-width: 64px; }
+  .btc-result-tile span { font-size: 13px; }
+  .btc-result-tile em { margin-left: auto; }
   .btc-pcard { padding: 14px; border-radius: 16px; gap: 8px; }
   .btc-pcard p { font-size: 13px; }
   .btc-seework { padding: 16px; border-radius: 16px; }
